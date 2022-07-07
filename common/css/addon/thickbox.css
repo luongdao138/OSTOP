@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/*-------------------
+[discription]
+only quickView Style
+-------------------*/
+
+/*-----------------*/
+/* quickView */
+/*-----------------*/
+*{
+padding:0;
+margin:0;
+}
+#TB_overlay{
+position:fixed;
+z-index:2000;
+top:0px;
+left:0px;
+height:100%;
+width:100%;
+}
+.TB_overlayMacFFBGHack{background:url(/common/images/coffee/macFFBgHack.png) repeat;}
+.TB_overlayBG{
+background-color:#FFF;
+filter:alpha(opacity=75);
+-moz-opacity:0.75;
+opacity:0.75;
+}
+* html #TB_overlay{ /* ie6 hack */
+position:absolute;
+height:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight :document.body.offsetHeight + 'px');
+}
+#TB_window{
+position:fixed;
+z-index:2002;
+color:#000000;
+display:none;
+text-align:left;
+top:50%;
+left:50%;
+width:688px!important;
+height:332px!important;
+}
+* html #TB_window{ /* ie6 hack */
+position:absolute;
+margin-top:expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+#TB_window img#TB_Image{
+display:block;
+margin:15px 0 0 15px;
+border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;
+border-top:1px solid #666;
+border-left:1px solid #666;
+}
+#TB_caption{
+height:25px;
+padding:7px 30px 10px 25px;
+float:left;
+}
+#TB_closeWindow{
+height:25px;
+padding:11px 25px 10px 0;
+float:right;
+}
+#TB_closeAjaxWindow{
+padding:0;
+float:right;
+}
+#TB_ajaxWindowTitle{
+float:left;
+padding:0;
+margin-bottom:1px;
+}
+#TB_title{
+padding:19px 19px 0;
+background:url(/common/images/coffee/bg-quickview-top.png) left top no-repeat;
+}
+#TB_title:after{
+visibility:hidden;
+display:block;
+font-size:0;
+content:".";
+clear:both;
+height:0;
+}
+* html #TB_title{
+zoom:1;
+}
+*:first-child+html #TB_title{
+zoom:1;
+}
+#TB_closeWindowButton{
+display:block;
+background:url(/common/images/coffee/btn-quickview-close-ovoff.gif) left top no-repeat;
+width:63px;
+height:16px!important;
+overflow:hidden;
+text-indent:-9999px;
+}
+#TB_closeWindowButton:hover{
+background:url(/common/images/coffee/btn-quickview-close-ovon.gif) left top no-repeat;
+}
+#TB_ajaxContent{
+clear:both;
+text-align:left;
+line-height:1.4em;
+width:650px!important;
+height:auto!important;
+padding:15px 19px 0;
+background:url(/common/images/coffee/bg-quickview-btm.png) left bottom no-repeat;
+}
+#TB_ajaxContent.TB_modal{
+padding:15px;
+}
+#TB_ajaxContent p{
+padding:0;
+}
+#TB_load{
+position:fixed;
+display:none;
+height:13px;
+width:208px;
+z-index:103;
+top:50%;
+left:50%;
+margin:-6px 0 0 -104px; /* -height/2 0 0 -width/2 */
+}
+* html #TB_load{ /* ie6 hack */
+position:absolute;
+margin-top:expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');
+}
+#TB_HideSelect{
+z-index:99;
+position:fixed;
+top:0;
+left:0;
+background-color:#fff;
+border:none;
+filter:alpha(opacity=0);
+-moz-opacity:0;
+opacity:0;
+height:100%;
+width:100%;
+}
+* html #TB_HideSelect{ /* ie6 hack */
+position:absolute;
+height:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight :document.body.offsetHeight + 'px');
+}
+#TB_iframeContent{
+clear:both;
+border:none;
+margin-bottom:-1px;
+margin-top:1px;
+_margin-bottom:1px;
+}
+.quickViewBtn{
+background:url(/common/images/coffee/btn-quickview.png) 32px 70px no-repeat;
+}
+.quickView{
+margin:0 30px 19px;
+height:393px;
+font-size:1.2em;
+}
+*:first-child+html .quickView{
+height:363px;
+}
+.quickView .coffeeDetailsCol{
+margin-bottom:0!important;
+padding-top:0!important;
+background:none!important;
+}
+.quickView .coffeeDetailsCol .colTxt{
+width:392px!important;
+height:328px;
+overflow:auto;
+}
+
+.quickViewConfirm{
+margin:0 30px 19px;
+height:113px;
+font-size:1.2em;
+}
+*:first-child+html .quickViewConfirm{
+height:83px;
+}
+.quickViewConfirm .confirmContents{
+text-align:center;
+height:64px;
+overflow:auto;
+}
+.quickViewConfirm .confirmContents p{
+font-weight:bold;
+}
+
+.quickViewStoreLan{
+margin:0 30px 19px;
+height:350px;
+font-size:1.2em;
+}
+.quickViewStoreLan .col{
+width:630px;
+margin-right:-40px;
+overflow:hidden;
+zoom:1;
+}
+.quickViewStoreLan .col .col2{
+width:275px;
+float:left;
+}
+.quickViewStoreLan .col .col2 .heading3{
+margin-bottom:20px;
+padding-bottom:0;
+}
+.quickViewStoreLan .col .col2 .wifiService{
+width:100%;
+overflow:hidden;
+}
+.quickViewStoreLan .col .col2 .wifiService dl{
+float:left;
+margin-right:7px;
+}
+.quickViewStoreLan .col .col2 .wifiService dl.last{
+margin-right:0;
+}
+.quickViewStoreLan .col .col2 .wifiService dl dt,
+.quickViewStoreLan .col .col2 .wifiService dl dd{
+font-size:0;
+line-height:0;
+}
+.quickViewStoreLan .col .col2 .wifiService dl dt{
+margin-bottom: 10px;
+}
+.quickViewStoreLan .col .col2 .wifiService dl dd{
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+width: 63px !important;
+width: auto;
+height: 62px !important;
+height: auto;
+}

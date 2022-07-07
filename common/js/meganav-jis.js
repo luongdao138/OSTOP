@@ -1,0 +1,163 @@
+jQuery(function($){
+	//mNavCoffee
+	var coffeeHtml = '';
+	coffeeHtml += '<div id="mNavCoffeeSub" class="megaNavSab col3">';
+	coffeeHtml += '<ul>';
+	coffeeHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/coffee/">コーヒー トップ</a></span>';
+	coffeeHtml += '<ul>';
+	coffeeHtml += '<li><a href="http://store.starbucks.co.jp/coffee/lineup/">コーヒー豆</a></li>';
+	coffeeHtml += '<li><a href="http://store.starbucks.co.jp/brewing/lineup/">コーヒー器具</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/coffee/origami/">スターバックス オリガミ&reg;</a></li>';
+	coffeeHtml += '<li><a href="http://store.starbucks.co.jp/coffee/via/">スターバックス ヴィア&reg;</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/reserve/">スターバックス リザーブ&reg;</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/oos/">スーパー・コンビニ・百貨店</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/story/">コーヒーへのこだわり</a></li>';
+	coffeeHtml += '</ul>';
+	coffeeHtml += '<ul>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/seminar/">コーヒーセミナー</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/coffee/recipe/">アレンジ コーヒー レシピ</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/howto/coffee/">自宅でスターバックス</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/howto/office/">オフィスでスターバックス</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/csr/ethicalsourcing/">倫理的な調達</a></li>';
+	coffeeHtml += '<li><a href="https://www.starbucks.co.jp/faq/about_products.html">よくある質問</a></li>';
+	coffeeHtml += '</ul>';
+	coffeeHtml += '<p class="banner"><a href="https://www.starbucks.co.jp/coffee/?nid=pc_mega_coffee"><img src="'+document.location.protocol+'//www.starbucks.co.jp/common/images/mnav-bnr-coffee-ovoff.jpg" width="132" height="151" alt="Coffee" /></a></p>';
+	coffeeHtml += '</li></ul>';
+	coffeeHtml += '<!-- //megaNavSab --></div>';
+	//console.log(coffeeHtml);
+	$('#mNavCoffee').append(coffeeHtml);
+
+	//mNavProducts
+	var productHtml = '';
+	productHtml += '<div id="mNavProductsSub" class="megaNavSab col3">';
+	productHtml += '<ul>';
+	productHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/products/">商品情報 トップ</a></span>';
+	productHtml += '<ul>';
+	productHtml += '<li><a href="http://store.starbucks.co.jp/products/new/">季節のおすすめ</a></li>';
+	productHtml += '<li><a href="http://store.starbucks.co.jp/products/lineup/">ビバレッジ メニュー</a></li>';
+	productHtml += '<li><a href="http://store.starbucks.co.jp/food/">フード メニュー</a></li>';
+	productHtml += '<li><a href="http://store.starbucks.co.jp/tea/">ティー</a></li>';
+	productHtml += '<li><a href="http://store.starbucks.co.jp/goods/">タンブラー&amp;グッズ</a></li>';
+	productHtml += '<li><a href="http://store.starbucks.co.jp/coffee/lineup/">コーヒー豆</a></li>';
+	productHtml += '<li style="margin-bottom:0px;"><a href="http://store.starbucks.co.jp/brewing/lineup/">コーヒー器具</a></li>';
+	productHtml += '</ul>';
+	productHtml += '<ul style="padding-bottom:10px;">';
+	productHtml += '<li><a href="https://www.starbucks.co.jp/card/sbcard.html">スターバックス カード</a></li>';
+	productHtml += '<li><a href="https://gift.starbucks.co.jp/guide">Starbucks e-Gift</a></li>';
+	productHtml += '<li><a href="https://www.starbucks.co.jp/howto/store/">How to オーダー</a></li>';
+	productHtml += '<li><a href="https://www.starbucks.co.jp/howto/customize/index.html">How to カスタマイズ</a></li>';
+	productHtml += '<li><a href="https://www.starbucks.co.jp/allergy/">カロリー・アレルギー・原料原産地情報</a></li>';
+	productHtml += '<li style="margin-bottom:0px;"><a href="https://www.starbucks.co.jp/faq/about_products.html">よくある質問</a></li>';
+	productHtml += '</ul>';
+	productHtml += '<p class="banner"><a href="https://www.starbucks.co.jp/products/?nid=pc_mega_lto"><img src="'+document.location.protocol+'//www.starbucks.co.jp/common/images/mnav-bnr-products-ovoff.jpg" width="132" height="151" alt="Products" /></a></p>';
+	productHtml += '<ul class="rtdArea">';
+	productHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/discoveries/">ディスカバリーズ（コンビニ商品）</a></span>';
+	productHtml += '</li></ul>';
+	productHtml += '<!-- //megaNavSab --></div>';
+	//console.log(productHtml); 
+	$('#mNavProducts').append(productHtml);
+
+	//mNavCard
+	var cardHtml = '';
+	cardHtml += '<div id="mNavCardSub" class="megaNavSab col2">';
+	cardHtml += '<ul>';
+	cardHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/card/">スターバックス カード トップ</a></span>';
+	cardHtml += '<ul>';
+	cardHtml += '<li><a href="https://www.starbucks.co.jp/howto/card/">スターバックス カードとは</a></li>';
+	cardHtml += '<li><a href="https://www.starbucks.co.jp/card/mobile/">モバイル スターバックス カード</a></li>';
+	cardHtml += '<li><a href="http://store.starbucks.co.jp/goods/sbcard/">デザイン一覧</a></li>';
+	cardHtml += '<li><a href="https://card.starbucks.co.jp/mystarbucks/card/cardinfo/">カード登録・管理</a></li>';
+	cardHtml += '<li><a href="https://card.starbucks.co.jp/mystarbucks/card/inquire/">残高照会</a></li>';
+	cardHtml += '<li><a href="https://www.starbucks.co.jp/card/rules.html">法定表示事項・約款</a></li>';
+	cardHtml += '<li><a href="https://www.starbucks.co.jp/faq/about_card.html">よくあるご質問</a></li>';
+	cardHtml += '</ul>';
+	cardHtml += '<p class="banner"><a href="https://www.starbucks.co.jp/card/?nid=pc_mega_card"><img src="'+document.location.protocol+'//www.starbucks.co.jp/common/images/mnav-bnr-card-ovoff.jpg" width="132" height="151" alt="Card" /></a></p>';
+	cardHtml += '</li></ul>';
+	cardHtml += '<!-- //megaNavSab --></div>';
+	//console.log(cardHtml);
+	$('#mNavCard').append(cardHtml);
+
+	//mNavStore
+	var storeHtml = '';
+	storeHtml += '<div id="mNavStoreSub" class="megaNavSab col2">';
+	storeHtml += '<ul>';
+	storeHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/store/">店舗情報 トップ</a></span>';
+	storeHtml += '<ul>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/store/search/">店舗検索</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/store/concept/">コンセプトストア</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/inspired/">Inspired by STARBUCKS&trade;</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/event/">イベント情報</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/seminar/">コーヒーセミナー</a></li>';
+	storeHtml += '</ul>';
+	storeHtml += '<ul>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/recruit/barista/">アルバイト</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/csr/environment/">環境面でのリーダーシップ</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/csr/community/">コミュニティへの貢献</a></li>';
+	storeHtml += '<li><a href="https://www.starbucks.co.jp/faq/about_store.html">よくあるご質問</a></li>';
+	storeHtml += '</ul>';
+	storeHtml += '</li></ul>';
+	storeHtml += '<!-- //megaNavSab --></div>';
+	//console.log(storeHtml);
+	$('#mNavStore').append(storeHtml);
+
+	//mNavAbout
+	var aboutHtml = '';
+	aboutHtml += '<div id="mNavAboutSub" class="megaNavSab col1">';
+	aboutHtml += '<ul>';
+	aboutHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/about_us/">企業情報 トップ</a></span>';
+	aboutHtml += '<ul>';
+	aboutHtml += '<li><a href="https://www.starbucks.co.jp/company/">会社案内</a></li>';
+	aboutHtml += '<li><a href="https://www.starbucks.co.jp/press_release/">プレスリリース</a></li>';
+	aboutHtml += '<li><a href="https://www.starbucks.co.jp/ir/">IR情報</a></li>';
+	aboutHtml += '<li><a href="https://www.starbucks.co.jp/csr/">CSRについて</a></li>';
+	aboutHtml += '<li><a href="https://www.starbucks.co.jp/about_us/policy/security_policy.html">ポリシー</a></li>';
+	aboutHtml += '<li><a href="https://www.starbucks.co.jp/faq/">よくあるご質問</a></li>';
+	aboutHtml += '</ul>';
+	aboutHtml += '</li></ul>';
+	aboutHtml += '<!-- //megaNavSab --></div>';
+	//console.log(aboutHtml);
+	$('#mNavAbout').append(aboutHtml);
+
+	//mNavRecruit
+	var recruitHtml = '';
+	recruitHtml += '<div id="mNavAboutSub" class="megaNavSab col1">';
+	recruitHtml += '<ul>';
+	recruitHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/recruit/">採用情報 トップ</a></span>';
+	recruitHtml += '<ul>';
+	recruitHtml += '<li><a href="https://www.starbucks.co.jp/recruit/shinsotsu/">新卒採用</a></li>';
+	recruitHtml += '<li><a href="https://www.starbucks.co.jp/recruit/barista/">アルバイト</a></li>';
+	recruitHtml += '<li><a href="https://www.starbucks.co.jp/recruit/storejob/">中途採用(店舗)</a></li>';
+	recruitHtml += '<li><a href="https://www.starbucks.co.jp/recruit/career/">中途採用(サポートセンター)</a></li>';
+	recruitHtml += '<li><a href="https://www.starbucks.co.jp/faq/about_recruit.html">よくあるご質問</a></li>';
+	recruitHtml += '<li><a href="https://www.starbucks.co.jp/company/">会社案内</a></li>';
+	recruitHtml += '</ul>';
+	recruitHtml += '</li></ul>';
+	recruitHtml += '<!-- //megaNavSab --></div>';
+	//console.log(recruitHtml);
+	$('#mNavRecruit').append(recruitHtml);
+
+	//mNavOnlineStore
+	var onlinestoreHtml = '';
+	onlinestoreHtml += '<div id="mNavOnlinestoreSub" class="megaNavSab col2">';
+	onlinestoreHtml += '<ul>';
+	onlinestoreHtml += '<li><span class="linkTop"><a href="https://www.starbucks.co.jp/onlinestore/">オンラインストア トップ</a></span>';
+	onlinestoreHtml += '<ul>';
+	onlinestoreHtml += '<li><a href="http://store.starbucks.co.jp/products/new/online/">New</a></li>';
+	onlinestoreHtml += '<li><a href="http://store.starbucks.co.jp/coffee/lineup/online/">コーヒー豆</a></li>';
+	onlinestoreHtml += '<li><a href="http://store.starbucks.co.jp/tea/online/">ティー</a></li>';
+	onlinestoreHtml += '<li><a href="http://store.starbucks.co.jp/goods/online/">タンブラー＆グッズ</a></li>';
+	onlinestoreHtml += '<li><a href="http://store.starbucks.co.jp/brewing/online/">コーヒー器具</a></li>';
+	onlinestoreHtml += '<li><a href="http://store.starbucks.co.jp/gift/online/">Gift</a></li>';
+	onlinestoreHtml += '</ul>';
+	onlinestoreHtml += '<p class="banner"><a href="https://www.starbucks.co.jp/onlinestore/?nid=pc_mega_onlinstore"><img src="'+document.location.protocol+'//www.starbucks.co.jp/common/images/mnav-bnr-online-ovoff.jpg" width="132" height="151" alt="OnlineStoe" /></a></p>';
+	onlinestoreHtml += '<ul class="bottom">';
+	onlinestoreHtml += '<li><a href="https://cart.starbucks.co.jp/b/pc/PWCheck.html?mthd=doPasswordCheck">ご注文状況</a></li>';
+	onlinestoreHtml += '<li><a href="https://www.starbucks.co.jp/onlinestore/guide/">ご利用ガイド</a></li>';
+	onlinestoreHtml += '<li><a href="https://www.starbucks.co.jp/onlinestore/guide/index.html#faq">よくあるご質問</a></li>';
+	onlinestoreHtml += '</ul>';
+	onlinestoreHtml += '</li></ul>';
+	onlinestoreHtml += '<!-- //megaNavSab --></div>';
+	//console.log(onlinestoreHtml);
+	$('#mNavOnlineStore').append(onlinestoreHtml);
+
+});

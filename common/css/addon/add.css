@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/*-------------------
+[discription]
+only add Style
+-------------------*/
+
+/*-----------------*/
+/* add */
+/*-----------------*/
+#add{
+width:443px;
+height:97px;
+margin:0;
+color:#fff;
+background:url(/common/images/add/add-bg.png) 0 0 no-repeat;
+bottom:10px;
+right:0;
+position: fixed;
+z-index:1000;
+visibility:hidden;
+}
+
+#add:after{
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+#add #addIn{
+margin:5px 5px 5px 4px;
+position:relative;
+}
+
+#add #addIn #openarr{
+width:17px;
+margin-right:10px;
+position:absolute;
+top:0;
+left:0;
+visibility:visibility;
+}
+
+#add #addIn #closearr{
+width:17px;
+margin-right:10px;
+position:absolute;
+top:0;
+left:0;
+visibility:hidden;
+}
+
+/** 2012.08.02 **/
+
+#add #addIn #col1{
+width:57px;
+margin-top:15px;
+padding:0 10px 0 27px;
+float:left;
+}
+
+#add #addIn #col2{
+width:320px;
+margin:15px 0 0 0;
+float:left;
+}
+
+*:first-child+html #add #addIn #col2{
+width:320px;
+height:15px;
+margin:-7px 0 0 0;
+padding:0 0 0 0;
+float:left;
+position:relative;
+}
+
+#add #addIn #col2 h2{
+margin:2px 0 4px 0;
+padding:0;
+}
+
+#add #addIn #col2 p{
+margin:0 0 0 3px;
+padding:0;
+}
+
+#add #addIn #col3{
+width:11px;
+height: 10px;
+margin-top:5px;
+float:right;
+}
+/** 2012.08.02 **/
+
+#add #addIn #close{
+width:11px;
+height: 10px;
+}
+
+/*** a ***/
+#add a{
+color:#fff;
+}
+
+/** arrow(link) **/
+#add a.arrow{
+background:url(/common/images/add/arrow-white.png) no-repeat left 0.4em;
+padding-top:3px;
+padding-left:14px;
+display:inline-block;
+}
+#add a.arrow:link,
+#add a.arrow:visited{
+text-decoration:none;
+}
+#add a.arrow:hover{
+background-image:url(/common/images/add/arrow-white.png);
+text-decoration:underline;
+}
+#add a.arrow.areaLinkHover{
+background:url(/common/images/add/arrow-white.png) no-repeat left 0.4em;
+text-decoration:underline;
+}

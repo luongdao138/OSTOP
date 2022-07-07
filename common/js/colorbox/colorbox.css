@@ -1,0 +1,266 @@
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+#cboxContent {
+  position: relative;
+}
+
+#cboxLoadedContent {
+  overflow: auto;
+}
+
+#cboxTitle {
+  margin: 0;
+}
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+}
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay {
+  background: #2C2A29;
+}
+
+#colorbox {
+  -webkit-box-shadow: 0 0 5px rgba(44, 42, 41, .08);
+  -moz-box-shadow: 0 0 5px rgba(44, 42, 41, .08);
+  box-shadow: 0 0 5px rgba(44, 42, 41, .08);
+}
+
+/*#cboxTopLeft{width:48px; height:48px; background:url(/common/js/colorbox/images/border1.png) no-repeat 0 0;}*/
+/*#cboxTopCenter{height:48px; background:url(/common/js/colorbox/images/border1.png) repeat-x 0 -96px;}*/
+/*#cboxTopRight{width:48px; height:48px; background:url(/common/js/colorbox/images/border1.png) no-repeat -48px 0;}*/
+/*#cboxBottomLeft{width:48px; height:48px; background:url(/common/js/colorbox/images/border1.png) no-repeat 0 -48px;}*/
+/*#cboxBottomCenter{height:48px; background:url(/common/js/colorbox/images/border1.png) repeat-x 0 -144px;}*/
+/*#cboxBottomRight{width:48px; height:48px; background:url(/common/js/colorbox/images/border1.png) no-repeat -48px -48px;}*/
+/*#cboxMiddleLeft{width:48px; background:url(/common/js/colorbox/images/border2.png) repeat-y 0 0;}*/
+/*#cboxMiddleRight{width:48px; background:url(/common/js/colorbox/images/border2.png) repeat-y -48px 0;}*/
+#cboxContent {
+  background: #fff;
+  display: inline-block;
+}
+
+.cboxIframe {
+  background: #fff;
+}
+
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+#cboxTitle {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #999;
+}
+
+#cboxCurrent {
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+  color: #999;
+}
+
+#cboxSlideshow {
+  position: absolute;
+  bottom: 0px;
+  right: 42px;
+  color: #444;
+}
+
+#cboxPrevious {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  left: -45px;
+  background: url("/common/images/img-btn-modal-prev.png") left top no-repeat;
+  font-size: 0.1em;
+  text-indent: -9999px;
+}
+
+#cboxNext {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  right: -45px;
+  background: url("/common/images/img-btn-modal-next.png") left top no-repeat;
+  font-size: 0.1em;
+  text-indent: -9999px;
+}
+
+#cboxLoadingOverlay {
+  background: url(/common/js/colorbox/images/loading.gif) no-repeat 5px 5px;
+}
+
+#cboxClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url("/common/images/img-btn-modal-close.png") left top no-repeat;
+  font-size: 0.1em;
+  text-indent: -9999px;
+}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+}
+
+/*  2015.06.24 オーバーレイ改修
+--------------------------------------------------------------------- */
+body #cboxOverlay + body #colorbox { background: #fff; }
+@media all and (max-width: 599px) {
+	body #cboxOverlay + body #colorbox { left: 0!important;; }
+	body #colorbox{
+		width: 100%!important;
+		min-width: 320px;
+	}
+	#colorbox #cboxWrapper,
+	#colorbox #cboxContent,
+	#colorbox #cboxLoadedContent {
+		width: 100%!important;
+		height: 100%!important;
+	}
+	#colorbox, #cboxOverlay, #cboxWrapper { overflow: visible !important; }
+	#colorbox #cboxPrevious {
+		width: 21px;
+		height: 21px;
+		top: 178px;
+		left: 10px;
+		background: url("/common/images/img-btn-modal-prev-sp.png") left top no-repeat;
+		-webkit-background-size: 21px;
+		-moz-background-size: 21px;
+		-o-background-size: 21px;
+		background-size: 21px;
+	}
+	#cboxNext {
+		width: 21px;
+		height: 21px;
+		top: 178px;
+		right: 10px;
+		background: url("/common/images/img-btn-modal-next-sp.png") left top no-repeat;
+		-webkit-background-size: 21px;
+		-moz-background-size: 21px;
+		-o-background-size: 21px;
+		background-size: 21px;
+	}
+	#colorbox #cboxClose {
+	right: 20px;
+	top: 20px;
+		width: 15px;
+		height: 15px;
+		background: url("/common/images/img-btn-modal-close-sp.png") left top no-repeat;
+		-webkit-background-size: 15px;
+		-moz-background-size: 15px;
+		-o-background-size: 15px;
+		background-size: 15px;
+	}
+	#cboxTopLeft,
+	#cboxTopCenter,
+	#cboxTopRight,
+	#cboxBottomLeft,
+	#cboxBottomRight,
+	#cboxBottomCenter { display: none; }
+	#cboxTopLeft{ background: none; }
+	#cboxTopCenter{ background: none; }
+	#cboxTopRight{ background: none; }
+	#cboxBottomLeft{ background: none; }
+	#cboxBottomCenter{ background: none; }
+	#cboxBottomRight{ background: none; }
+	#cboxMiddleLeft{ background: none; }
+	#cboxMiddleRight{ background: none; }
+	#colorbox #cboxContent {
+  -webkit-box-shadow: 0 0 5px rgba(44, 42, 41, .08);
+  -moz-box-shadow: 0 0 5px rgba(44, 42, 41, .08);
+  box-shadow: 0 0 5px rgba(44, 42, 41, .08);
+	}
+}
+/*---------------------------------------------------------------------------- 
+オーバーレイ改修 END*/
+
+
+/*  2015.11.09 cboxLoadingOverlay修正
+--------------------------------------------------------------------- */
+#cboxLoadingOverlay {
+ 	background: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#cboxLoadingGraphic {
+  background: url(/common/js/colorbox/images/loading.gif) no-repeat 5px 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+}
+/*---------------------------------------------------------------------------- 
+cboxLoadingOverlay修正 END*/

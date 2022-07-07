@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/*-------------------
+[discription]
+only matching Style
+-------------------*/
+
+/*-----------------*/
+/* matching */
+/*-----------------*/
+.newContents #matching{
+margin-bottom:30px;
+padding:15px 20px;
+background-color:#E2DED8;
+}
+.newContents #matching label{
+margin-right:20px;
+}
+.newContents #matching #matchingSel{
+margin-right:20px;
+}
+.newContents #matchingBtn img{
+vertical-align:middle;
+}
+* html .newContents #matchingBtn img{
+vertical-align:top;
+}

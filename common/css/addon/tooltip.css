@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*-------------------
+[discription]
+only tooltip Style
+-------------------*/
+
+/*-----------------*/
+/* tooltip */
+/*-----------------*/
+#contents #tooltipInfo{
+display:none;
+position:absolute;
+padding-top:10px;
+width:134px;
+background:url(/common/images/tooltip/bg-tooltip-top.png) left top no-repeat;
+z-index:1;
+line-height:1.5;
+}
+#contents #tooltipInfo span{
+display:block;
+padding:0 10px 10px 14px;
+background:url(/common/images/tooltip/bg-tooltip-btm.png) left bottom no-repeat;
+color:#FFF;
+}
+.tooltipContents{
+display:none;
+}
