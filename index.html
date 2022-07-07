@@ -12,34 +12,54 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no">
-<title><?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン</title>
-<?php include(INCLUDE_DIR."/meta.html"); ?>
-<?php include(INCLUDE_DIR."/css2022.html"); ?>
-<?php include(INCLUDE_DIR."/js.html"); ?>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>
+      <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
+    </title>
+    <?php include(INCLUDE_DIR."/meta.html"); ?>
+    <?php include(INCLUDE_DIR."/css2022.html"); ?>
+    <?php include(INCLUDE_DIR."/js.html"); ?>
 
-<!-- +++++ local css +++++ -->
-<!-- ここにCSSを記載してください -->
-<!-- <link media="all" rel="stylesheet" href="/top/css/top.css" type="text/css" /> -->
-<!-- +++++ /local css +++++ -->
+    <!-- +++++ local css +++++ -->
+    <!-- ここにCSSを記載してください -->
+    <!-- <link media="all" rel="stylesheet" href="/top/css/top.css" type="text/css" /> -->
+    <!-- +++++ /local css +++++ -->
+    <link rel="stylesheet" href="/top/css/reset.css" />
+    <link rel="stylesheet" href="/top/css/common.css" />
 
-<!-- +++++ local script +++++ -->
-<!-- ここにJavaScriptを記載してください -->
-<!-- <script src="/top/js/top.js"></script> -->
-<!-- +++++ /local script +++++ -->
-</head>
-<body>
-<noscript>
-<p class="noscript">当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。</p>
-</noscript>
-<?php include(INCLUDE_DIR."/header.html"); ?>
-<div class="mainContents notExNav">
-<!-- ここからコンテンツを作成してください -->
-ここにコンテンツ
-<!-- ここまでコンテンツを作成してください -->
-</div><!-- /.mainContents -->
-<?php include(INCLUDE_DIR."/footer.html"); ?>
-</body>
+    <link rel="stylesheet" href="/top/css/index.css" />
+
+    <!-- +++++ local script +++++ -->
+    <!-- ここにJavaScriptを記載してください -->
+    <!-- <script src="/top/js/top.js"></script> -->
+    <!-- +++++ /local script +++++ -->
+  </head>
+  <body>
+    <noscript>
+      <p class="noscript">
+        当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。
+      </p>
+    </noscript>
+    <?php include(INCLUDE_DIR."/header.html"); ?>
+    <div class="mainContents notExNav">
+      <!-- ここからコンテンツを作成してください -->
+      <div class="banner">
+        <a href="#" class="banner__img banner__img-1">
+          <img src="/top/images/banner/img-1.png" alt="" />
+        </a>
+        <a href="#" class="banner__img banner__img-2">
+          <img src="/top/images/banner/img-2.png" alt="" />
+        </a>
+        <a href="#" class="banner__img banner__img-3">
+          <img src="/top/images/banner/img-3.png" alt="" />
+          <!-- <img src="../assets/starbuck/hero/img-4.png" alt="" /> -->
+        </a>
+      </div>
+      <!-- ここまでコンテンツを作成してください -->
+    </div>
+    <!-- /.mainContents -->
+    <?php include(INCLUDE_DIR."/footer.html"); ?>
+  </body>
 </html>
