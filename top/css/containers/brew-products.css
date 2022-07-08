@@ -1,16 +1,18 @@
-@import url(/top/css/components/casourel.css);
+@import url(/components/casourel.css);
 
 /* Brew Products */
 .brew-products {
-  padding-top: 80px;
-  padding-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 35px;
   overflow-x: hidden;
+  background-color: #006241;
 }
 
 .brew-products__title {
   margin-bottom: 36px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: SoDoSans;
+  color: #fff;
 }
 
 .brew-products-carousel {
@@ -18,13 +20,14 @@
   position: relative;
   padding-left: 16px;
   transition: all 0.4s;
+  margin-bottom: 32.8px;
 }
 
 .brew-products-carousel > * {
   margin-right: 8px;
 }
 
-.brew-products-carousel .card {
+.brew-products__card {
   width: 167px;
   height: 248px;
   border-radius: 12px;
@@ -33,11 +36,11 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-.card__inner {
+.brew-products__card__inner {
   position: relative;
 }
 
-.card__inner::after {
+.brew-products__card__inner::after {
   content: '';
   position: absolute;
   z-index: 5;
@@ -52,19 +55,19 @@
   right: 0;
 }
 
-.card__inner,
-.card__inner__img,
-.card__inner__img img {
+.brew-products__card__inner,
+.brew-products__card__inner__img,
+.brew-products__card__inner__img img {
   height: 100%;
   display: block;
 }
 
-.card__inner__img img {
+.brew-products__card__inner__img img {
   object-fit: cover;
   width: 100%;
 }
 
-.card__inner__info {
+.brew-products__card__inner__info {
   position: absolute;
   z-index: 10;
   bottom: 0;
@@ -74,11 +77,11 @@
   flex-direction: column-reverse;
 }
 
-.card__inner__desc {
+.brew-products__card__inner__desc {
   font-size: 1.3rem;
 }
 
-.card__inner__time {
+.brew-products__card__inner__time {
   display: block;
   font-size: 1rem;
   margin-right: 0.5rem;
@@ -86,26 +89,65 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
-.brew-products-carousel > *:last-child {
-  margin-right: 0;
-}
 .carousel__item:not(.active) {
   opacity: 1;
   pointer-events: all;
 }
 
+/* Bottom */
+.brew-products__bottom {
+   padding-inline: 12px;
+   display: grid;
+   gap: 16px;
+   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.brew-products__bottom__items {
+   /* background-color: red;   */
+   display: flex;
+   align-items: center;
+}
+
+.brew-products__bottom__items__img {
+   flex-shrink: 0;
+   margin-right: 15px;
+}
+
+.brew-products__bottom__items__img img {
+   width: 77px;
+   aspect-ratio: 1;
+   object-fit: cover;
+   border-radius: 100%;
+}
+
+.brew-products__bottom__items__desc {
+   font-size: 1.3rem;
+   font-weight: 500;
+   line-height: 1.8rem;
+   color: #fff;
+}
+
 @media screen and (min-width: 520px) {
-  .brew-products-carousel .card {
+  .brew-products  {
+     background-color: unset;
+     padding-top: 80px;
+     padding-bottom: 90px;
+  }
+  .brew-products__title {
+     color: rgba(0, 0, 0, 0.87);
+     font-size: 2rem;
+  }
+ .brew-products__card {
     width: 224px;
     height: auto;
   }
 
-  .card__inner::after {
+  .brew-products__card__inner::after {
     opacity: 0;
     visibility: hidden;
   }
 
-  .card__inner__info {
+  .brew-products__card__inner__info {
     position: relative;
     padding: 1.2rem 1.4rem;
     min-height: 150px;
@@ -114,13 +156,28 @@
     justify-content: space-between;
   }
 
-  .card__inner,
-  .card__inner__img,
-  .card__inner__img img {
+  .brew-products__card__inner,
+  .brew-products__card__inner__img,
+  .brew-products__card__inner__img img {
     height: unset;
   }
 
   .carousel {
     padding-left: 50px;
   }
+
+  .brew-products__bottom {
+    gap: 30px;
+    padding-inline: 75px;
+ }
+
+ .brew-products__bottom__items__img img {
+  width: 115px;
+}
+
+.brew-products__bottom__items__desc {
+ color: rgba(0, 0, 0, 0.87);
+}  
+
+ 
 }
