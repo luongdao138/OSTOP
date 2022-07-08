@@ -1,5 +1,3 @@
-@import url(/components/casourel.css);
-
 /* Brew Products */
 .brew-products {
   padding-top: 52px;
@@ -97,13 +95,6 @@
 }
 
 /* Bottom */
-.brew-products-container {
-  width: 100%;
-  max-width: 1264px;
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
 .brew-products__bottom {
   display: grid;
   gap: 16px;
@@ -176,10 +167,6 @@
   .brew-products__bottom {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .brew-products-container {
-    padding-inline: 40px;
   }
 
   .brew-products__bottom__items__desc {
