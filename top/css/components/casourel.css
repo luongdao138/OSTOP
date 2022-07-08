@@ -1,0 +1,78 @@
+/* ------------------------
+carousel
+--------------------------- */
+.carousel-wrap {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.carousel-wrap .arrow-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%);
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: all 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-wrap .arrow-button.show {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.carousel-wrap .arrow-button--prev {
+  left: 16px;
+}
+
+.carousel-wrap .arrow-button--next {
+  right: 16px;
+}
+
+.carousel-wrap .arrow-button svg {
+  width: 8px;
+  height: 14px;
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  padding-left: 16px;
+  transition: all 0.4s;
+}
+
+.carousel > * {
+  margin-right: 16px;
+}
+
+.carousel > *:last-child {
+  margin-right: 0;
+}
+
+/* .carousel__item:not(.active) {
+  opacity: 0.65;
+  pointer-events: none;
+} */
+
+@media screen and (min-width: 520px) {
+  .carousel > * {
+    margin-right: 32px;
+  }
+  .carousel-wrap .arrow-button--prev {
+    left: 40px;
+  }
+  .carousel-wrap .arrow-button--next {
+    right: 40px;
+  }
+}

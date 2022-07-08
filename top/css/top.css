@@ -1,0 +1,11 @@
+@import url(/top/css/reset.css);
+@import url(/top/css/common.css);
+
+@import url(/top/css/containers/banner.css);
+@import url(/top/css/containers/brew-products.css);
+
+.mainContents {
+  width: 100%;
+  margin: auto;
+  max-width: 1184px;
+}

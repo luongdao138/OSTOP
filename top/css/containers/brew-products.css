@@ -1,0 +1,126 @@
+@import url(/top/css/components/casourel.css);
+
+/* Brew Products */
+.brew-products {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  overflow-x: hidden;
+}
+
+.brew-products__title {
+  margin-bottom: 36px;
+  font-size: 2rem;
+  font-family: SoDoSans;
+}
+
+.brew-products-carousel {
+  display: flex;
+  position: relative;
+  padding-left: 16px;
+  transition: all 0.4s;
+}
+
+.brew-products-carousel > * {
+  margin-right: 8px;
+}
+
+.brew-products-carousel .card {
+  width: 167px;
+  height: 248px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.card__inner {
+  position: relative;
+}
+
+.card__inner::after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.9) 20%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card__inner,
+.card__inner__img,
+.card__inner__img img {
+  height: 100%;
+  display: block;
+}
+
+.card__inner__img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__inner__info {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column-reverse;
+}
+
+.card__inner__desc {
+  font-size: 1.3rem;
+}
+
+.card__inner__time {
+  display: block;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  font-family: SoDoSans;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.brew-products-carousel > *:last-child {
+  margin-right: 0;
+}
+.carousel__item:not(.active) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 520px) {
+  .brew-products-carousel .card {
+    width: 224px;
+    height: auto;
+  }
+
+  .card__inner::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .card__inner__info {
+    position: relative;
+    padding: 1.2rem 1.4rem;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card__inner,
+  .card__inner__img,
+  .card__inner__img img {
+    height: unset;
+  }
+
+  .carousel {
+    padding-left: 50px;
+  }
+}
