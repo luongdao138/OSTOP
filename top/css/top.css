@@ -2,6 +2,7 @@
 @import url(/top/css/containers/banner.css);
 @import url(/top/css/containers/brew-products.css);
 @import url(/top/css/containers/online-store.css);
+@import url(/top/css/containers/notification.css);
 
 html {
   --max-width-PC: 1184px;
@@ -25,6 +26,22 @@ html {
 .line-gray {
   height: 8px;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ex-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: max-content;
+  margin-left: auto;
+
+  color: #00754A;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+}
+
+.ex-link:hover {
+  opacity: .85;
 }
 
 @media (min-width: 640px) {
