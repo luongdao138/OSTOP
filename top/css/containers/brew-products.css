@@ -2,14 +2,14 @@
 
 /* Brew Products */
 .brew-products {
-  padding-top: 50px;
+  padding-top: 52px;
   padding-bottom: 35px;
   overflow-x: hidden;
   background-color: #006241;
 }
 
 .brew-products__title {
-  margin-bottom: 36px;
+  margin-bottom: 42px;
   font-size: 1.5rem;
   font-family: SoDoSans;
   color: #fff;
@@ -18,8 +18,8 @@
 .brew-products-carousel {
   display: flex;
   position: relative;
-  padding-left: 16px;
   transition: all 0.4s;
+  padding-left: 16px;
   margin-bottom: 32.8px;
 }
 
@@ -34,6 +34,7 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
 }
 
 .brew-products__card__inner {
@@ -79,6 +80,7 @@
 
 .brew-products__card__inner__desc {
   font-size: 1.3rem;
+  line-height: 2rem;
 }
 
 .brew-products__card__inner__time {
@@ -95,49 +97,58 @@
 }
 
 /* Bottom */
+.brew-products-container {
+  width: 100%;
+  max-width: 1264px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
 .brew-products__bottom {
-   padding-inline: 12px;
-   display: grid;
-   gap: 16px;
-   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display: grid;
+  gap: 16px;
+  padding-inline: 1rem;
 }
 
 .brew-products__bottom__items {
-   /* background-color: red;   */
-   display: flex;
-   align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .brew-products__bottom__items__img {
-   flex-shrink: 0;
-   margin-right: 15px;
+  flex-shrink: 0;
+  margin-right: 15px;
 }
 
 .brew-products__bottom__items__img img {
-   width: 77px;
-   aspect-ratio: 1;
-   object-fit: cover;
-   border-radius: 100%;
+  width: 77px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 .brew-products__bottom__items__desc {
-   font-size: 1.3rem;
-   font-weight: 500;
-   line-height: 1.8rem;
-   color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #fff;
 }
 
-@media screen and (min-width: 520px) {
-  .brew-products  {
-     background-color: unset;
-     padding-top: 80px;
-     padding-bottom: 90px;
+@media screen and (min-width: 640px) {
+  .brew-products-carousel {
+    padding-left: 40px;
+  }
+  .brew-products {
+    background-color: unset;
+    padding-top: 80px;
+    padding-bottom: 91.7px;
   }
   .brew-products__title {
-     color: rgba(0, 0, 0, 0.87);
-     font-size: 2rem;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 2rem;
+    margin-bottom: 36.5px;
   }
- .brew-products__card {
+  .brew-products__card {
     width: 224px;
     height: auto;
   }
@@ -162,22 +173,32 @@
     height: unset;
   }
 
-  .carousel {
-    padding-left: 50px;
+  .brew-products__bottom {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brew-products-container {
+    padding-inline: 40px;
+  }
+
+  .brew-products__bottom__items__desc {
+    color: rgba(0, 0, 0, 0.87);
   }
 
   .brew-products__bottom {
-    gap: 30px;
-    padding-inline: 75px;
- }
-
- .brew-products__bottom__items__img img {
-  width: 115px;
+    padding-inline: 0rem;
+  }
 }
 
-.brew-products__bottom__items__desc {
- color: rgba(0, 0, 0, 0.87);
-}  
+@media screen and (min-width: 768px) {
+  .brew-products__bottom__items__img img {
+    width: 115px;
+  }
+}
 
- 
+@media screen and (min-width: 1024px) {
+  .brew-products__bottom {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -110,7 +110,7 @@ carousel
   display: flex;
   flex: 1;
   width: 100%;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 .carousel-wrap .arrow-button {
   position: absolute;
