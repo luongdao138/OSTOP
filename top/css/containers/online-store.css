@@ -52,6 +52,20 @@
   justify-content: space-between;
 }
 
+.card__inner__text-header > .text-limit {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.card__inner__text-header > .products-tag-02 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .online-store__card__inner__text__header {
   display: flex;
   flex-direction: column;
