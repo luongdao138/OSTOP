@@ -92,13 +92,15 @@ function animateCarousel() {
     })();
 
     for (let i = 0; i < activeCarouselItemNum; i++) {
-      carouselItems[i].classList.add('active');
+      if(carouselItems[i]) carouselItems[i].classList.add('active');
     }
 
-    nextButton.classList.add('show');
+    maxPage = Math.ceil(carouselItemLength / activeCarouselItemNum);
+
+    if(maxPage != 1) nextButton.classList.add('show');
+  
     prevButton.classList.remove('show');
     carouselInner.style.transform = 'translateX(-' + position + 'px)';
-    maxPage = Math.ceil(carouselItemLength / activeCarouselItemNum);
 
     // when you click the next button
     nextButton.addEventListener('click', function () {
@@ -163,11 +165,20 @@ function animateCarousel() {
 function showButton(prevButton, nextButton, currentPage, maxPage) {
   if (currentPage == 1) {
     prevButton.classList.remove('show');
+    if(maxPage != 1) {
+      nextButton.classList.add('show');
+    }
   } else if (currentPage == maxPage) {
     nextButton.classList.remove('show');
-  } else {
-    nextButton.classList.add('show');
     prevButton.classList.add('show');
+  } else {
+    if(currentPage > maxPage) {
+      nextButton.classList.remove('show');
+      prevButton.classList.add('show');
+    } else {
+      nextButton.classList.add('show');
+      prevButton.classList.add('show');
+    }
   }
 }
 
