@@ -6,13 +6,14 @@
 .online-store__header-title {
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 1.04px;
   font-family: 'SoDoSans';
+  line-height: 27px;
 }
 
 .online-store__header-text {
   padding-top: 11px;
   font-size: 12px;
+  line-height: 17px;
   font-weight: normal;
   font-family: 'Noto Sans JP';
 }
@@ -28,7 +29,7 @@
 }
 
 .online-store__card {
-  width: 150px;
+  width: 152px;
   margin-right: 8px;
   margin-bottom: 54px;
   background-color: white;
@@ -41,7 +42,35 @@
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  min-height: 330px;
+  min-height: 320px;
+}
+
+.online-store__card__inner__img {
+  position: relative;
+  margin-bottom: 10px;
+}
+.online-store__card__inner__img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.online-store__card__inner__img .products-tag-01 {
+  display: inline-block;
+  width: 4.8rem;
+  height: 4.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background: #1e3932;
+  border-radius: 50%;
+  padding: 10px 0;
+  line-height: 1.4rem;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
 }
 
 .online-store__card__inner__text {
@@ -56,14 +85,24 @@
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 4;
+  word-wrap: break-word;
   -webkit-box-orient: vertical;
 }
 
 .card__inner__text-header > .products-tag-02 {
   display: -webkit-box;
   overflow: hidden;
+  word-wrap: break-word;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+.card__inner__text-header {
+  flex: 1;
+  overflow: hidden;
+  padding-bottom: 8px;
+  font-size: 11px;
+  line-height: 17px;
 }
 
 .online-store__card__inner__text__header {
@@ -71,18 +110,16 @@
   flex-direction: column;
 }
 
-.card__inner__text-header {
-  flex: 1;
-  overflow: hidden;
-  font-size: 11px;
-  line-height: 17px;
-}
-
 .online-store__card__inner__text > .card__inner__text-footer > .english {
   font-size: 14px;
-  padding-bottom: 8px;
+  line-height: 1.9rem;
   font-family: 'SoDoSans';
   font-weight: normal;
+  display: -webkit-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .online-store__card-button {
