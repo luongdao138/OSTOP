@@ -18,7 +18,7 @@
   position: relative;
   transition: all 0.4s;
   padding-left: 16px;
-  margin-bottom: 32.8px;
+  /* margin-bottom: 32.8px; */
 }
 
 .brew-products-carousel > * {
@@ -79,6 +79,10 @@
 .brew-products__card__inner__desc {
   font-size: 1.3rem;
   line-height: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .brew-products__card__inner__time {
@@ -95,16 +99,10 @@
 }
 
 /* Bottom */
-.brew-products-container {
-  width: 100%;
-  max-width: 1264px;
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
 .brew-products__bottom {
   display: grid;
   gap: 16px;
+  margin-top: 32.8px;
   padding-inline: 1rem;
 }
 
@@ -130,11 +128,15 @@
   font-weight: 500;
   line-height: 1.8rem;
   color: #fff;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 640px) {
   .brew-products-carousel {
-    padding-left: 40px;
+    padding-left: var(--padding-inline);
   }
   .brew-products {
     background-color: unset;
@@ -176,21 +178,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-<<<<<<< HEAD
   .brew-products__bottom__items__desc {
     color: rgba(0, 0, 0, 0.87);
   }
 
-=======
-  .brew-products-container {
-    padding-inline: 40px;
-  }
-
-  .brew-products__bottom__items__desc {
-    color: rgba(0, 0, 0, 0.87);
-  }
-
->>>>>>> c2f5f57 (change image and fix container)
   .brew-products__bottom {
     padding-inline: 0rem;
   }
