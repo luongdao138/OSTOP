@@ -42,7 +42,7 @@
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  min-height: 320px;
+  min-height: 330px;
 }
 
 .online-store__card__inner__img {
