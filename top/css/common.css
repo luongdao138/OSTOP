@@ -55,6 +55,7 @@ body {
   color: rgba(0, 0, 0, 0.87);
   line-height: 2.4rem;
   overflow-x: hidden;
+  letter-spacing: 1.04px;
 }
 img {
   max-width: 100%;
