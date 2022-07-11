@@ -1,9 +1,15 @@
 .stories {
   padding: 7.8rem 0 8.5rem;
+  background-color: #F9F9F9;
 }
 
 .stories__header {
-  margin-bottom: 1.9rem;
+  margin-bottom: 2.9rem;
+}
+
+.stories__header svg {
+  width: 14rem;
+  fill: #18422B;
 }
 
 .stories__link {
@@ -96,6 +102,16 @@
 }
 
 @media screen and (max-width: 520px) {
+  .stories {
+    padding: 7.8rem 0 4.5rem;
+    background-color: #F9F9F9;
+  }
+  
+
+  .stories-carousel {
+    padding-left: 16px;
+  }
+
   .stories-carousel > * {
     margin-right: 6px;
   }
