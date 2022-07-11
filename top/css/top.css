@@ -1,8 +1,12 @@
-@import url(/top/css/reset.css);
-@import url(/top/css/common.css);
-
+/* Top page CSS */
 @import url(/top/css/containers/banner.css);
 @import url(/top/css/containers/brew-products.css);
+@import url(/top/css/containers/online-store.css);
+
+html {
+  --max-width-PC: 1184px;
+  --padding-inline: 40px;
+}
 
 .top-wrapper {
   width: 100%;
@@ -11,9 +15,20 @@
   /* max-width: 1440px; */
 }
 
-.container { 
+.container {
   width: 100%;
-  max-width: 1216px;
+  max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
   margin-inline: auto;
   padding-inline: 16px;
+}
+
+.line-gray {
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: var(--padding-inline);
+  }
 }

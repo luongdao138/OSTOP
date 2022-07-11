@@ -29,7 +29,7 @@
   font-weight: 700;
   color: #fff;
   text-align: center;
-  background: #1E3932;
+  background: #1e3932;
   border-radius: 50%;
   padding: 10px 0;
   line-height: 1.4rem;
@@ -94,7 +94,7 @@
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #AA8875;
+  color: #aa8875;
 }
 .card--XS-button .button--secondary-small {
   font-size: 1.4rem;
@@ -142,7 +142,7 @@ carousel
 .carousel-wrap .arrow-button svg {
   width: 8px;
   height: 14px;
-  fill: rgba(0,0,0,0.6);
+  fill: rgba(0, 0, 0, 0.6);
 }
 .carousel {
   display: flex;
@@ -161,7 +161,7 @@ carousel
   pointer-events: none;
 }
 
-@media screen and (min-width:520px) {
+@media screen and (min-width: 640px) {
   .card--XS-button {
     width: 170px;
   }
@@ -175,6 +175,6 @@ carousel
     right: 40px;
   }
   .carousel {
-    padding-left: 128px;
+    padding-left: 40px;
   }
 }
