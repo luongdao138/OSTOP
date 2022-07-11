@@ -12,6 +12,10 @@
   top: 4.1rem;
 }
 
+.stories-carousel {
+  padding-left: var(--padding-inline);
+}
+
 .stories-carousel > * {
   margin-right: 9px;
 }
