@@ -3,6 +3,7 @@
 @import url(/top/css/containers/brew-products.css);
 @import url(/top/css/containers/online-store.css);
 @import url(/top/css/containers/notification.css);
+@import url(/top/css/containers/stories.css);
 
 html {
   --max-width-PC: 1184px;
