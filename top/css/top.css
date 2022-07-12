@@ -8,7 +8,7 @@
 html {
   --max-width-PC: 1184px;
   --padding-inline: 5.25rem;
-  --padding-inline-SP: 1rem;
+  --padding-inline-SP: 16px;
 }
 
 .top-wrapper {

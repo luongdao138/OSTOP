@@ -11,7 +11,7 @@
   font-size: 1.5rem;
   font-family: SoDoSans;
   color: #fff;
-  word-spacing: 1.6rem;
+  word-spacing: 1rem;
   letter-spacing: .2rem;
 }
 
@@ -103,7 +103,7 @@
 .brew-products__bottom {
   display: grid;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 28px;
   padding-inline: 1rem;
 }
 
@@ -160,6 +160,10 @@
     visibility: hidden;
   }
 
+  .brew-products__card__inner__time {
+    line-height: 2.1rem;
+  }
+
   .brew-products__card__inner__info {
     position: relative;
     padding: 1.2rem 1.4rem;
@@ -177,6 +181,7 @@
 
   .brew-products__bottom {
     gap: 30px;
+    margin-top: 40px;
     grid-template-columns: repeat(2, 1fr);
   }
 
