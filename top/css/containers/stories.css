@@ -10,6 +10,7 @@
 .stories__header svg {
   width: 14rem;
   fill: #18422B;
+  margin-right: 4px;
 }
 
 .stories__link {
@@ -26,17 +27,6 @@
   margin-right: 9px;
 }
 
-
-.stories__container .carousel-wrap .arrow-button--prev {
-  left: 5.2%;
-  top: 56%;
-}
-
-.stories__container .carousel-wrap .arrow-button--next {
-  right: 5.2%;
-  top: 56%;
-}
-
 .story-item {
   width: 22.4rem;
   box-shadow: 0px  1px 3px rgba(0, 0, 0 , 0.16);
@@ -46,6 +36,7 @@
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   margin-bottom: 3px;
+  overflow: hidden;
 }
 
 .story-item a {
@@ -105,20 +96,34 @@
   color: rgba(0, 0, 0 , 0.7);
 }
 
+@media screen and (min-width: 640px) {
+  .stories__container .carousel-wrap .arrow-button--prev {
+    left: 5.2%;
+    top: 56%;
+  }
+  
+  .stories__container .carousel-wrap .arrow-button--next {
+    right: 5.2%;
+    top: 56%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .stories__link {
     position: static;
-    margin-top: 2.4rem;
+    margin-top: 1.8rem;
     padding: 0 1.6rem;
   }
 }
 
 @media screen and (max-width: 520px) {
   .stories {
-    padding: 7.8rem 0 4.5rem;
-    background-color: #F9F9F9;
+    padding: 7.8rem 0 3.2rem;
   }
-  
+
+  .stories__header {
+    margin-bottom: 3.2rem;
+  }
 
   .stories-carousel {
     padding-left: 16px;
@@ -128,6 +133,16 @@
     margin-right: 6px;
   }
 
+  .stories__container .carousel-wrap .arrow-button--prev {
+    left: 4%;
+    top: 50%;
+  }
+  
+  .stories__container .carousel-wrap .arrow-button--next {
+    right: 4%;
+    top: 50%;
+  }
+
   .story-item {
     width: 16.9rem;
   }
@@ -135,6 +150,31 @@
   .story-item__img img {
     width: 100%;
     height: 16.9rem;
+  }
+
+  .story-item__content {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 7px 1.1rem 1rem;
+  }
+
+  .story-item__content__desc {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .story-item__content__time {
+    justify-content: flex-end;
+    margin-bottom: 2px;
+  }
+  
+  .story-item__content__time span {
+    flex: 1 1;
+    font-size: 7px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
   }
 
   .story-item__content__time span:first-child {

@@ -51,8 +51,13 @@
 @media (max-width: 767px) {
   .notification-item {
     display: block;
-    margin-bottom: 2.4rem !important;
+    margin-bottom: 2.6rem;
   }
+
+  .notification-item:last-of-type {
+    margin-bottom: 4.3rem;
+  }
+  
 }
 
 @media (max-width: 520px) {
@@ -65,11 +70,16 @@
     flex: 0 0 100%;
     max-width: 100%;
     background-color: #fff;
-    padding: 5.5rem 1.6rem 4.5rem;
+    padding: 6rem 1.6rem 3.2rem;
   }
 
   .notification__block__title {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .notification-item__time {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
   
 }
