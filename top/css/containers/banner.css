@@ -45,7 +45,8 @@
 @media (max-width: 640px) {
   .banner {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 160px;
+    gap: .4rem;
   }
 
   .banner__img-1 {
