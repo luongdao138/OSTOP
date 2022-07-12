@@ -7,12 +7,14 @@
 
 html {
   --max-width-PC: 1184px;
-  --padding-inline: 40px;
+  --padding-inline: 4rem;
+  --padding-inline-SP: 1rem;
 }
 
 .top-wrapper {
   width: 100%;
   margin-inline: auto;
+  overflow-x: hidden;
 
   /* max-width: 1440px; */
 }
@@ -21,7 +23,7 @@ html {
   width: 100%;
   max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
   margin-inline: auto;
-  padding-inline: 16px;
+  padding-inline: var(--padding-inline-SP);
 }
 
 .line-gray {
@@ -36,13 +38,13 @@ html {
   width: max-content;
   margin-left: auto;
 
-  color: #00754A;
+  color: #00754a;
   font-size: 1.3rem;
   line-height: 2.4rem;
 }
 
 .ex-link:hover {
-  opacity: .85;
+  opacity: 0.85;
 }
 
 @media (min-width: 640px) {

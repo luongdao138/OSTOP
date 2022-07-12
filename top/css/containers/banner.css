@@ -3,9 +3,8 @@
   width: 100%;
   gap: 0.8rem;
   display: grid;
-  grid-auto-rows: 360px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, calc(25vw - 8px));
 }
 
 .banner img {
@@ -32,7 +31,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
   opacity: 0;
   visibility: hidden;
   transition: all 0.25s ease;
@@ -43,10 +42,10 @@
   visibility: visible;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .banner {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 160px;
+    grid-template-rows: auto auto;
   }
 
   .banner__img-1 {
