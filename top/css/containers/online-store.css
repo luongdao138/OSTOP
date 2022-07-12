@@ -58,6 +58,7 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
 .online-store__card__inner__img .products-tag-01 {
   display: inline-block;
   width: 4rem;
@@ -68,11 +69,24 @@
   text-align: center;
   /* background: #1e3932; */
   border-radius: 50%;
-  padding: 10px 0;
-  line-height: 1.4rem;
+  padding: 8px 0;
   position: absolute;
-  left: 8px;
+  left: 7.5px;
   top: 8px;
+  letter-spacing: normal;
+}
+
+.online-store__card__inner__img .products-tag-01 > .products-tag-01--mini-tag {
+  line-height: 0.5rem;
+}
+
+.online-store__card__inner__img .products-tag-01 > * {
+  font-size: 1rem;
+}
+
+.online-store__card__inner__img .products-tag-01 > .english {
+  letter-spacing: -1px;
+  font-weight: 500;
 }
 
 .online-store__card__inner__text {
