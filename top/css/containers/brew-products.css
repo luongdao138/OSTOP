@@ -166,7 +166,7 @@
 
   .brew-products__card__inner__info {
     position: relative;
-    padding: 1.2rem 1.4rem;
+    padding: 1.2rem 1.4rem 1.4rem;
     min-height: 156px;
     display: flex;
     flex-direction: column;
