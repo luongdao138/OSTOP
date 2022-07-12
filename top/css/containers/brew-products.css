@@ -11,7 +11,8 @@
   font-size: 1.5rem;
   font-family: SoDoSans;
   color: #fff;
-  word-spacing: 0.9rem;
+  word-spacing: 1.6rem;
+  letter-spacing: .2rem;
 }
 
 .brew-products-carousel {
@@ -19,7 +20,6 @@
   position: relative;
   transition: all 0.4s;
   padding-left: var(--padding-inline-SP);
-  /* margin-bottom: 32.8px; */
 }
 
 .brew-products-carousel > * {
@@ -103,7 +103,7 @@
 .brew-products__bottom {
   display: grid;
   gap: 16px;
-  margin-top: 32.8px;
+  margin-top: 40px;
   padding-inline: 1rem;
 }
 
@@ -142,13 +142,13 @@
   }
   .brew-products {
     background-color: unset;
-    padding-top: 80px;
+    padding-top: 82px;
     padding-bottom: 91.7px;
   }
   .brew-products__title {
     color: rgba(0, 0, 0, 0.87);
     font-size: 2rem;
-    margin-bottom: 36.5px;
+    margin-bottom: 40px;
   }
   .brew-products__card {
     width: 224px;

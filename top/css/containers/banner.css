@@ -3,8 +3,8 @@
   width: 100%;
   gap: 0.8rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, calc(25vw - 8px));
+  grid-template-columns: calc(50vw - 1px) calc(50vw - 7px);
+  grid-template-rows: repeat(2, calc(25vw - 4px));
 }
 
 .banner img {
