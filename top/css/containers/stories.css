@@ -85,7 +85,7 @@
 
 .story-item__content__time span {
   font: inherit;
-  flex: 0 0 49%;
+  /* flex: 0 0 49%; */
   font-size: 1rem;
   line-height: 2.1rem;
   color: #00754A;
@@ -94,6 +94,11 @@
   -webkit-box-orient: vertical;  
   overflow: hidden;
   letter-spacing: -0.6px;
+}
+
+.story-item__content__time .text-left {
+  flex: 1;
+  padding-right: 5px;
 }
 
 .story-item__content__time span:last-child {
