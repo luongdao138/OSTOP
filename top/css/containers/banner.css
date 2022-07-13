@@ -20,9 +20,9 @@
   grid-row: 1 / -1;
 }
 
-.banner__img-2 {
+/* .banner__img-2 {
   background-color: aquamarine;
-}
+} */
 
 .banner__img::before {
   content: '';

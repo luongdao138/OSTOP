@@ -25,7 +25,11 @@
 }
 
 .tabs .tabs-item+.tabs-item {
-  margin-left: 33px;
+  margin-left: 32px;
+}
+
+.tabs-item .tabs-item__text {
+  border: 1px solid transparent;
 }
 
 .tabs-item:hover {
