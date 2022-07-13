@@ -179,6 +179,10 @@
     height: unset;
   }
 
+  .brew-products__card__inner__img {
+    height: 22.4rem;
+  }
+
   .brew-products__bottom {
     gap: 30px;
     margin-top: 40px;
