@@ -55,15 +55,14 @@
   right: 0;
 }
 
-.brew-products__card__inner,
-.brew-products__card__inner__img,
-.brew-products__card__inner__img img {
+.brew-products__card__inner__img {
   height: 100%;
-  display: block;
 }
 
 .brew-products__card__inner__img img {
   object-fit: cover;
+  height: 100%;
+  object-position: center;
   width: 100%;
 }
 
@@ -173,10 +172,8 @@
     justify-content: space-between;
   }
 
-  .brew-products__card__inner,
-  .brew-products__card__inner__img,
-  .brew-products__card__inner__img img {
-    height: unset;
+  .brew-products__card__inner__img {
+     height: 224px;
   }
 
   .brew-products__bottom {
