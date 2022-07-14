@@ -19,6 +19,7 @@
   text-decoration: none;
   font-size: 13px;
   line-height: 1.9rem;
+  color: rgb(0, 0, 0, 0.7);
   /* letter-spacing: 1.04px; */
   /* border-bottom: 3px solid transparent; */
   cursor: pointer;
@@ -35,6 +36,7 @@
 .tabs-item:hover {
   text-decoration: none;
   font-weight: bold;
+  color: #000;
 }
 
 .tabs-item::before {
@@ -60,6 +62,7 @@
 .tabs-item.active-tab {
   position: relative;
   font-weight: bold;
+  color: #000;
 }
 
 .tabs-item.active-tab::after {
