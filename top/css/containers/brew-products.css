@@ -81,7 +81,7 @@
   color: #1E3932;
   line-height: 1.8rem;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -191,6 +191,7 @@
   .brew-products__card__inner__desc {
      line-height: 2rem;
      color: rgba(0, 0, 0, 0.87);
+     -webkit-line-clamp: 5;
   }
 
   .brew-products__bottom {
