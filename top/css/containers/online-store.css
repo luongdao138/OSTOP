@@ -155,6 +155,13 @@
   transition: all 0.2s ease;
 }
 
+[class*='online-store__card-button']:disabled {
+  color: #FBFBFB;
+  background: #ccc;
+  border: solid 1px #ccc;
+  pointer-events: none;
+}
+
 .online-store__carousel {
   padding-left: var(--padding-inline);
 }
@@ -172,6 +179,7 @@
     font-weight: bold;
     padding-bottom: 25px;
     padding-top: 44px;
+    color: #1E3932;
     line-height: 1.7rem;
     display: block;
   }
