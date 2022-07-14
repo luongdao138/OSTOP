@@ -81,4 +81,15 @@
 .tab-content.active-tab {
   display: flex;
 }
+
+@media screen and (max-width: 640px) {
+  .tabs {
+    display: none;
+  }
+
+
+  .tab-content {
+    display: flex;
+  }
+}
 /* ------------------ */
