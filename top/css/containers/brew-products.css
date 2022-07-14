@@ -1,7 +1,7 @@
 /* Brew Products */
 .brew-products {
   padding-top: 52px;
-  padding-bottom: 35px;
+  padding-bottom: 37px;
   overflow-x: hidden;
   background-color: #006241;
 }
@@ -10,7 +10,7 @@
   margin-bottom: 38px;
   font-size: 1.5rem;
   font-family: SoDoSans;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.87);
   word-spacing: 0.6rem;
   letter-spacing: .2rem;
 }
@@ -106,7 +106,7 @@
 /* Bottom */
 .brew-products__bottom {
   display: grid;
-  gap: 16px;
+  gap: 14px;
   margin-top: 33px;
   padding-inline: 1rem;
 }
