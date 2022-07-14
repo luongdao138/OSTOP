@@ -74,6 +74,7 @@
 
   font-size: 1.3rem;
   line-height: 2rem;
+  color: rgba(0, 0, 0 , 0.87);
 }
 
 .story-item__content__time {
@@ -143,7 +144,7 @@
   }
 
   .stories-carousel > * {
-    margin-right: 6px;
+    margin-right: 8px;
   }
 
   .stories__container .carousel-wrap .arrow-button--prev {
@@ -177,6 +178,7 @@
     font-size: 1.2rem;
     line-height: 1.6rem;
     -webkit-line-clamp: 3;
+    color: #000;
   }
 
   .story-item__content__time {
