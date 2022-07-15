@@ -119,10 +119,12 @@
 .brew-products__bottom__items__img {
   flex-shrink: 0;
   margin-right: 15px;
+  width: 77px;
 }
 
 .brew-products__bottom__items__img img {
-  width: 77px;
+  /* width: 77px; */
+  width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 100%;
@@ -230,7 +232,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .brew-products__bottom__items__img img {
+  .brew-products__bottom__items__img {
     width: 115px;
   }
 }
