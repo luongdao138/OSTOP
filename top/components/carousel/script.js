@@ -83,6 +83,8 @@ function animateCarousel() {
       activeCarouselItemNum = carouselItemCountFloor;
     }
 
+    let restItems = carouselItems.length - activeCarouselItemNum;
+
     // initialization
     (function () {
       let carouselActiveItems = carouselInner.querySelectorAll('.active');
@@ -117,15 +119,25 @@ function animateCarousel() {
         targetIndexMax = carouselItemLength;
       }
 
+      restItems = carouselItems.length - currentPage * activeCarouselItemNum
+
       for (
-        let i = activeCarouselItemNum * currentPage;
+        let i = activeCarouselItemNum * currentPage - (restItems > activeCarouselItemNum ? 0 : (activeCarouselItemNum - restItems));
         i < targetIndexMax;
         i++
       ) {
         carouselItems[i].classList.add('active');
       }
 
-      position = carouselItemWidthWhole * activeCarouselItemNum * currentPage;
+      if(restItems > activeCarouselItemNum) {
+        position = carouselItemWidthWhole * activeCarouselItemNum * currentPage;
+      } else {
+        const wWidth = window.innerWidth;
+        const paddingLeftCarouselInner = parseFloat(window.getComputedStyle(carouselInner).paddingLeft) || 0;
+        const restWidth = wWidth - (activeCarouselItemNum * carouselItemWidthWhole + paddingLeftCarouselInner);
+        position += carouselItemWidthWhole * restItems - restWidth + paddingLeftCarouselInner;
+      }
+
       carouselInner.style.transform = 'translateX(-' + position + 'px)';
       currentPage = targetPage;
 
