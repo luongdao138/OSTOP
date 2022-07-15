@@ -31,6 +31,23 @@ html {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.text-link-wrapper {
+  display: flex;
+  width: max-content;
+  margin-left: auto;
+}
+
+.text-link-green {
+  color: #00754a;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  align-items: center;
+}
+
+.text-link-green:hover {
+  opacity: 0.85;
+}
+/* 
 .ex-link {
   display: flex;
   align-items: center;
@@ -41,7 +58,7 @@ html {
   color: #00754a;
   font-size: 1.3rem;
   line-height: 2.4rem;
-}
+} */
 
 .ex-link:hover {
   opacity: 0.85;
