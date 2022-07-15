@@ -129,12 +129,13 @@ function animateCarousel() {
         carouselItems[i].classList.add('active');
       }
 
-      if(restItems > activeCarouselItemNum) {
+      if(restItems > activeCarouselItemNum || currentPage + 1 !== maxPage) {
         position = carouselItemWidthWhole * activeCarouselItemNum * currentPage;
       } else {
-        const wWidth = window.innerWidth;
         const paddingLeftCarouselInner = parseFloat(window.getComputedStyle(carouselInner).paddingLeft) || 0;
-        const restWidth = wWidth - (activeCarouselItemNum * carouselItemWidthWhole + paddingLeftCarouselInner);
+        const carouselItemWidthWholeLast = carouselItems[carouselItems.length - 1].offsetWidth
+        const restWidth = carouselWrapWidth - (activeCarouselItemNum * carouselItemWidthWhole + paddingLeftCarouselInner) + (carouselItemWidthWhole - carouselItemWidthWholeLast);
+
         position += carouselItemWidthWhole * restItems - restWidth + paddingLeftCarouselInner;
       }
 
@@ -146,6 +147,7 @@ function animateCarousel() {
 
     // when you click the preview button
     prevButton.addEventListener('click', function () {
+      
       let carouselActiveItems = carouselInner.querySelectorAll('.active');
       targetPage = currentPage - 1;
 
