@@ -1,7 +1,10 @@
 .online-store {
   padding-top: 88px;
-  text-align: center;
   letter-spacing: 1.04px;
+}
+
+.online-store__header {
+  text-align: center;
 }
 
 .online-store__header-title {
@@ -55,8 +58,6 @@
 }
 .online-store__card__inner__img img {
   width: 100%;
-  font-size: 1.4rem;
-  line-height: unset;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-top-left-radius: 12px;
