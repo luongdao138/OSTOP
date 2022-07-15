@@ -56,6 +56,7 @@
 .online-store__card__inner__img img {
   width: 100%;
   font-size: 1.4rem;
+  line-height: unset;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-top-left-radius: 12px;
