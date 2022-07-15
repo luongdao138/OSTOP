@@ -162,6 +162,14 @@
   pointer-events: none;
 }
 
+.online-store__content-carousel .carousel-wrap .arrow-button--next {
+  right: 71px;
+}
+
+.online-store__content-carousel .carousel-wrap .arrow-button {
+  top: 43%;
+}
+
 .online-store__carousel {
   padding-left: var(--padding-inline);
 }
@@ -172,6 +180,16 @@
 @media screen and (max-width: 640px) {
   .online-store {
     padding-top: 59px;
+  }
+
+  .online-store__content-carousel .carousel-wrap .arrow-button--prev {
+    left: 4%;
+    top: 44.5%;
+  }
+  
+  .online-store__content-carousel .carousel-wrap .arrow-button--next {
+    right: 4%;
+    top: 44.5%;
   }
 
   .online-store__content-carousel-title {

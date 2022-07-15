@@ -140,7 +140,19 @@
   overflow: hidden;
 }
 
+.brew-products .carousel-wrap .arrow-button {
+  top: 52%
+}
+
+.brew-products .carousel-wrap .arrow-button--next {
+  right: 4%;
+}
+
 @media screen and (min-width: 640px) {
+  .brew-products .carousel-wrap .arrow-button--next {
+    right: 78px;
+  }
+  
   .brew-products-carousel {
     padding-left: var(--padding-inline);
   }

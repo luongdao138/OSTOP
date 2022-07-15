@@ -16,7 +16,11 @@
 .stories__link {
   position: absolute;
   right: 5.3%;
-  top: 3.4rem;
+  top: 3.3rem;
+}
+
+.text-link-green .icon {
+  margin-left: 4px;
 }
 
 .stories-carousel {
@@ -148,12 +152,12 @@
   }
 
   .stories__container .carousel-wrap .arrow-button--prev {
-    left: 4%;
+    left: 3%;
     top: 50%;
   }
   
   .stories__container .carousel-wrap .arrow-button--next {
-    right: 4%;
+    right: 3%;
     top: 50%;
   }
 

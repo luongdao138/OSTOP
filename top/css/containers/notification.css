@@ -41,7 +41,6 @@
 .notification-item__content {
   font-size: 1.3rem;
   line-height: 2.1rem;
-  letter-spacing: 1.35px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;  
@@ -57,7 +56,10 @@
   .notification-item:last-of-type {
     margin-bottom: 2.2rem;
   }
-  
+
+  .notification-item__content {
+    letter-spacing: 1.35px;
+  }
 }
 
 @media (max-width: 520px) {
