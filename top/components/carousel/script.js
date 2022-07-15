@@ -76,6 +76,11 @@ function animateCarousel() {
     let targetPage;
     let activeCarouselItemNum;
 
+    let carouselItemLast = carouselItems[carouselItems.length - 1];
+    let carouselItemWidthLast = carouselItemLast.offsetWidth;
+    let carouselItemLastMarginRight = parseInt(window.getComputedStyle(carouselItemLast, null).marginRight);
+    let carouselItemWidthWholeLast = carouselItemWidthLast + carouselItemLastMarginRight;
+
     // number of items to activate in the carousel
     if (visibleCarouselItems <= carouselActiveArea) {
       activeCarouselItemNum = carouselItemCountFloor + 1;
@@ -133,7 +138,6 @@ function animateCarousel() {
         position = carouselItemWidthWhole * activeCarouselItemNum * currentPage;
       } else {
         const paddingLeftCarouselInner = parseFloat(window.getComputedStyle(carouselInner).paddingLeft) || 0;
-        const carouselItemWidthWholeLast = carouselItems[carouselItems.length - 1].offsetWidth
         const restWidth = carouselWrapWidth - (activeCarouselItemNum * carouselItemWidthWhole + paddingLeftCarouselInner) + (carouselItemWidthWhole - carouselItemWidthWholeLast);
 
         position += carouselItemWidthWhole * restItems - restWidth + paddingLeftCarouselInner;
