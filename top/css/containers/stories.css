@@ -194,6 +194,7 @@
   .story-item__content__time span {
     flex: 1 1;
     font-size: 7px;
+    font-weight: 700;
     line-height: 1.5rem;
     letter-spacing: 1px;
   }
