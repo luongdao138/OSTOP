@@ -85,7 +85,6 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  gap: 2%;
 }
 
 .story-item__content__time span {
