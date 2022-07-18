@@ -37,7 +37,7 @@
 }
 
 .brew-products__card__inner {
-  position: relative;
+  /* position: relative; */
 }
 
 .brew-products__card__inner::after {
@@ -108,7 +108,7 @@
   display: grid;
   gap: 14px;
   margin-top: 33px;
-  padding-inline: 1rem;
+  padding: 1rem;
 }
 
 .brew-products__bottom__items {
