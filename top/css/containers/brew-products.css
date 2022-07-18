@@ -1,0 +1,244 @@
+/* Brew Products */
+.brew-products {
+  padding-top: 52px;
+  padding-bottom: 37px;
+  overflow-x: hidden;
+  background-color: #006241;
+}
+
+.brew-products__title {
+  margin-bottom: 38px;
+  font-size: 1.5rem;
+  font-family: SoDoSans;
+  color: rgba(255, 255, 255, 0.87);
+  word-spacing: 0.6rem;
+  letter-spacing: .2rem;
+}
+
+.brew-products-carousel {
+  display: flex;
+  position: relative;
+  transition: all 0.4s;
+  padding-left: var(--padding-inline-SP);
+}
+
+.brew-products-carousel > * {
+  margin-right: 8px;
+}
+
+.brew-products__card {
+  width: 167px;
+  height: 248px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+}
+
+.brew-products__card__inner {
+  position: relative;
+}
+
+.brew-products__card__inner::after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.9) 20%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.brew-products__card__inner__img {
+  height: 100%;
+}
+
+.brew-products__card__inner__img img {
+  object-fit: cover;
+  height: 100%;
+  object-position: center;
+  width: 100%;
+}
+
+.brew-products__card__inner__info {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column-reverse;
+}
+
+.brew-products__card__inner__desc {
+  font-size: 1.3rem;
+  color: #1E3932;
+  line-height: 1.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.brew-products__card__inner__time {
+  display: block;
+  font-size: 1rem;
+  font-family: SoDoSans;
+  color: rgba(0, 0, 0, 0.7);
+  
+
+  line-height: 1.5rem;
+  margin-right: 0.2rem;
+  margin-bottom: 3px;
+}
+
+.carousel__item:not(.active) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Bottom */
+.brew-products__bottom {
+  display: grid;
+  gap: 14px;
+  margin-top: 33px;
+  padding-inline: 1rem;
+}
+
+.brew-products__bottom__items {
+  display: flex;
+  align-items: center;
+}
+
+.brew-products__bottom__items__img {
+  flex-shrink: 0;
+  margin-right: 15px;
+  width: 77px;
+}
+
+.brew-products__bottom__items__img img {
+  /* width: 77px; */
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.brew-products__bottom__items__desc {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #fff;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.brew-products .carousel-wrap .arrow-button {
+  top: 50%;
+}
+
+.brew-products .carousel-wrap .arrow-button--next {
+  right: 3%;
+}
+
+.brew-products .carousel-wrap .arrow-button--prev {
+  left: 3%;
+}
+
+@media screen and (min-width: 640px) {
+  .brew-products .carousel-wrap .arrow-button--next {
+    right: 5.2%;
+  }
+
+  .brew-products .carousel-wrap .arrow-button--prev {
+    left: 5.2%;
+  }
+  
+  .brew-products-carousel {
+    padding-left: var(--padding-inline);
+  }
+  .brew-products {
+    background-color: unset;
+    padding-top: 82px;
+    padding-bottom: 91.7px;
+  }
+  .brew-products__title {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 2rem;
+    margin-bottom: 42px;
+    word-spacing: 1rem;
+  }
+  .brew-products__card {
+    width: 224px;
+    height: auto;
+  }
+
+  .brew-products__card__inner::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .brew-products__card__inner__time {
+    line-height: 2.1rem;
+    margin-bottom: 0;
+    margin-right: .6rem;
+  }
+
+  .brew-products__card__inner__info {
+    position: relative;
+    padding: 1.2rem 1.4rem 1.4rem;
+    min-height: 156px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .brew-products__card__inner__img {
+     height: 224px;
+  }
+
+  .brew-products__card__inner__img {
+    height: 22.4rem;
+  }
+
+  .brew-products__card__inner__desc {
+     line-height: 2rem;
+     color: rgba(0, 0, 0, 0.87);
+     -webkit-line-clamp: 5;
+  }
+
+  .brew-products__bottom {
+    gap: 30px;
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brew-products__bottom__items__desc {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .brew-products__bottom {
+    padding-inline: 0rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .brew-products__bottom__items__img {
+    width: 115px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .brew-products__bottom {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

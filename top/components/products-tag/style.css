@@ -1,0 +1,42 @@
+/* ------------------------
+products tag
+--------------------------- */
+.products-tag-01 {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background: #1E3932;
+  border-radius: 50%;
+  padding: 8px 0;
+  line-height: 1.2rem;
+}
+.products-tag-01--white {
+  color: #1E3932;
+  background: #fff;
+  border: solid 1px #1E3932;
+}
+.products-tag-01 > * {
+  font-size: 1rem;
+}
+.products-tag-02 {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #AA8875;
+}
+@media screen and (min-width:520px) {
+  .products-tag-01 {
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    line-height: 1.4rem;
+  }
+  .products-tag-01 > * {
+    font-size: 1.2rem;
+  }
+}

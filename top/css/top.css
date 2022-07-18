@@ -1,0 +1,71 @@
+/* Top page CSS */
+@import url(/top/css/containers/banner.css);
+@import url(/top/css/containers/brew-products.css);
+@import url(/top/css/containers/online-store.css);
+@import url(/top/css/containers/notification.css);
+@import url(/top/css/containers/stories.css);
+
+html {
+  --max-width-PC: 1184px;
+  --padding-inline: 5.25rem;
+  --padding-inline-SP: 16px;
+}
+
+.top-wrapper {
+  width: 100%;
+  margin-inline: auto;
+  overflow-x: hidden;
+
+  /* max-width: 1440px; */
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
+  margin-inline: auto;
+  padding-inline: var(--padding-inline-SP);
+}
+
+.line-gray {
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-link-wrapper {
+  display: flex;
+  width: max-content;
+  margin-left: auto;
+}
+
+.text-link-green {
+  color: #00754a;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  align-items: center;
+}
+
+.text-link-green:hover {
+  opacity: 0.85;
+}
+/* 
+.ex-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: max-content;
+  margin-left: auto;
+
+  color: #00754a;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+} */
+
+.ex-link:hover {
+  opacity: 0.85;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-inline: var(--padding-inline);
+  }
+}
