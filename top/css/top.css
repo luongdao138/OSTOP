@@ -19,6 +19,10 @@ html {
   /* max-width: 1440px; */
 }
 
+.top-wrapper .carousel-wrap .arrow-button {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.239), 0 8px 12px rgba(0, 0, 0, 0.141);
+}
+
 .container {
   width: 100%;
   max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
