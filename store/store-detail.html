@@ -1,0 +1,137 @@
+<!-- <?php
+include_once($_SERVER['DOCUMENT_ROOT']."/config.inc.php");
+
+$is_brs = strpos($_SERVER['HTTP_HOST'], "starbucks.co.jp") !== false;
+$include_dir = $is_brs ? _SB_DIR_INCLUDE_."/common" : $_SERVER['DOCUMENT_ROOT'].'/local_include';
+define('INCLUDE_DIR', $include_dir);
+
+// ページプロパティ設定
+$pageProperties['title'] = "Connect Happy holidays for you";
+$pageProperties['description'] = "スターバックスからあなたへのプレゼント。１日１回届くGreen Gift BoxとeGiftを贈って届くGold Gift Box、２つの特別なギフトを用意しました。離れた友人や家族とも楽しい時間をシェアできるギフトや、スターバックスのドリンクやフードを楽しめるギフトをお届けします。";
+$pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
+?> -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Noto Sans JP Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
+    </title>
+    <!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
+<?php include(INCLUDE_DIR."/css2022.html"); ?>
+<?php include(INCLUDE_DIR."/js.html"); ?> -->
+    <!-- Reset and Common CSS -->
+    <link rel="stylesheet" href="/top/css/reset.css" />
+    <link rel="stylesheet" href="/top/css/common.css" />
+    <link rel="stylesheet" href="/store/css/style.css" />
+
+    <!-- Common CSS -->
+    <link
+      rel="stylesheet"
+      href="/store/components/notification/notification.css"
+    />
+    <!-- +++++ local css +++++ -->
+    <!-- ここにCSSを記載してください -->
+    <link rel="stylesheet" href="/store/css/store-detail/style.css" />
+    <!-- +++++ /local css +++++ -->
+
+    <!-- +++++ local script +++++ -->
+    <!-- ここにJavaScriptを記載してください -->
+    <script src="/store/js/store-detail.js" defer></script>
+    <!-- +++++ /local script +++++ -->
+    <!-- Common script -->
+    <script src="/common/js/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <p class="noscript">
+        当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。
+      </p>
+    </noscript>
+    <!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
+    <div class="store-detail-wrapper">
+      <div class="information-wrapper">
+        <div class="information container">
+          <h2 class="information__title text-bold english">MORE INFOMATION</h2>
+          <div class="information__list">
+            <article class="information__list__item">
+              <a href="#" class="information__list__item__thumbnail"
+                ><img
+                  src="/store/images/store-detail/infomation/information-1.jpg"
+                  alt="store-thumbnail"
+              /></a>
+              <div class="information__list__item__seperate"></div>
+              <div class="information__list__item__info">
+                <h3 class="information__list__item__title text-bold">
+                  <a href="#"
+                    >地元の老舗家具メーカーと開発したチェアから瀬戸内海が一望でき、嚴島神社の大鳥居を望むロケーション</a
+                  >
+                </h3>
+                <p class="information__list__item__desc">
+                  株式会社
+                  宮島ビールが運営する自家醸造施設を備えたレストラン「宮島ブルワリー」と併設しています。デザインコンセプトは「Passion
+                  Brewery」。創業の地である宮島への熱い思いを醸造に込める宮島ビールと、コーヒーへの情熱と地域との繋がりと大切にするスターバックスの共通の想いから生まれたコンセプトです。
+                </p>
+              </div>
+            </article>
+            <article class="information__list__item">
+              <a href="#" class="information__list__item__thumbnail"
+                ><img
+                  src="/store/images/store-detail/infomation/information-2.jpg"
+                  alt="store-thumbnail"
+              /></a>
+              <div class="information__list__item__seperate"></div>
+              <div class="information__list__item__info">
+                <p class="information__list__item__desc">
+                  世界文化遺産の嚴島神社に通じる表参道商店街に位置し、ガラス張りの店内からは瀬戸内海が目の前に広がります。
+                </p>
+              </div>
+            </article>
+            <article class="information__list__item">
+              <a href="#" class="information__list__item__thumbnail"
+                ><img
+                  src="/store/images/store-detail/infomation/information-3.jpg"
+                  alt="store-thumbnail"
+              /></a>
+              <div class="information__list__item__seperate"></div>
+              <div class="information__list__item__info">
+                <p class="information__list__item__desc">
+                  2階の客席の壁には、宮島の伝統工芸品である木製しゃもじを使ったオリジナルのアートを飾りました。しゃもじの形をスターバックスのロゴであるサイレンの鱗に見立てています。
+                </p>
+              </div>
+            </article>
+            <article class="information__list__item">
+              <a href="#" class="information__list__item__thumbnail"
+                ><img
+                  src="/store/images/store-detail/infomation/information-4.jpg"
+                  alt="store-thumbnail"
+              /></a>
+              <div class="information__list__item__seperate"></div>
+              <div class="information__list__item__info">
+                <p class="information__list__item__desc">
+                  海側に設置されたバルコニーからは、時間帯によって表情の異なる瀬戸内海とともに、幻想的な空気に包まれる嚴島神社の大鳥居をご覧いただけます。
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <a href="#" class="information__link">
+            他のリージョナル ランドマーク ストアを見る</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
+  </body>
+</html>
