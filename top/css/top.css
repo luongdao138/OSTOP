@@ -51,18 +51,6 @@ html {
 .text-link-green:hover {
   opacity: 0.85;
 }
-/* 
-.ex-link {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  width: max-content;
-  margin-left: auto;
-
-  color: #00754a;
-  font-size: 1.3rem;
-  line-height: 2.4rem;
-} */
 
 .ex-link:hover {
   opacity: 0.85;

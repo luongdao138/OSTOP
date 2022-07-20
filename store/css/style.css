@@ -1,0 +1,23 @@
+html {
+    --clr-gray: #EDEBE9;
+    --clr-bg: #fff;
+    --clr-text: rgba(0,0,0,0.87);
+    --max-width-PC: 1184px;
+    --max-width-SP: 343px;   
+    --padding-inline: 16px;  
+}
+
+
+body {
+    background-color: var(--clr-bg);
+}
+
+
+/* Common */
+
+.container {
+    width: 100%;
+    max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
+    margin-inline: auto;
+    padding-inline: var(--padding-inline);
+}

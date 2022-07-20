@@ -1,0 +1,37 @@
+.notification {
+     width: 100%;
+     padding: 1rem 1.6rem;
+     display: flex;
+     color: #D62B1F;
+     border: 2px solid currentColor;
+     flex-direction: column;
+}
+
+.notification__detail {
+     display: flex;
+     align-items: center;
+     font-size: 1.3rem;
+}
+
+.notification__detail > p + p {
+    margin-left: 1.2rem;
+}
+
+.notification__title {
+     font-size: 1.3rem;
+     font-weight: 700;
+     line-height: 2.2rem;
+}
+
+
+@media (min-width: 640px) {
+    .notification {
+        flex-direction: row;
+        align-items: center;
+        padding-block: 1.2rem;
+    }
+
+    .notification__title {
+         margin-right: 2.8rem;
+    }
+} 
