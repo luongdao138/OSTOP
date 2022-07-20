@@ -12,2874 +12,359 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
 ?> -->
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Noto Sans JP Font CDN -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
-  rel="stylesheet"
-/>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Noto Sans JP Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Reset and Common CSS -->
-<link rel="stylesheet" href="/top/css/reset.css" />
-<link rel="stylesheet" href="/top/css/common.css" />
+    <!-- Reset and Common CSS -->
+    <link rel="stylesheet" href="/top/css/reset.css" />
+    <link rel="stylesheet" href="/top/css/common.css" />
 
-<!-- Common CSS -->
-<link rel="stylesheet" href="/top/components/carousel/styles.css" />
-<link rel="stylesheet" href="/top/components/tabs/styles.css" />
-<link rel="stylesheet" href="/top/components/products-tag/style.css" />
-<link rel="stylesheet" href="/top/components/text-link-green/style.css" />
-<title><?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン</title>
-<!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/top/components/carousel/styles.css" />
+    <link
+      rel="stylesheet"
+      href="/top/components/brief-info-carousel/styles.css"
+    />
+    <link rel="stylesheet" href="/top/components/tabs/styles.css" />
+    <link rel="stylesheet" href="/top/components/products-tag/style.css" />
+    <link rel="stylesheet" href="/store/css/store-detail/style.css" />
+    <link rel="stylesheet" href="/store/components/breadcrum/breadcrum.css" />
+    <link
+      rel="stylesheet"
+      href="/store/css/store-detail/store-information.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/top/components/brief-info-carousel/styles.css"
+    />
+    <title>
+      <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
+    </title>
+    <!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
 <?php include(INCLUDE_DIR."/css2022.html"); ?>
 <?php include(INCLUDE_DIR."/js.html"); ?> -->
 
-<!-- +++++ local css +++++ -->
-<!-- ここにCSSを記載してください -->
-<link rel="stylesheet" href="/top/css/top.css" />
-<!-- +++++ /local css +++++ -->
+    <!-- +++++ local css +++++ -->
+    <!-- ここにCSSを記載してください -->
+    <link rel="stylesheet" href="/top/css/top.css" />
+    <!-- +++++ /local css +++++ -->
 
-<!-- +++++ local script +++++ -->
-<!-- ここにJavaScriptを記載してください -->
-<script src="/top/js/script.js" defer></script>
-<!-- +++++ /local script +++++ -->
-<!-- Common script -->
-<script src="/common/js/jquery-1.12.3.min.js"></script>
-<script src="/top/components/tabs/script.js" defer></script>
-<script src="/top/components/carousel/script.js" defer></script>
-</head>
-<body>
-<noscript>
-<p class="noscript">当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。</p>
-</noscript>
-<!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
-<div class="mainContents notExNav">
-<!-- ここからコンテンツを作成してください -->
-  <div class="top-wrapper">
-    <div class="banner">
-      <a href="#" class="banner__img banner__img-1">
-        <img src="/top/images/banner/img-1.jpg" alt="the-melon-frappuccino" />
-      </a>
-      <a href="#" class="banner__img banner__img-2">
-        <img src="/top/images/banner/img-2.jpg" alt="keeping-story-safe" />
-      </a>
-      <a href="#" class="banner__img banner__img-3">
-        <img src="/top/images/banner/img-3.jpg" alt="summer-coffee-bliss" />
-      </a>
-    </div>
-  <!-- Brew Products -->
-  <div class="brew-products">
-    <h2 class="brew-products__title text-bold text-center">
-      WHAT’S BREWING
-    </h2>
-    <ul class="carousel brew-products-carousel">
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-1.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-2.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              キラキラ輝く水面のような色合いの涼し気なグッズやアイスコーヒーにぴったりのコーヒーなど、オンラインストアで贈るサマーギフト
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-3.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              サマー限定オリジナルeGiftで、大切なあの人へ感謝の気持ちを伝えてみませんか。
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-4.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報]
-              グリーンな未来につなげるための、環境に配慮した素材を使用したグッズが登場。
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-5.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-6.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-7.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-8.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-1.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-2.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-    </ul>
-
-
-    <div class="container">
-      <div class="brew-products__bottom">
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-1.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            いつもの一杯を、キャッシュレスで
-          </p>
-        </a>
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-2.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            Starを集めるとさまざまな商品と交換できるプログラム
-          </p>
-        </a>
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-3.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            新型コロナウィルス に関する営業状況と感染予防へのご協力のお願い
-          </p>
-        </a>
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-4.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            [アルバイト情報] あなたもバリスタとして働いてみませんか
-          </p>
-        </a>
-      </div>
-    </div>
-  </div>
-    <div class="line-gray"></div>
-    <!-- online store -->
-    <div class="online-store">
-      <div class="online-store__header">
-        <h2 class="online-store__header-title">ONLINE STORE</h2>
-        <h4 class="online-store__header-text">
-          5,000円（税抜）以上お買い上げで送料無料
-        </h4>
-      </div>
-      <div class="online-store__content">
-        <div class="online-store__carousel--pc">
-          <ul class="tabs">
-            <li data-tab="seasonal-drink" class="tabs-item active-tab">
-              <div class="tabs-item__text">
-                季節のおすすめ
-              </div>
-            </li>
-            <li data-tab="coffee-drink" class="tabs-item">
-              <div class="tabs-item__text">
-                コーヒー豆
-              </div>
-            </li>
-            <li data-tab="mug-drink" class="tabs-item">
-              <div class="tabs-item__text">
-                タンブラー＆マグカップ
-              </div>
-            </li>
-            <li data-tab="gift-drink" class="tabs-item">
-              <div class="tabs-item__text">
-                ギフト
-              </div>
-            </li>
+    <!-- +++++ local script +++++ -->
+    <!-- ここにJavaScriptを記載してください -->
+    <script src="/top/js/script.js" defer></script>
+    <!-- +++++ /local script +++++ -->
+    <!-- Common script -->
+    <script src="/common/js/jquery-1.12.3.min.js"></script>
+    <script src="/top/components/tabs/script.js" defer></script>
+    <script src="/top/components/carousel/script.js" defer></script>
+  </head>
+  <body>
+    <noscript>
+      <p class="noscript">
+        当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。
+      </p>
+    </noscript>
+    <!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
+    <div class="mainContents notExNav">
+      <div class="store-detail__wrapper">
+        <div class="breadcrum-wrap">
+          <ul class="breadcrum container">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">店舗検索</a></li>
+            <li><a href="#">東京都</a></li>
+            <li><span class="breadcrum__current">目黒店</span></li>
           </ul>
-          <!-- seasonal-drink -->
-          <div
-            id="seasonal-drink"
-            class="online-store__content-carousel tab-content active-tab"
-          >
-            <div class="online-store__content-carousel-title">
-              季節のおすすめ
-            </div>
-            <ul class="carousel online-store__carousel">
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item1.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        ステンレスタンブラーベアリスタサマーデイズ355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,650</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                        disabled
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item2.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス リザーブ ロースタリー トラベラーズノートブルー
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,720</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item3.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">シトラスハーモニー ラテ</div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥900</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item4.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス® ナイトロ コールドブリュー ムース フォーム ダーク キャラメル
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥620〜¥660</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item5.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        バナナナバナナ フラペチーノ®
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥690</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item6.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <span class="products-tag-01 products-tag-01--white">
-                      <div class="english">Online</div>
-                      <div class="products-tag-01--mini-tag">限定</div>
-                    </span>
-                    <img
-                      src="/top/images/online-store/gr1/item7.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス ヴィア® ＆ スターバックス オリガミ® ギフトアソート ミニ
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥2,500</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <span class="products-tag-01 products-tag-01--white">
-                      <div class="english">Online</div>
-                      <div class="products-tag-01--mini-tag">限定</div>
-                    </span>
-                    <img
-                      src="/top/images/online-store/gr1/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item9.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス ヴィア® ＆ スターバックス オリガミ® ギフトアソート ミニ
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥2,500</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- coffee drink -->
-          <div
-            id="coffee-drink"
-            class="online-store__content-carousel tab-content"
-          >
-            <div class="online-store__content-carousel-title">
-              コーヒー豆
-            </div>
-            <ul class="carousel online-store__carousel">
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item1.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス リザーブ ロースタリー
-                        トラベラーズノートブルー
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥1,749</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                        disabled
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item2.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">シトラスハーモニー ラテ</div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥900</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item3.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス® ナイトロ コールドブリュー ムース
-                        フォーム ダーク キャラメル
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥620〜¥660</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item4.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        バナナナバナナ フラペチーノ®
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥690</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item5.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item6.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item7.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr2/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- mug drink -->
-          <div
-            id="mug-drink"
-            class="online-store__content-carousel tab-content"
-          >
-            <div class="online-store__content-carousel-title">
-              タンブラー＆マグカップ
-            </div>
-            <ul class="carousel online-store__carousel">
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item1.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        ステンレスタンブラーベアリスタサマーデイズ355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥1,749</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                        disabled
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item2.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス リザーブ ロースタリー
-                        トラベラーズノートブルー
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥1,749</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item3.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">シトラスハーモニー ラテ</div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥900</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item4.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス® ナイトロ コールドブリュー ムース
-                        フォーム ダーク キャラメル
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥620〜¥660</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item5.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        バナナナバナナ フラペチーノ®
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥690</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item6.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item7.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item8.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item9.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr1/item10.jpg"
-                      alt="starbuck-online-store-product"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- gift drink -->
-          <div
-            id="gift-drink"
-            class="online-store__content-carousel tab-content"
-          >
-            <div class="online-store__content-carousel-title">
-              ギフト
-            </div>
-            <ul class="carousel online-store__carousel">
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-1.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        ステンレスタンブラーベアリスタサマーデイズ355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥1,749</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                        disabled
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-2.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス リザーブ ロースタリー
-                        トラベラーズノートブルー
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥1,749</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-3.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">シトラスハーモニー ラテ</div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥900</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-4.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        スターバックス® ナイトロ コールドブリュー ムース
-                        フォーム ダーク キャラメル
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥620〜¥660</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-5.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        バナナナバナナ フラペチーノ®
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥690</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-6.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <div class="text-limit">
-                        [オンラインストア限定] ステンレスボトル NOFILTER 355ml
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥3,910</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-7.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="card online-store__card card--XS-button">
-                <div href="" class="card__inner">
-                  <div class="online-store__card__inner__img">
-                    <img
-                      src="/top/images/online-store/gr3/img-8.jpg"
-                      alt="season"
-                    />
-                  </div>
-                  <div
-                    class="card__inner__text online-store__card__inner__text"
-                  >
-                    <div class="card__inner__text-header">
-                      <span class="products-tag-02">ROASTERY TOKYO</span>
-                      <div class="text-limit">
-                        HANDPICKED AT THE ROASTERY アソートギフト -Coffee &
-                        Coffee cream sandwich cookies-
-                      </div>
-                    </div>
-                    <div class="card__inner__text-footer">
-                      <span class="english">¥5,160</span>
-                      <button
-                        class="button online-store__card-button button--secondary-S"
-                      >
-                        カートに入れる
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="line-gray"></div>
-    <!-- Stories -->
-    <div class="stories">
-      <div class="stories__container relative">
-        <div class="stories__header text-center">
-          <svg viewBox="0 0 118 48" alt="Starbucks Stories"><path d="M16.1 7.4c1.3 0 2.2-.7 2.2-2 0-2.2-3.2-2-3.2-3.2 0-.4.4-.8.9-.8.6 0 1.1.4 1.4.8l.7-.7C17.7.8 17 .4 15.9.4 15 .4 14 1 14 2.3c0 2.2 3.1 2 3.1 3.3 0 .5-.4.8-1 .8-.7 0-1.3-.4-1.7-1l-.7.7c.3.6 1.1 1.3 2.4 1.3zM28.5.5h-4.7v1.1h1.7v5.7h1.3V1.5h1.7v-1zm9.9 6.7h1.4L37.4.5H36l-2.4 6.7h1.3l.6-1.7h2.4l.5 1.7zm-2.6-2.6l.9-2.7.9 2.7h-1.8zm13.3 2.6h1.5l-1.7-2.6c1-.3 1.6-1 1.6-2.1 0-1.4-1-2.1-2.5-2.1h-2.4v6.7h1.3V4.7h.8l1.4 2.5zm-2.3-5.7h1c.8 0 1.3.3 1.3 1.1s-.5 1.2-1.3 1.2h-1V1.5zM60 3.8c.7-.2 1.1-.7 1.1-1.5 0-1.2-1-1.8-2.3-1.8h-2.3v6.7H59c1.4 0 2.4-.6 2.4-1.9 0-.9-.6-1.4-1.4-1.5zm-1.3-2.3c.7 0 1.1.3 1.1 1s-.4.9-1.1.9h-.9V1.5h.9zm.2 4.7h-1.1v-2h1.1c.7 0 1.1.3 1.1 1s-.4 1-1.1 1zM70 7.4c1.6 0 2.7-.9 2.7-2.7V.5h-1.3v4.1c0 1.1-.5 1.6-1.4 1.6-.8 0-1.3-.6-1.3-1.6V.5h-1.3v4.2c-.1 1.8 1 2.7 2.6 2.7zm11.8 0c1.1 0 1.8-.3 2.3-.8l-.4-1.1c-.4.4-.9.7-1.8.7-1.1 0-2.1-.8-2.1-2.3 0-1.5 1-2.3 2.1-2.3.7 0 1.3.3 1.6.6l.4-1.2c-.5-.4-1.2-.7-2.2-.7-1.8 0-3.2 1.3-3.2 3.5s1.4 3.6 3.3 3.6zm11.9-.2h1.5l-2.6-3.7 2.4-3h-1.5l-2.4 3.2V.5h-1.3v6.7h1.3V5.3l.6-.8 2 2.7zm9.1.2c1.3 0 2.2-.7 2.2-2 0-2.2-3.2-2-3.2-3.2 0-.4.4-.8.9-.8.6 0 1.1.4 1.4.8l.7-.7c-.4-.7-1.1-1.1-2.2-1.1s-2.1.6-2.1 1.9c0 2.2 3.1 2 3.1 3.3 0 .5-.4.8-1 .8-.7 0-1.3-.4-1.7-1l-.7.7c.5.6 1.3 1.3 2.6 1.3zm5.9-6.9c-.7 0-1.3.5-1.3 1.3s.6 1.3 1.3 1.3c.7 0 1.3-.5 1.3-1.3s-.7-1.3-1.3-1.3zm0 2.4c-.5 0-1-.3-1-1.1 0-.7.5-1.1 1-1.1s1 .3 1 1.1-.5 1.1-1 1.1zm.5-1.3c0-.3-.2-.4-.5-.4h-.5v1.2h.3V2h.1l.2.4h.3l-.2-.4c.2-.1.3-.2.3-.4zm-.7-.1h.1c.1 0 .2.1.2.2s-.1.2-.2.2h-.1v-.4zM6.8 33.4c3.4 0 6-1.8 6-5.4 0-5.8-8.5-5.4-8.5-8.6 0-1.2 1-2 2.4-2 1.7 0 2.9 1.1 3.8 2.1l1.8-1.9c-1.1-1.9-3-2.9-5.8-2.9-3 0-5.7 1.7-5.7 5 0 6 8.3 5.4 8.3 8.8 0 1.3-1.1 2.2-2.7 2.2-1.9 0-3.6-1.2-4.6-2.7L0 30c1.1 1.7 3.2 3.4 6.8 3.4zm23.1-18.6H17.2v2.9h4.6V33h3.4V17.7h4.6v-2.9h.1zm13.4 18.6c4.9 0 9.1-3.8 9.1-9.5s-4.3-9.5-9.1-9.5-9.1 3.8-9.1 9.5 4.2 9.5 9.1 9.5zm0-3.2c-2.8 0-5.5-2.1-5.5-6.3 0-4.3 2.8-6.3 5.5-6.3 2.8 0 5.6 2.1 5.6 6.3 0 4.2-2.8 6.3-5.6 6.3zM68.6 33h4l-4.7-7c2.7-.7 4.3-2.7 4.3-5.7 0-3.9-2.7-5.5-6.8-5.5h-6.5V33h3.4v-6.7h2l4.3 6.7zm-6.3-15.4h2.6c2.3 0 3.6.9 3.6 3s-1.3 3.1-3.6 3.1h-2.6v-6.1zM78.9 33h3.4V14.8h-3.4V33zm21.2-15.4v-2.9H89.9V33H100v-2.9h-6.7v-5.2h5.8v-2.7h-5.8v-4.6h6.8zm11.8 15.8c3.4 0 6-1.8 6-5.4 0-5.8-8.5-5.4-8.5-8.6 0-1.2 1-2 2.4-2 1.7 0 2.9 1.1 3.8 2.1l1.8-1.9c-1.1-1.9-3-2.9-5.8-2.9-3 0-5.7 1.7-5.7 5 0 6 8.3 5.4 8.3 8.8 0 1.3-1.1 2.2-2.7 2.2-1.9 0-3.6-1.2-4.6-2.7l-1.8 2c1.1 1.7 3.2 3.4 6.8 3.4z"></path><g><path d="M33.7 47.6l.1-1.1c.1 0 .4.1.7.1.8 0 1.1-.4 1.1-1.4v-4.5h1.3v4.8c0 1.8-.8 2.4-2.2 2.4-.4-.2-.8-.3-1-.3zM46.3 45.8h-2.5l-.6 1.8h-1.3l2.5-7.1h1.5l2.5 7.1h-1.5l-.6-1.8zm-.3-.9L45 42l-1 2.8h2zM58.3 42.9c0 1.6-1 2.6-2.6 2.6h-1v2.1h-1.3v-7.1h2.4c1.5 0 2.5.8 2.5 2.4zm-1.4.1c0-.9-.5-1.4-1.5-1.4h-.8v2.8h.8c1 0 1.5-.5 1.5-1.4zM66.8 45.8h-2.5l-.6 1.8h-1.3l2.5-7.1h1.5l2.5 7.1h-1.5l-.6-1.8zm-.3-.9l-.9-2.9-1 2.8h1.9zM79.7 40.5v7.1h-1.3l-3.2-5v5H74v-7.1h1.4l3.1 4.6v-4.6h1.2z"></path></g></svg>
-        </div>
-        <ul class="carousel stories-carousel">
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-1.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  千葉県東金市にオープンしたスターバックスは、地域と一緒に地球環境について考える拠点。目指すのは「Connect
-                  to the future」。未来へ、つなぐこと
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-2.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  捨てずに直して使い続けるライフスタイルを楽しむ
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-3.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.21
-                  コーヒーの未来のためにできること「サステナブルなアイスコーヒーの楽しみ方」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-4.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  失敗も成功もふたりで分かち合える。双子姉妹が歩んだストーリー
-                </p>
-                <div class="story-item__content__time english">
-                  <span>People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-5.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  お互いに刺激しあい成長できる環境。スターバックスで働く親子の物語
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-6.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.20「日常と未来を彩るフェアトレードコーヒー」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-7.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ［what
-                  is…?］フェアトレード：地球環境と人権を守っていくためにできること
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-8.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ハミングバード
-                  プログラムの寄付の先にあるもの。被災した青年の夢
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Community&Connection</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-1.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  千葉県東金市にオープンしたスターバックスは、地域と一緒に地球環境について考える拠点。目指すのは「Connect
-                  to the future」。未来へ、つなぐこと
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-2.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  捨てずに直して使い続けるライフスタイルを楽しむ
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-3.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.21
-                  コーヒーの未来のためにできること「サステナブルなアイスコーヒーの楽しみ方」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-4.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  失敗も成功もふたりで分かち合える。双子姉妹が歩んだストーリー
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-5.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  お互いに刺激しあい成長できる環境。スターバックスで働く親子の物語
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-6.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.20「日常と未来を彩るフェアトレードコーヒー」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-7.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ［what
-                  is…?］フェアトレード：地球環境と人権を守っていくためにできること
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-8.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ハミングバード
-                  プログラムの寄付の先にあるもの。被災した青年の夢
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Community&Connection</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <div class="stories__link text-right">
-          <div class="text-link-wrapper">
-            <a class="text-link-green" href="">
-              一覧へ
-              <span class="icon">
-                <svg viewBox="0 0 12 12">
-                  <path d="M14.75,18H7.875A1.876,1.876,0,0,1,6,16.125V9.25A1.875,1.875,0,0,1,7.875,7.375h5.11a.5.5,0,1,1,0,1H7.875A.875.875,0,0,0,7,9.25v6.875A.875.875,0,0,0,7.875,17H14.75a.875.875,0,0,0,.875-.875V11a.5.5,0,0,1,1,0v5.125A1.876,1.876,0,0,1,14.75,18ZM14,6.5a.5.5,0,0,1,.5-.5h3a.5.5,0,0,1,.5.5v3a.5.5,0,0,1-1,0V7.72l-4.66,4.74a.5.5,0,0,1-.71-.7L16.307,7H14.5A.5.5,0,0,1,14,6.5Z" transform="translate(-6 -6)"/>
-                </svg>
-              </span>
-            </a>
-          </div>
-          <!-- <a href="#" class="ex-link"
-            >一覧へ <img src="/images/external-link-icon.png" alt=""
-          /></a> -->
-        </div>
-      </div>
-    </div>
-    <div class="line-gray"></div>
-    <!-- notification -->
-    <div class="notification">
-      <div class="notification__block">
-        <h2 class="notification__block__title text-bold text-center">
-          重要なお知らせ
-        </h2>
-        <div class="notification-item">
-          <div class="notification-item__time english">22.06.21</div>
-          <div class="notification-item__content">
-            新型コロナウイルス感染症に関する対応および店舗営業状況について（6/21更新）
-          </div>
-        </div>
-        <div class="notification-item">
-          <div class="notification-item__time english">22.06.21</div>
-          <div class="notification-item__content">
-            新型コロナウイルス感染症に関わる店舗営業再開について（6/21更新）
-          </div>
-        </div>
-        <div class="notification-item">
-          <div class="notification-item__time english">22.06.21</div>
-          <div class="notification-item__content">
-            キャラメルクリームサンド自主回収のお知らせ
-          </div>
-        </div>
-        <div class="text-link-wrapper">
-          <a class="text-link-green" href="">
-            一覧へ
-            <span class="icon">
-              <svg viewBox="0 0 12 12">
-                <path d="M14.75,18H7.875A1.876,1.876,0,0,1,6,16.125V9.25A1.875,1.875,0,0,1,7.875,7.375h5.11a.5.5,0,1,1,0,1H7.875A.875.875,0,0,0,7,9.25v6.875A.875.875,0,0,0,7.875,17H14.75a.875.875,0,0,0,.875-.875V11a.5.5,0,0,1,1,0v5.125A1.876,1.876,0,0,1,14.75,18ZM14,6.5a.5.5,0,0,1,.5-.5h3a.5.5,0,0,1,.5.5v3a.5.5,0,0,1-1,0V7.72l-4.66,4.74a.5.5,0,0,1-.71-.7L16.307,7H14.5A.5.5,0,0,1,14,6.5Z" transform="translate(-6 -6)"/>
-              </svg>
-            </span>
+        <div class="store-detail__title">
+          目黒店
+          <a class="reseave-logo" href="">
+            <img
+              src="/store/images/reseave-logo.png"
+              alt="スターバックス リザーブ&reg; ロースタリー"
+            />
           </a>
         </div>
-        <!-- <a class="ex-link" href="#"
-          >一覧へ <img src="/images/external-link-icon.png" alt=""
-        /></a> -->
+        <div class="store-detail__content">
+          <div class="store-detail__content-iframe">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=co-well+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.maps.ie/distance-area-calculator.html"
+                >store address</a
+              ></iframe
+            >
+          </div>
+          <div class="store-detail__content-desc">
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-detail">
+                  141-0021　東京都 品川区 上大崎2-25-2 新目黒東急ビル
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-title">電話番号</div>
+                <div class="store-detail__text-detail phone-number__text">
+                  03-5796-3091
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text custom-break-line">
+                <div class="store-detail__text-title">営業時間</div>
+                <div class="store-detail__text-detail">
+                  月～金：07:00～22:00 <br />
+                  土日祝：07:30～21:00
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-title">定休日</div>
+                <div class="store-detail__text-detail">不定休</div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__text-title">アクセス</div>
+                <div class="store-detail__text-detail">
+                  目黒駅／西口（ＪＲ山手線、東急目黒線、東京メトロ南北線、都営地下鉄三田線）
+                  徒歩3分
+                  <br />目黒駅／東口（ＪＲ山手線） 徒歩4分
+                  <br />目黒駅／正面口（ＪＲ山手線、東急目黒線、東京メトロ南北線、都営地下鉄三田線）
+                  徒歩6分
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__text-title">無線LAN</div>
+                <div class="store-detail__text-detail">
+                  STARBUCKS　docomo　au　Softbank　Wi2 300
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__text-title">モバイル決済</div>
+                <div class="store-detail__text-detail">
+                  <div class="store-detail__payment-method">
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method1.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method2.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method3.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method4.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method5.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method6.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="store-detail__text-notice">
+                  <div class="notice-icon">※</div>
+                  <div class="notice-text">
+                    一部店舗で表記と異なる場合がございます。詳しくは店頭でご確認ください。
+                  </div>
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-title">サービス</div>
+                <div class="store-detail__text-detail flex">
+                  <img
+                    src="/store/images/mobile-order.svg"
+                    alt="mobile-order"
+                  />
+                  <div class="mobile-order__text">Mobile Order & Pay</div>
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img
+                      src="/store/images/store-type-icon/gas-station.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="store-type__text">
+                    お車でも便利なドライブスルー店舗です
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img src="/store/images/store-type-icon/car.jpg" alt="" />
+                  </div>
+                  <div class="store-type__text">
+                    旅のお供に。新幹線停車駅の駅ビルの店舗です
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img src="/store/images/store-type-icon/plane.jpg" alt="" />
+                  </div>
+                  <div class="store-type__text">
+                    搭乗前の待ち時間に。空港にある店舗です。
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img
+                      src="/store/images/store-type-icon/simple-plane.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="store-type__text">
+                    お車でも便利なドライブスルー店舗です
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img src="/store/images/store-type-icon/book.jpg" alt="" />
+                  </div>
+                  <div class="store-type__text">
+                    書店が併設され、本を読みながらコーヒーが楽しめる店舗です。
+                  </div>
+                </div>
+              </div>
+              <div class="line-gray" style="height: 1px"></div>
+            </div>
+            <div class="store-detail__text-notice">
+              <div class="notice-icon">※</div>
+              <div class="notice-text">
+                台風、その他災害等により、予告なく臨時休業や営業時間を変更をさせて頂くことがありますが、あらかじめご了承下さい。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-gray" style="margin-top: 32px"></div>
+        <!-- information -->
+        <div class="information-wrapper">
+          <div class="information container">
+            <h2 class="information__title text-bold english">
+              MORE INFOMATION
+            </h2>
+            <div class="information__list">
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/store-detail/infomation/information-1.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <h3 class="information__list__item__title text-bold">
+                    <a href="#"
+                      >地元の老舗家具メーカーと開発したチェアから瀬戸内海が一望でき、嚴島神社の大鳥居を望むロケーション</a
+                    >
+                  </h3>
+                  <p class="information__list__item__desc">
+                    株式会社
+                    宮島ビールが運営する自家醸造施設を備えたレストラン「宮島ブルワリー」と併設しています。デザインコンセプトは「Passion
+                    Brewery」。創業の地である宮島への熱い思いを醸造に込める宮島ビールと、コーヒーへの情熱と地域との繋がりと大切にするスターバックスの共通の想いから生まれたコンセプトです。
+                  </p>
+                </div>
+              </article>
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/store-detail/infomation/information-2.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <p class="information__list__item__desc">
+                    世界文化遺産の嚴島神社に通じる表参道商店街に位置し、ガラス張りの店内からは瀬戸内海が目の前に広がります。
+                  </p>
+                </div>
+              </article>
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/store-detail/infomation/information-3.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <p class="information__list__item__desc">
+                    2階の客席の壁には、宮島の伝統工芸品である木製しゃもじを使ったオリジナルのアートを飾りました。しゃもじの形をスターバックスのロゴであるサイレンの鱗に見立てています。
+                  </p>
+                </div>
+              </article>
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/store-detail/infomation/information-4.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <p class="information__list__item__desc">
+                    海側に設置されたバルコニーからは、時間帯によって表情の異なる瀬戸内海とともに、幻想的な空気に包まれる嚴島神社の大鳥居をご覧いただけます。
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <a href="#" class="information__link">
+              他のリージョナル ランドマーク ストアを見る</a
+            >
+          </div>
+        </div>
       </div>
-      <div class="notification__block">
-        <h2 class="notification__block__title text-bold text-center">
-          PRESS RELEASE
-        </h2>
-        <div class="notification-item">
-          <div class="notification-item__time english">22.06.21</div>
-          <div class="notification-item__content">
-            スターバックス リザーブ® ロースタリー 東京 × CONVERSE TOKYO<br />
-            中目黒の2つの星が出会う、夏を彩る七夕シーズングッズが今年も登場<br />
-            コラボレーション全7アイテムを6月24日(金)より発売開始
-          </div>
-        </div>
-        <div class="notification-item">
-          <div class="notification-item__time english">22.06.21</div>
-          <div class="notification-item__content">
-            “ティー”を楽しむ「スターバックス ティー ＆
-            カフェ」夏の新商品第2弾<br />
-            芳醇な香りの抹茶と香ばしいアーモンドの絶妙なコンビネーションが楽しめる新食感のティーラテ
-            <br />
-            『抹茶 ＆ クラッシュ アーモンドミルク ティー
-            ラテ』を6月22日（水）から発売
-          </div>
-        </div>
-        <div class="notification-item">
-          <div class="notification-item__time english">22.06.21</div>
-          <div class="notification-item__content">
-            スターバックス 夏に楽しむ新作ティービバレッジが登場！<br />
-            濃厚な抹茶の味わいを存分に楽しめる『ダブル 抹茶 ティー ラテ』、<br />
-            華やかでフルーティーな『ストロベリー & ユースベリー®
-            ティー』を6月22日(水)発売
-          </div>
-        </div>
-        <div class="text-link-wrapper">
-          <a class="text-link-green" href="">
-            一覧へ
-            <span class="icon">
-              <svg viewBox="0 0 12 12">
-                <path d="M14.75,18H7.875A1.876,1.876,0,0,1,6,16.125V9.25A1.875,1.875,0,0,1,7.875,7.375h5.11a.5.5,0,1,1,0,1H7.875A.875.875,0,0,0,7,9.25v6.875A.875.875,0,0,0,7.875,17H14.75a.875.875,0,0,0,.875-.875V11a.5.5,0,0,1,1,0v5.125A1.876,1.876,0,0,1,14.75,18ZM14,6.5a.5.5,0,0,1,.5-.5h3a.5.5,0,0,1,.5.5v3a.5.5,0,0,1-1,0V7.72l-4.66,4.74a.5.5,0,0,1-.71-.7L16.307,7H14.5A.5.5,0,0,1,14,6.5Z" transform="translate(-6 -6)"/>
-              </svg>
-            </span>
-          </a>
-        </div>
-        <!-- <a class="ex-link" href="#"
-          >一覧へ <img src="/images/external-link-icon.png" alt=""
-        /></a> -->
-      </div>
+      <!-- ここからコンテンツを作成してください -->
+      <!-- ここまでコンテンツを作成してください -->
     </div>
-    <div class="line-gray"></div>
-  </div>
-<!-- ここまでコンテンツを作成してください -->
-</div><!-- /.mainContents -->
-<!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
-</body>
+    <!-- /.mainContents -->
+    <!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
+  </body>
 </html>

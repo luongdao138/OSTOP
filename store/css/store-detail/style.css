@@ -1,2 +1,143 @@
 
 @import url('/store/css/store-detail/store-information.css');
+
+.store-detail__wrapper {
+  /* padding: 0 16px; */
+  /* height: 100vh; */
+}
+.store-detail__title {
+  padding: 39px 16px 0 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* content */
+.store-detail__content {
+  padding-top: 39px;
+  display: grid;
+}
+
+.store-detail__content-iframe {
+  width: 100%;
+  left: 0;
+  min-height: 375px;
+  max-height: 560px;
+}
+
+/* content description text */
+
+.store-detail__content-desc {
+  padding: 8px 16px 0 16px;
+}
+
+.store-detail__content--row {
+  font-size: 1.3rem;
+  flex-direction: column;
+  line-height: 1.9rem;
+  display: flex;
+}
+
+.store-detail__content--row .store-detail__content-text {
+  padding: 24px 0;
+  line-height: 1.9rem;
+  display: flex;
+}
+
+.phone-number__text {
+  letter-spacing: 0.5px;
+}
+
+.store-detail__text-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  flex: 0 0 20%;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.no-flex {
+  display: block !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.mobile-order__text {
+  margin: auto;
+  padding-left: 8px;
+  font-size: 14px;
+  color: #00754A;
+}
+
+.store-detail__content-text.no-flex > .store-detail__text-detail {
+  margin-top: 16px;
+  line-height: 22px;
+}
+
+.store-detail__payment-method {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(6, 32px);
+}
+
+.store-detail__payment-method .payment-method__item {
+  max-width: 32px;
+  height: auto;
+}
+
+.store-detail__text-notice {
+  display: flex;
+  padding-top: 8px;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.store-type__icon {
+  max-width: 40px;
+  height: auto;
+}
+.store-type__text {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 16px;
+}
+.store-detail__store-type + .store-detail__store-type {
+  padding-top: 16px;
+}
+
+.store-detail__content-text.custom-break-line br {
+  content: "";
+  display: block;
+  margin-top: 5px;
+}
+
+.store-detail__title .reseave-logo {
+  display: inline-block;
+  margin-left: 20px;
+  width: 20px;
+}
+
+/* responsive */
+@media screen and (min-width: 768px) {
+  .store-detail__title {
+    padding-top: 39px;
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  .store-detail__content {
+    padding: 0 128px;
+    padding-top: 54px;
+    gap: 64px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .store-detail__content-iframe {
+    width: 560px;
+  }
+
+  .store-detail__content-desc {
+    padding: 0;
+    grid-row: 1;
+  }
+}
