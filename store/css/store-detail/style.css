@@ -37,6 +37,7 @@
 .store-detail__content-iframe {
   width: 100%;
   left: 0;
+  height: 100%;
   min-height: 375px;
   max-height: 560px;
 }
