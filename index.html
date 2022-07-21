@@ -37,6 +37,9 @@ $wbs = getTopWb($previewDate);
 $recs = getTopRec($previewDate);
 $kv = getTopKv($previewDate);
 
+// stories
+$stories = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/top/json/stories.json'), true);
+
 // ページプロパティ設定
 $pageProperties['title'] = "Starbucks Coffee Japan";
 $pageProperties['description'] = "スターバックス コーヒー ジャパンの公式ホームページ。新商品・メニュー情報、店舗検索、イベント情報、求人情報、エスプレッソドリンク用語の解説、コーヒー豆の解説、IR情報、CSR情報など。";
@@ -65,252 +68,236 @@ ob_start();
 <link rel="stylesheet" href="/top/css/reset.css" />
 <link rel="stylesheet" href="/top/css/common.css" />
 
-<!-- Common CSS -->
+<!-- +++++ local css +++++ -->
 <link rel="stylesheet" href="/top/components/carousel/styles.css" />
 <link rel="stylesheet" href="/top/components/tabs/styles.css" />
 <link rel="stylesheet" href="/top/components/products-tag/style.css" />
 <link rel="stylesheet" href="/top/components/text-link-green/style.css" />
-<title><?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン</title>
-
-<!-- +++++ local css +++++ -->
-<!-- ここにCSSを記載してください -->
 <link rel="stylesheet" href="/top/css/top.css" />
+<style>
+@media screen and (min-width:1040px) {
+  .pc-hidden {
+    display: none;
+  }
+}
+@media screen and (max-width:1039px) {
+  .sp-hidden {
+    display: none;
+  }
+}
+.super-notice{
+    color: #fff;
+    background: #006241;
+    font-size: 13px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.super-notice-inner{
+    max-width: 1184px;
+    width: 1184px;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:1263px) {
+  .super-notice-inner{
+    width: calc(100% - 80px);
+  }
+}
+.super-notice-content{
+    width: calc(100% - 96px);
+    position: relative;
+    text-overflow: unset;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+.super-notice-content{
+    display: flex;
+    align-items: center;
+}
+.super-notice-content::after{
+    content: "";
+    height: 40px;
+    width: 40px;
+    background: #f00;
+    display: block;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0, #006241 100%);
+    z-index: 9999;
+}
+.super-notice-paging{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+}
+.super-notice-paging-prev{
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #fff;
+    border-left-width: 0;
+    border-top-width: 0;
+    transform: translate(0, 0) rotate(135deg);
+    cursor: pointer;
+}
+.super-notice-paging-next{
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #fff;
+    border-left-width: 0;
+    border-top-width: 0;
+    transform: translate(0, 0) rotate(-45deg);
+    cursor: pointer;
+}
+@media screen and (max-width:1039px) {
+  .super-notice{
+    font-size: 11px;
+  }
+  .super-notice-inner{
+    width: calc(100% - 32px);
+  }
+  .super-notice-content{
+    width: calc(100% - 32px);
+  }
+  .super-notice-paging{
+    justify-content: end;
+    width: 32px;
+  }
+  .super-notice-paging-prev, .super-notice-paging-next{
+    display: none;
+  }
+}
+</style>
 <!-- +++++ /local css +++++ -->
 
 <!-- +++++ local script +++++ -->
-<!-- ここにJavaScriptを記載してください -->
 <script src="/top/js/script.js" defer></script>
-<!-- +++++ /local script +++++ -->
-<!-- Common script -->
 <script src="/common/js/jquery-1.12.3.min.js"></script>
 <script src="/top/components/tabs/script.js" defer></script>
 <script src="/top/components/carousel/script.js" defer></script>
+<!-- +++++ /local script +++++ -->
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <noscript>
 <p class="noscript">当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。</p>
 </noscript>
+<script>
+</script>
+<nav class="super-notice">
+  <div class="super-notice-inner">
+    <div class="super-notice-content">
+    スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ スーパー重要なお知らせ
+    </div>
+    <div class="super-notice-paging">
+      <div class="super-notice-paging-prev"></div>
+      <div class="super-notice-paging-number"><span>1</span> / <span>3</span></div>
+      <div class="super-notice-paging-next"></div>
+    </div>
+  </div>
+</nav>
 <?php include(INCLUDE_DIR."/header.html"); ?>
 <div class="mainContents notExNav">
 <!-- ここからコンテンツを作成してください -->
   <div class="top-wrapper">
     <div class="banner">
-      <a href="#" class="banner__img banner__img-1">
-        <img src="/top/images/banner/img-1.jpg" alt="the-melon-frappuccino" />
+      <a href="<?= $kv[0]['KV_LINK_URL']; ?> <?= $kv[0]['KV_NEW_WINDOW']?'target=_blank':''; ?>" class="banner__img banner__img-1">
+        <img src="<?= 'https://'._SB_DOMAIN_WWW_.'/'.$kv[0]['KV_IMAGE']; ?>" alt="<?= $kv[0]['KV_IMAGE_ALT']; ?>" class="sp-hidden" />
+        <img src="<?= 'https://'._SB_DOMAIN_WWW_.'/'.$kv[0]['KV_SP_IMAGE']; ?>" alt="<?= $kv[0]['KV_IMAGE_ALT']; ?>" class="pc-hidden" />
       </a>
-      <a href="#" class="banner__img banner__img-2">
-        <img src="/top/images/banner/img-2.jpg" alt="keeping-story-safe" />
+      <a href="<?= $kv[1]['KV_LINK_URL']; ?> <?= $kv[1]['KV_NEW_WINDOW']?'target=_blank':''; ?>" class="banner__img banner__img-2">
+        <img src="<?= 'https://'._SB_DOMAIN_WWW_.'/'.$kv[1]['KV_IMAGE']; ?>" alt="<?= $kv[1]['KV_IMAGE_ALT']; ?>" class="sp-hidden" />
+        <img src="<?= 'https://'._SB_DOMAIN_WWW_.'/'.$kv[1]['KV_SP_IMAGE']; ?>" alt="<?= $kv[1]['KV_IMAGE_ALT']; ?>" class="pc-hidden" />
       </a>
-      <a href="#" class="banner__img banner__img-3">
-        <img src="/top/images/banner/img-3.jpg" alt="summer-coffee-bliss" />
+      <a href="<?= $kv[2]['KV_LINK_URL']; ?> <?= $kv[2]['KV_NEW_WINDOW']?'target=_blank':''; ?>" class="banner__img banner__img-3">
+        <img src="<?= 'https://'._SB_DOMAIN_WWW_.'/'.$kv[2]['KV_IMAGE']; ?>" alt="<?= $kv[2]['KV_IMAGE_ALT']; ?>" class="sp-hidden" />
+        <img src="<?= 'https://'._SB_DOMAIN_WWW_.'/'.$kv[2]['KV_SP_IMAGE']; ?>" alt="<?= $kv[2]['KV_IMAGE_ALT']; ?>" class="pc-hidden" />
       </a>
     </div>
-  <!-- Brew Products -->
-  <div class="brew-products">
-    <h2 class="brew-products__title text-bold text-center">
-      WHAT’S BREWING
-    </h2>
-    <ul class="carousel brew-products-carousel">
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-1.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
+
+    <!-- Brew Products -->
+    <div class="brew-products">
+      <h2 class="brew-products__title text-bold text-center">
+        WHAT’S BREWING
+      </h2>
+      <ul class="carousel brew-products-carousel">
+        <?php foreach($wbs as $wb): ?>
+        <li class="brew-products__card">
+          <a href="<?php if ($wb['link']){ echo '<?php echo addUrlParam("'.setServerDomail($wb['link']).'", "nid=wh_'.sprintf('%02d', $i).'_".getDevice()) ?>'; } ?>"
+             <?php if($wb['wb_new_window_flg']){ echo 'target="_blank"'; } ?> 
+             class="brew-products__card__inner">
+            <div class="brew-products__card__inner__img">
+              <img src="/<?php echo $wb['image'] ?>" width="100" height="120" alt="<?php echo $wb['title'] ?>">
+            </div>
+            <div class="brew-products__card__inner__info">
+              <p class="brew-products__card__inner__desc">
+                <?php echo $wb['title'] ?>
+              </p>
+              <span class="brew-products__card__inner__time text-right">
+                <?php echo date("y.m.d" ,strtotime($wb['disp_date'])) ?>
+              </span>
+            </div>
+          </a>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+
+      <div class="container">
+        <div class="brew-products__bottom">
+          <a href="#" class="brew-products__bottom__items">
+            <div class="brew-products__bottom__items__img">
+              <img src="/top/images/brew-products/img-bottom-1.jpg" alt="product" />
+            </div>
+
+            <p class="brew-products__bottom__items__desc">
+              いつもの一杯を、キャッシュレスで
             </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-2.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              キラキラ輝く水面のような色合いの涼し気なグッズやアイスコーヒーにぴったりのコーヒーなど、オンラインストアで贈るサマーギフト
+          </a>
+          <a href="#" class="brew-products__bottom__items">
+            <div class="brew-products__bottom__items__img">
+              <img src="/top/images/brew-products/img-bottom-2.jpg" alt="product" />
+            </div>
+
+            <p class="brew-products__bottom__items__desc">
+              Starを集めるとさまざまな商品と交換できるプログラム
             </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-3.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              サマー限定オリジナルeGiftで、大切なあの人へ感謝の気持ちを伝えてみませんか。
+          </a>
+          <a href="#" class="brew-products__bottom__items">
+            <div class="brew-products__bottom__items__img">
+              <img src="/top/images/brew-products/img-bottom-3.jpg" alt="product" />
+            </div>
+
+            <p class="brew-products__bottom__items__desc">
+              新型コロナウィルス に関する営業状況と感染予防へのご協力のお願い
             </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-4.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報]
-              グリーンな未来につなげるための、環境に配慮した素材を使用したグッズが登場。
+          </a>
+          <a href="#" class="brew-products__bottom__items">
+            <div class="brew-products__bottom__items__img">
+              <img src="/top/images/brew-products/img-bottom-4.jpg" alt="product" />
+            </div>
+
+            <p class="brew-products__bottom__items__desc">
+              [アルバイト情報] あなたもバリスタとして働いてみませんか
             </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-5.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-6.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-7.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-8.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-1.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-
-      <li class="brew-products__card">
-        <a href="" class="brew-products__card__inner">
-          <div class="brew-products__card__inner__img">
-            <img src="/top/images/brew-products/img-top-2.jpg" alt="starbuck-feature-product" />
-          </div>
-          <div class="brew-products__card__inner__info">
-            <p class="brew-products__card__inner__desc">
-              [新商品情報] The メロン of メロン フラペチーノ®
-            </p>
-            <span class="brew-products__card__inner__time text-right">
-              2021. 11. 8
-            </span>
-          </div>
-        </a>
-      </li>
-    </ul>
-
-
-    <div class="container">
-      <div class="brew-products__bottom">
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-1.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            いつもの一杯を、キャッシュレスで
-          </p>
-        </a>
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-2.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            Starを集めるとさまざまな商品と交換できるプログラム
-          </p>
-        </a>
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-3.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            新型コロナウィルス に関する営業状況と感染予防へのご協力のお願い
-          </p>
-        </a>
-        <a href="#" class="brew-products__bottom__items">
-          <div class="brew-products__bottom__items__img">
-            <img src="/top/images/brew-products/img-bottom-4.jpg" alt="product" />
-          </div>
-
-          <p class="brew-products__bottom__items__desc">
-            [アルバイト情報] あなたもバリスタとして働いてみませんか
-          </p>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
     <div class="line-gray"></div>
     <!-- online store -->
     <div class="online-store">
@@ -2541,274 +2528,28 @@ ob_start();
           <svg viewBox="0 0 118 48" alt="Starbucks Stories"><path d="M16.1 7.4c1.3 0 2.2-.7 2.2-2 0-2.2-3.2-2-3.2-3.2 0-.4.4-.8.9-.8.6 0 1.1.4 1.4.8l.7-.7C17.7.8 17 .4 15.9.4 15 .4 14 1 14 2.3c0 2.2 3.1 2 3.1 3.3 0 .5-.4.8-1 .8-.7 0-1.3-.4-1.7-1l-.7.7c.3.6 1.1 1.3 2.4 1.3zM28.5.5h-4.7v1.1h1.7v5.7h1.3V1.5h1.7v-1zm9.9 6.7h1.4L37.4.5H36l-2.4 6.7h1.3l.6-1.7h2.4l.5 1.7zm-2.6-2.6l.9-2.7.9 2.7h-1.8zm13.3 2.6h1.5l-1.7-2.6c1-.3 1.6-1 1.6-2.1 0-1.4-1-2.1-2.5-2.1h-2.4v6.7h1.3V4.7h.8l1.4 2.5zm-2.3-5.7h1c.8 0 1.3.3 1.3 1.1s-.5 1.2-1.3 1.2h-1V1.5zM60 3.8c.7-.2 1.1-.7 1.1-1.5 0-1.2-1-1.8-2.3-1.8h-2.3v6.7H59c1.4 0 2.4-.6 2.4-1.9 0-.9-.6-1.4-1.4-1.5zm-1.3-2.3c.7 0 1.1.3 1.1 1s-.4.9-1.1.9h-.9V1.5h.9zm.2 4.7h-1.1v-2h1.1c.7 0 1.1.3 1.1 1s-.4 1-1.1 1zM70 7.4c1.6 0 2.7-.9 2.7-2.7V.5h-1.3v4.1c0 1.1-.5 1.6-1.4 1.6-.8 0-1.3-.6-1.3-1.6V.5h-1.3v4.2c-.1 1.8 1 2.7 2.6 2.7zm11.8 0c1.1 0 1.8-.3 2.3-.8l-.4-1.1c-.4.4-.9.7-1.8.7-1.1 0-2.1-.8-2.1-2.3 0-1.5 1-2.3 2.1-2.3.7 0 1.3.3 1.6.6l.4-1.2c-.5-.4-1.2-.7-2.2-.7-1.8 0-3.2 1.3-3.2 3.5s1.4 3.6 3.3 3.6zm11.9-.2h1.5l-2.6-3.7 2.4-3h-1.5l-2.4 3.2V.5h-1.3v6.7h1.3V5.3l.6-.8 2 2.7zm9.1.2c1.3 0 2.2-.7 2.2-2 0-2.2-3.2-2-3.2-3.2 0-.4.4-.8.9-.8.6 0 1.1.4 1.4.8l.7-.7c-.4-.7-1.1-1.1-2.2-1.1s-2.1.6-2.1 1.9c0 2.2 3.1 2 3.1 3.3 0 .5-.4.8-1 .8-.7 0-1.3-.4-1.7-1l-.7.7c.5.6 1.3 1.3 2.6 1.3zm5.9-6.9c-.7 0-1.3.5-1.3 1.3s.6 1.3 1.3 1.3c.7 0 1.3-.5 1.3-1.3s-.7-1.3-1.3-1.3zm0 2.4c-.5 0-1-.3-1-1.1 0-.7.5-1.1 1-1.1s1 .3 1 1.1-.5 1.1-1 1.1zm.5-1.3c0-.3-.2-.4-.5-.4h-.5v1.2h.3V2h.1l.2.4h.3l-.2-.4c.2-.1.3-.2.3-.4zm-.7-.1h.1c.1 0 .2.1.2.2s-.1.2-.2.2h-.1v-.4zM6.8 33.4c3.4 0 6-1.8 6-5.4 0-5.8-8.5-5.4-8.5-8.6 0-1.2 1-2 2.4-2 1.7 0 2.9 1.1 3.8 2.1l1.8-1.9c-1.1-1.9-3-2.9-5.8-2.9-3 0-5.7 1.7-5.7 5 0 6 8.3 5.4 8.3 8.8 0 1.3-1.1 2.2-2.7 2.2-1.9 0-3.6-1.2-4.6-2.7L0 30c1.1 1.7 3.2 3.4 6.8 3.4zm23.1-18.6H17.2v2.9h4.6V33h3.4V17.7h4.6v-2.9h.1zm13.4 18.6c4.9 0 9.1-3.8 9.1-9.5s-4.3-9.5-9.1-9.5-9.1 3.8-9.1 9.5 4.2 9.5 9.1 9.5zm0-3.2c-2.8 0-5.5-2.1-5.5-6.3 0-4.3 2.8-6.3 5.5-6.3 2.8 0 5.6 2.1 5.6 6.3 0 4.2-2.8 6.3-5.6 6.3zM68.6 33h4l-4.7-7c2.7-.7 4.3-2.7 4.3-5.7 0-3.9-2.7-5.5-6.8-5.5h-6.5V33h3.4v-6.7h2l4.3 6.7zm-6.3-15.4h2.6c2.3 0 3.6.9 3.6 3s-1.3 3.1-3.6 3.1h-2.6v-6.1zM78.9 33h3.4V14.8h-3.4V33zm21.2-15.4v-2.9H89.9V33H100v-2.9h-6.7v-5.2h5.8v-2.7h-5.8v-4.6h6.8zm11.8 15.8c3.4 0 6-1.8 6-5.4 0-5.8-8.5-5.4-8.5-8.6 0-1.2 1-2 2.4-2 1.7 0 2.9 1.1 3.8 2.1l1.8-1.9c-1.1-1.9-3-2.9-5.8-2.9-3 0-5.7 1.7-5.7 5 0 6 8.3 5.4 8.3 8.8 0 1.3-1.1 2.2-2.7 2.2-1.9 0-3.6-1.2-4.6-2.7l-1.8 2c1.1 1.7 3.2 3.4 6.8 3.4z"></path><g><path d="M33.7 47.6l.1-1.1c.1 0 .4.1.7.1.8 0 1.1-.4 1.1-1.4v-4.5h1.3v4.8c0 1.8-.8 2.4-2.2 2.4-.4-.2-.8-.3-1-.3zM46.3 45.8h-2.5l-.6 1.8h-1.3l2.5-7.1h1.5l2.5 7.1h-1.5l-.6-1.8zm-.3-.9L45 42l-1 2.8h2zM58.3 42.9c0 1.6-1 2.6-2.6 2.6h-1v2.1h-1.3v-7.1h2.4c1.5 0 2.5.8 2.5 2.4zm-1.4.1c0-.9-.5-1.4-1.5-1.4h-.8v2.8h.8c1 0 1.5-.5 1.5-1.4zM66.8 45.8h-2.5l-.6 1.8h-1.3l2.5-7.1h1.5l2.5 7.1h-1.5l-.6-1.8zm-.3-.9l-.9-2.9-1 2.8h1.9zM79.7 40.5v7.1h-1.3l-3.2-5v5H74v-7.1h1.4l3.1 4.6v-4.6h1.2z"></path></g></svg>
         </div>
         <ul class="carousel stories-carousel">
+          <?php foreach($stories as $story): ?>
           <li class="story-item">
-            <a href="#">
+            <a href="<?= $story['page_url'] ?>">
               <div class="story-item__img">
-                <img src="/top/images/stories/story-1.jpg" alt="img" />
+                <img src="<?= $story['image_url'] ?>" alt="<?= $story['title'] ?>" />
               </div>
               <div class="story-item__content">
                 <p class="story-item__content__desc">
-                  千葉県東金市にオープンしたスターバックスは、地域と一緒に地球環境について考える拠点。目指すのは「Connect
-                  to the future」。未来へ、つなぐこと
+                <?= $story['title'] ?>
                 </p>
                 <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
+                  <span class="text-left"><?= $story['categogy'] ?></span>
+                  <span class="text-right"><?= $story['date'] ?></span>
                 </div>
               </div>
             </a>
           </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-2.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  捨てずに直して使い続けるライフスタイルを楽しむ
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-3.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.21
-                  コーヒーの未来のためにできること「サステナブルなアイスコーヒーの楽しみ方」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-4.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  失敗も成功もふたりで分かち合える。双子姉妹が歩んだストーリー
-                </p>
-                <div class="story-item__content__time english">
-                  <span>People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-5.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  お互いに刺激しあい成長できる環境。スターバックスで働く親子の物語
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-6.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.20「日常と未来を彩るフェアトレードコーヒー」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-7.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ［what
-                  is…?］フェアトレード：地球環境と人権を守っていくためにできること
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-8.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ハミングバード
-                  プログラムの寄付の先にあるもの。被災した青年の夢
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Community&Connection</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-1.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  千葉県東金市にオープンしたスターバックスは、地域と一緒に地球環境について考える拠点。目指すのは「Connect
-                  to the future」。未来へ、つなぐこと
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-2.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  捨てずに直して使い続けるライフスタイルを楽しむ
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Sustainability</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-3.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.21
-                  コーヒーの未来のためにできること「サステナブルなアイスコーヒーの楽しみ方」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-4.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  失敗も成功もふたりで分かち合える。双子姉妹が歩んだストーリー
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-5.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  お互いに刺激しあい成長できる環境。スターバックスで働く親子の物語
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">People</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-6.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  コーヒーストーリーvol.20「日常と未来を彩るフェアトレードコーヒー」
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-7.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ［what
-                  is…?］フェアトレード：地球環境と人権を守っていくためにできること
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Planet</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="story-item">
-            <a href="#">
-              <div class="story-item__img">
-                <img src="/top/images/stories/story-8.jpg" alt="img" />
-              </div>
-              <div class="story-item__content">
-                <p class="story-item__content__desc">
-                  ハミングバード
-                  プログラムの寄付の先にあるもの。被災した青年の夢
-                </p>
-                <div class="story-item__content__time english">
-                  <span class="text-left">Community&Connection</span>
-                  <span class="text-right">2021. 11. 8</span>
-                </div>
-              </div>
-            </a>
-          </li>
+          <?php endforeach; ?>
         </ul>
         <div class="stories__link text-right">
           <div class="text-link-wrapper">
-            <a class="text-link-green" href="">
+            <a class="text-link-green" href="//stories.starbucks.co.jp/">
               一覧へ
               <span class="icon">
                 <svg viewBox="0 0 12 12">
@@ -2849,7 +2590,7 @@ ob_start();
           </div>
         </div>
         <div class="text-link-wrapper">
-          <a class="text-link-green" href="">
+          <a class="text-link-green" href="/notice/">
             一覧へ
             <span class="icon">
               <svg viewBox="0 0 12 12">
@@ -2895,7 +2636,7 @@ ob_start();
           </div>
         </div>
         <div class="text-link-wrapper">
-          <a class="text-link-green" href="">
+          <a class="text-link-green" href="/press_release/">
             一覧へ
             <span class="icon">
               <svg viewBox="0 0 12 12">
@@ -2916,3 +2657,11 @@ ob_start();
 <!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
 </body>
 </html>
+<?php
+$html = ob_get_contents();
+ob_end_clean();
+
+saveCache($pageCacheKey, $html);
+
+echo eval('?>'.$html);
+?>
