@@ -1,29 +1,65 @@
-<!-- <?php
+<?php
 include_once($_SERVER['DOCUMENT_ROOT']."/config.inc.php");
+require_once('cs/top/getData.php');
+session_start();
 
-$is_brs = strpos($_SERVER['HTTP_HOST'], "starbucks.co.jp") !== false;
-$include_dir = $is_brs ? _SB_DIR_INCLUDE_."/common" : $_SERVER['DOCUMENT_ROOT'].'/local_include';
-define('INCLUDE_DIR', $include_dir);
+if($_SESSION['member-quit-flg'])
+{
+    unset($_SESSION['member-quit-flg']);
+    header('Location: /mystarbucks/member-quit/complete/');
+    exit;
+}
+
+// キャッシュが存在する場合は表示する
+$pageCacheKey = md5(serialize(array(
+    'file' => __FILE__,
+    'params' => $_GET,
+    'device' => getDevice(),
+    'is_webview' => is_webview(),
+)));
+
+/*
+if (viewCache($pageCacheKey))
+{
+    return true;
+}
+*/
+
+$previewDate = '';
+if ($_GET['preview_date'] && strtotime($_GET['preview_date']))
+{
+    $previewDate = $_GET['preview_date'];
+}
+
+// 以下キャッシュが存在しない場合の処理
+$newss = getTopNews($previewDate);
+$wbs = getTopWb($previewDate);
+$recs = getTopRec($previewDate);
+$kv = getTopKv($previewDate);
 
 // ページプロパティ設定
-$pageProperties['title'] = "Connect Happy holidays for you";
-$pageProperties['description'] = "スターバックスからあなたへのプレゼント。１日１回届くGreen Gift BoxとeGiftを贈って届くGold Gift Box、２つの特別なギフトを用意しました。離れた友人や家族とも楽しい時間をシェアできるギフトや、スターバックスのドリンクやフードを楽しめるギフトをお届けします。";
-$pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
-?> -->
+$pageProperties['title'] = "Starbucks Coffee Japan";
+$pageProperties['description'] = "スターバックス コーヒー ジャパンの公式ホームページ。新商品・メニュー情報、店舗検索、イベント情報、求人情報、エスプレッソドリンク用語の解説、コーヒー豆の解説、IR情報、CSR情報など。";
+$pageProperties['keyword'] = "スターバックス, コーヒー, ジャパン, starbucks, coffee, japan, スタバ, 店, 店舗, 豆, カフェ, caf&eacute;";
+$pageProperties['ogImage'] = "https:"._AWS_DOMAIN_CF_."/images/og/logo.png";
+// サニタイズ
+$pageURL = str_replace(['\'', '"', '<', '>'],
+                       ['%27','%22','%3C', '%3E'],
+                       $pageURL);
+
+// 出力バッファで変数に格納
+ob_start();
+?>
+<?php echo '<?php include_once($_SERVER[\'DOCUMENT_ROOT\']."/config.inc.php"); ?>' ?>
+<?php echo '<?php include_once("cs/top/getData.php"); ?>' ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="format-detection" content="telephone=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Noto Sans JP Font CDN -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
-  rel="stylesheet"
-/>
+<title>Starbucks Coffee Japan - スターバックス コーヒー ジャパン</title>
+<?php include(_SB_DIR_INCLUDE_."/common/meta.html"); ?>
+<?php include(_SB_DIR_INCLUDE_."/common/css2022.html"); ?>
+<?php echo '<?php include(_SB_DIR_INCLUDE_."/common/js.html"); ?>' ?>
 
 <!-- Reset and Common CSS -->
 <link rel="stylesheet" href="/top/css/reset.css" />
@@ -35,9 +71,6 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
 <link rel="stylesheet" href="/top/components/products-tag/style.css" />
 <link rel="stylesheet" href="/top/components/text-link-green/style.css" />
 <title><?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン</title>
-<!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
-<?php include(INCLUDE_DIR."/css2022.html"); ?>
-<?php include(INCLUDE_DIR."/js.html"); ?> -->
 
 <!-- +++++ local css +++++ -->
 <!-- ここにCSSを記載してください -->
@@ -57,7 +90,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
 <noscript>
 <p class="noscript">当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。</p>
 </noscript>
-<!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
+<?php include(INCLUDE_DIR."/header.html"); ?>
 <div class="mainContents notExNav">
 <!-- ここからコンテンツを作成してください -->
   <div class="top-wrapper">
