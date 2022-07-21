@@ -4,6 +4,7 @@
 
 .information-wrapper {
    padding-block-start: 23px;
+   border-top: solid 8px #EDEBE9;
    padding-block-end: 32px;
 }
 
