@@ -14,6 +14,7 @@
 /* content */
 .store-detail__content {
   padding-top: 39px;
+  padding-bottom: 32px;
   display: grid;
 }
 
@@ -131,6 +132,7 @@
 
   .store-detail__content {
     padding: 0 128px;
+    padding-bottom: 49px;
     padding-top: 54px;
     gap: 64px;
     grid-template-columns: repeat(2, 1fr);
