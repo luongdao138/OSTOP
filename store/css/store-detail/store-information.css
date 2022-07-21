@@ -45,6 +45,7 @@
      line-height: 1.8rem;
      text-align: right;
      display: block;
+     font-weight: 500;
 }
 
 @media screen and (min-width: 640px) and (max-width:1024px) {
