@@ -18,6 +18,8 @@ body {
 .container {
     width: 100%;
     max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
-    margin-inline: auto;
-    padding-inline: var(--padding-inline);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--padding-inline);
+    padding-right: var(--padding-inline);
 }

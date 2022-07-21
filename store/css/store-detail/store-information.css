@@ -1,7 +1,7 @@
 .information-wrapper {
-   padding-block-start: 2.3rem;
+   padding-top: 2.3rem;
    border-top: solid 8px #EDEBE9;
-   padding-block-end: 3.2rem;
+   padding-bottom: 3.2rem;
 }
 
 .information__title {
@@ -47,25 +47,29 @@
      display: block;
 }
 
-@media screen and (min-width: 768px) and (max-width:1024px) {
+@media screen and (min-width: 640px) and (max-width:1024px) {
     .information__list__item__title { 
-        font-size: 1.8rem;
-        line-height: 3.2rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
         margin-bottom: 1.6rem;
         -webkit-line-clamp: 2;
     }
 
     .information__list__item__desc {
-        font-size: 1.5rem;
-        line-height: 2.4rem;
-        -webkit-line-clamp: 3;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        -webkit-line-clamp: 4;
+    }
+
+    .information__list__item__seperate {
+        width: 32px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .information-wrapper {
-        padding-block-start: 3.5rem;
-        padding-block-end: 4rem;
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
      }
 
      .information__title {
@@ -90,11 +94,6 @@
          flex: 1;
      }
 
-     .information__list__item__seperate {
-         display: block;
-         width: 64px;
-     }
-
      .information__list__item__title { 
          display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -109,6 +108,8 @@
 
      .information__link {
          margin-top: 3.2rem;
+         font-size: 1.4rem;
+         line-height: 2.4rem;
      }
 }
 
@@ -124,5 +125,9 @@
         font-size: 1.5rem;
         line-height: 2.4rem;
         -webkit-line-clamp: 4;
+    }
+
+    .information__list__item__seperate {
+        width: 64px;
     }
 }
