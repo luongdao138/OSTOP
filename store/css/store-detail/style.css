@@ -1,14 +1,26 @@
 
 @import url('/store/css/store-detail/store-information.css');
 
-.store-detail__wrapper {
-  /* padding: 0 16px; */
-  /* height: 100vh; */
-}
 .store-detail__title {
   padding: 39px 16px 0 16px;
   font-weight: bold;
   font-size: 18px;
+}
+
+.store__header {
+    
+}
+
+.store__header h2 {
+  font-size: 2.6rem;
+  line-height: 2rem;
+  margin-bottom: 2.1rem;
+}
+
+.store__header p {
+   font-size: 13.6px;
+   line-height: 2.2rem;
+   color: #FF1800;
 }
 
 /* content */
@@ -31,8 +43,10 @@
   /* padding: 8px 16px 0 16px; */
   width: 100%;
   max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
-  margin-inline: auto;
-  padding-inline: var(--padding-inline-SP);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--padding-inline-SP);
+  padding-right: var(--padding-inline-SP);
 }
 
 .store-detail__content--row {
@@ -136,15 +150,15 @@
     padding-top: 54px;
     gap: 64px;
     grid-template-columns: repeat(2, 1fr);
-    padding-inline: var(--padding-inline);
+    padding-left: var(--padding-inline);
+    padding-right: var(--padding-inline);
     width: 100%;
     max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
-    margin-inline: auto;
+    margin:0 auto;
   }
 
   .store-detail__content-desc {
     padding: 0;
-    padding-inline: 0;
     grid-row: 1;
   }
 
