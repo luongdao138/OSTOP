@@ -6,21 +6,21 @@
   font-family: SoDoSans;
   font-style: normal;
   font-weight: 400;
-  src: url(/top/fonts/a04d3c474ae54100589fa362d8f6db2a.woff);
+  src: url(/store/fonts/a04d3c474ae54100589fa362d8f6db2a.woff);
 }
 @font-face {
   font-display: swap;
   font-family: SoDoSans;
   font-style: normal;
   font-weight: 600;
-  src: url(/top/fonts/9072643e9f07efac73cc4b79a2b55d7c.woff);
+  src: url(/store/fonts/9072643e9f07efac73cc4b79a2b55d7c.woff);
 }
 @font-face {
   font-display: swap;
   font-family: SoDoSans;
   font-style: normal;
   font-weight: 700;
-  src: url(/top/fonts/891bac4bf2cf726a4a3ccf8560d7c300.woff);
+  src: url(/store/fonts/891bac4bf2cf726a4a3ccf8560d7c300.woff);
 }
 
 /* animation */
