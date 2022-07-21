@@ -137,6 +137,7 @@
 .store-type__text {
   margin-top: auto;
   margin-bottom: auto;
+  line-height: 2.3rem;
   padding-left: 16px;
 }
 .store-detail__store-type + .store-detail__store-type {
