@@ -558,6 +558,9 @@
       padding: 0;
       margin-right: 24px;
     }
+    .relevant-contents .relevant-content-wrap:last-child {
+      margin-right: 0;
+    }
     .relevant-contents .relevant-content-wrap a {
       width: 176px;
     }
