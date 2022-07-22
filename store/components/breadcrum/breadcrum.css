@@ -6,7 +6,8 @@
 .breadcrum {
      display: flex;
      align-items: center;
-     padding-block: .6rem;
+     padding-top: .8rem;
+     padding-bottom: .8rem;
      overflow-x: auto;
      white-space: nowrap;
 }
@@ -45,6 +46,7 @@
 
 @media (min-width: 640px) {
     .breadcrum {
-        padding-block: 1.8rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
