@@ -171,6 +171,11 @@ window.addEventListener('DOMContentLoaded', function(){
       let targetPage;
       let activeCarouselItemNum;
 
+      let carouselItemLast = carouselItems[carouselItems.length - 1];
+      let carouselItemWidthLast = carouselItemLast.offsetWidth;
+      let carouselItemLastMarginRight = parseInt(window.getComputedStyle(carouselItemLast, null).marginRight);
+      let carouselItemWidthWholeLast = carouselItemWidthLast + carouselItemLastMarginRight;
+
       // number of items to activate in the carousel
       if (visibleCarouselItems <= carouselActiveArea) {
         activeCarouselItemNum = carouselItemCountFloor + 1;
@@ -192,7 +197,9 @@ window.addEventListener('DOMContentLoaded', function(){
         carouselItems[i].classList.add('active');
       }
 
-      if(carouselActiveArea < (carouselItemWidthWhole * carouselItemLength)) {
+      maxPage = Math.ceil(carouselItemLength / activeCarouselItemNum);
+
+      if(carouselActiveArea < (carouselItemWidthWhole * carouselItemLength) && maxPage > 1) {
         nextButton.classList.add('show');
       } else {
         nextButton.classList.remove('show');
@@ -200,7 +207,6 @@ window.addEventListener('DOMContentLoaded', function(){
 
       prevButton.classList.remove('show');
       carouselInner.style.transform = 'translateX(-' + position + 'px)';
-      maxPage = Math.ceil(carouselItemLength / activeCarouselItemNum);
 
       // when you click the next button
       nextButton.addEventListener('click', function(){
@@ -217,11 +223,24 @@ window.addEventListener('DOMContentLoaded', function(){
           targetIndexMax = carouselItemLength;
         }
 
-        for (let i=(activeCarouselItemNum * currentPage); i<targetIndexMax; i++) {
+        restItems = carouselItems.length - currentPage * activeCarouselItemNum;
+
+        for (
+          let i = activeCarouselItemNum * currentPage - (restItems > activeCarouselItemNum ? 0 : (activeCarouselItemNum - restItems));
+          i < targetIndexMax;
+          i++
+        ) {
           carouselItems[i].classList.add('active');
         }
 
-        position = carouselItemWidthWhole * activeCarouselItemNum * currentPage;
+        if(restItems > activeCarouselItemNum || currentPage + 1 !== maxPage) {
+          position = carouselItemWidthWhole * activeCarouselItemNum * currentPage;
+        } else {
+          const paddingLeftCarouselInner = parseFloat(window.getComputedStyle(carouselInner).paddingLeft) || 0;
+          const restWidth = carouselWrapWidth - (activeCarouselItemNum * carouselItemWidthWhole + paddingLeftCarouselInner) + (carouselItemWidthWhole - carouselItemWidthWholeLast);
+          position += carouselItemWidthWhole * restItems - restWidth + paddingLeftCarouselInner;
+        }
+
         carouselInner.style.transform = 'translateX(-' + position + 'px)';
         currentPage = targetPage;
 
@@ -284,13 +303,20 @@ window.addEventListener('DOMContentLoaded', function(){
   function showButton(prevButton, nextButton, currentPage, maxPage) {
     if (currentPage == 1) {
       prevButton.classList.remove('show');
-      nextButton.classList.add('show');
+      if(maxPage != 1) {
+        nextButton.classList.add('show');
+      }
     } else if (currentPage == maxPage) {
-      prevButton.classList.add('show');
       nextButton.classList.remove('show');
-    } else {
-      nextButton.classList.add('show');
       prevButton.classList.add('show');
+    } else {
+      if(currentPage > maxPage) {
+        nextButton.classList.remove('show');
+        prevButton.classList.add('show');
+      } else {
+        nextButton.classList.add('show');
+        prevButton.classList.add('show');
+      }
     }
   }
 
