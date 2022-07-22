@@ -26,19 +26,15 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
     />
 
     <!-- Reset and Common CSS -->
-    <link rel="stylesheet" href="/top/css/reset.css" />
-    <link rel="stylesheet" href="/top/css/common.css" />
+    <link rel="stylesheet" href="/store/css/reset.css" />
+    <link rel="stylesheet" href="/store/css/common.css" />
     <link rel="stylesheet" href="/store/css/components.css" />
 
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="/top/components/carousel/styles.css" />
+    <!-- component CSS -->
     <link
       rel="stylesheet"
-      href="/top/components/brief-info-carousel/styles.css"
+      href="/store/components/brief-info-carousel/styles.css"
     />
-    <link rel="stylesheet" href="/top/components/tabs/styles.css" />
-    <link rel="stylesheet" href="/top/components/products-tag/style.css" />
-    <link rel="stylesheet" href="/store/css/store-detail/style.css" />
     <link rel="stylesheet" href="/store/components/breadcrum/breadcrum.css" />
     <link
       rel="stylesheet"
@@ -48,38 +44,31 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
       rel="stylesheet"
       href="/store/components/relevant-product-carousel/styles.css"
     />
-    <link
-      rel="stylesheet"
-      href="/store/css/store-detail/store-information.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/top/components/brief-info-carousel/styles.css"
-    />
     <title>
       <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
     </title>
     <!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
-<?php include(INCLUDE_DIR."/css2022.html"); ?>
-<?php include(INCLUDE_DIR."/js.html"); ?> -->
+    <?php include(INCLUDE_DIR."/css2022.html"); ?>
+    <?php include(INCLUDE_DIR."/js.html"); ?> -->
 
     <!-- +++++ local css +++++ -->
     <!-- ここにCSSを記載してください -->
-    <link rel="stylesheet" href="/top/css/top.css" />
+    <!-- <link rel="stylesheet" href="/top/css/top.css" /> -->
+    <link rel="stylesheet" href="/store/css/style.css" />
+    <link rel="stylesheet" href="/store/css/store-detail/style.css" />
     <!-- +++++ /local css +++++ -->
 
-    <!-- +++++ local script +++++ -->
-    <!-- ここにJavaScriptを記載してください -->
-    <script src="/top/js/script.js" defer></script>
     <!-- +++++ /local script +++++ -->
     <!-- Common script -->
     <script src="/common/js/jquery-1.12.3.min.js"></script>
-    <script src="/top/components/tabs/script.js" defer></script>
     <script
       src="/store/components/relevant-product-carousel/script.js"
       defer
     ></script>
-    <script src="/top/components/carousel/script.js" defer></script>
+
+    <!-- +++++ local script +++++ -->
+    <!-- ここにJavaScriptを記載してください -->
+    <script src="/store/js/store-detail.js" defer></script>
   </head>
 
   <body>
@@ -133,7 +122,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
           <div class="store-detail__content-desc">
             <div class="store-detail__content--row">
               <div class="store-detail__content-text">
-                <div class="store-detail__text-detail">
+                <div class="store-detail__text-detail line-height-22">
                   739-0588　 広島県 廿日市市 宮島町459-2
                 </div>
               </div>
@@ -141,7 +130,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
             <div class="store-detail__content--row">
               <div class="store-detail__content-text">
                 <div class="store-detail__text-title">電話番号</div>
-                <div class="store-detail__text-detail phone-number__text">
+                <div class="store-detail__text-detail Sodo-text number-text">
                   0829-40-2205
                 </div>
               </div>
@@ -149,7 +138,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
             <div class="store-detail__content--row">
               <div class="store-detail__content-text custom-break-line">
                 <div class="store-detail__text-title">営業時間</div>
-                <div class="store-detail__text-detail">09:00～20:00</div>
+                <div class="store-detail__text-detail Sodo-text number-text">09:00～20:00</div>
               </div>
             </div>
             <div class="store-detail__content--row">
@@ -233,7 +222,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                     src="/store/images/mobile-order.svg"
                     alt="mobile-order"
                   />
-                  <div class="mobile-order__text">Mobile Order & Pay</div>
+                  <div class="mobile-order__text Sodo-text">Mobile Order & Pay</div>
                 </div>
               </div>
             </div>
@@ -258,7 +247,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                     />
                   </div>
                   <div class="store-type__text">
-                    お車でも便利なドライブスルー店舗です
+                    お車でも便利なドライブスルー店舗です。
                   </div>
                 </div>
                 <div class="store-detail__store-type flex">
@@ -266,7 +255,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                     <img src="/store/images/store-type-icon/car.jpg" alt="" />
                   </div>
                   <div class="store-type__text">
-                    旅のお供に。新幹線停車駅の駅ビルの店舗です
+                    ドライブの途中にご利用いただけるサービスエリアにある店舗です。
                   </div>
                 </div>
                 <div class="store-detail__store-type flex">
@@ -274,7 +263,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                     <img src="/store/images/store-type-icon/plane.jpg" alt="" />
                   </div>
                   <div class="store-type__text">
-                    搭乗前の待ち時間に。空港にある店舗です。
+                    旅のお供に。新幹線停車駅の駅ビルの店舗です。
                   </div>
                 </div>
                 <div class="store-detail__store-type flex">
@@ -285,7 +274,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                     />
                   </div>
                   <div class="store-type__text">
-                    お車でも便利なドライブスルー店舗です
+                    搭乗前の待ち時間に。空港にある店舗です。
                   </div>
                 </div>
                 <div class="store-detail__store-type flex">
@@ -297,7 +286,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
             <div class="store-detail__text-notice">
               <div class="notice-icon">※</div>
               <div class="notice-text">
