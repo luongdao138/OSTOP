@@ -6,7 +6,7 @@
   color: rgba(0, 0, 0, 0.87);
 }
 .store-detail__title {
-  padding: 40px 16px 39px 16px;
+  padding: 39px 16px 0 16px;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -22,32 +22,21 @@
   line-height: 2.4rem;
 }
 
-/* .store__header {
-   padding-bottom: 1rem;
-   padding-top: 1rem;
-}
-
 .store__header h2 {
   font-size: 2.6rem;
   line-height: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.1rem;
 }
 
 .store__header p {
-   font-size: 13.6px;
-   line-height: 2.2rem;
-   color: #FF1800;
+  font-size: 13.6px;
+  line-height: 2.2rem;
+  color: #ff1800;
 }
-
-.store__header button { 
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
-  color: rgba(0,0,0,0.6);
-  font-size: 1.5rem;
-} */
 
 /* content */
 .store-detail__content {
+  padding-top: 39px;
   padding-bottom: 32px;
   display: grid;
 }
@@ -87,12 +76,13 @@
   flex-direction: column;
   /* line-height: 1.9rem; */
   display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .store-detail__content--row .store-detail__content-text {
   padding: 24px 0;
   /* line-height: 2.4rem; */
+  color: rgba(0, 0, 0, 1);
   display: flex;
 }
 
@@ -139,7 +129,7 @@
   display: flex;
   padding-top: 8px;
   font-size: 11px;
-  line-height: 16px;
+  line-height: 20px;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -150,11 +140,12 @@
 .store-type__text {
   margin-top: auto;
   margin-bottom: auto;
-  line-height: 2.3rem;
+  line-height: 2.2rem;
   padding-left: 16px;
 }
 .store-detail__store-type + .store-detail__store-type {
   padding-top: 16px;
+  border: 1px solid transparent;
 }
 
 /* .store-detail__content-text.custom-break-line br {
@@ -173,13 +164,14 @@
   flex-direction: column;
 }
 .store-detail__content-desc
-.store-detail__content--row:first-child
-> .store-detail__content-text {
-padding-top: 0;
+  .store-detail__content--row:first-child
+  > .store-detail__content-text {
+  padding-top: 0;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .Sodo-text {
-  font-family: 'SoDoSans';
+  font-family: "SoDoSans";
   font-size: 1.4rem;
   /* margin-top: -3px; */
   /* letter-spacing: -1.5px; */
@@ -195,11 +187,23 @@ padding-top: 0;
 
 /* responsive */
 @media screen and (min-width: 640px) {
+  .store-type__text {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
   .Sodo-text {
     font-size: 1.6rem;
   }
   .flex-row {
     flex-direction: row;
+  }
+
+  .store-detail__text-detail {
+    line-height: 2.4rem;
+    font-size: 1.5rem;
+  }
+  .store-detail__text-detail.Sodo-text {
+    font-size: 1.6rem;
   }
   .store-detail__title .reseave-logo {
     /* display: inline-flex; */
@@ -225,7 +229,6 @@ padding-top: 0;
     font-size: 24px;
     line-height: 35px;
     padding-top: 55px;
-    padding-bottom: 54px;
   }
 
   /* .store-detail__text-title {
@@ -235,6 +238,7 @@ padding-top: 0;
   .store-detail__content {
     padding: 0 128px;
     padding-bottom: 49px;
+    padding-top: 55px;
     column-gap: 64px;
     grid-template-rows: auto auto;
     row-gap: 40px;
@@ -243,7 +247,7 @@ padding-top: 0;
     padding-right: var(--padding-inline);
     width: 100%;
     max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
-    margin:0 auto;
+    margin: 0 auto;
   }
 
   .store-detail__content-desc {
