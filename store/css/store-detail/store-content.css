@@ -138,11 +138,14 @@
   height: auto;
 }
 .store-type__text {
-  margin-top: auto;
-  margin-bottom: auto;
   line-height: 2.2rem;
   padding-left: 16px;
 }
+
+.store-detail__store-type {
+   align-items: center;
+}
+
 .store-detail__store-type + .store-detail__store-type {
   padding-top: 16px;
   border: 1px solid transparent;
