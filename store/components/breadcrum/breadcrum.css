@@ -12,11 +12,6 @@
      white-space: nowrap;
 }
 
-.breadcrum::-webkit-scrollbar {
-     width: 0;
-     height: 0;
-}
-
 .breadcrum li {
     line-height: 20px;
     font-size: 1.1rem;
@@ -25,7 +20,7 @@
 }
 
 .breadcrum li:last-child { 
-    color: var(--clr-text);
+    color: rgba(0, 0, 0, 1)
 }
 
 .breadcrum li:not(:last-child)::after {
