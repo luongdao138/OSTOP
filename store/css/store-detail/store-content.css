@@ -5,6 +5,11 @@
   /* height: 100vh; */
   color: rgba(0, 0, 0, 0.87);
 }
+
+.store-detail__wrapper .breadcrum__current {
+  color: rgba(0, 0, 0, 0.87);
+}
+
 .store-detail__title {
   padding: 39px 16px 0 16px;
   font-weight: bold;
