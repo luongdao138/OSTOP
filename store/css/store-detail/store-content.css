@@ -134,6 +134,14 @@
   height: auto;
 }
 
+.store-detail__payment-method .payment-method__item > img {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
 .store-detail__text-notice {
   display: flex;
   padding-top: 8px;
@@ -153,7 +161,7 @@
 }
 
 .store-detail__store-type {
-   align-items: center;
+  align-items: center;
 }
 
 .store-detail__store-type + .store-detail__store-type {
@@ -217,7 +225,7 @@
   .store-detail__wrapper .breadcrum__current {
     color: rgba(0, 0, 0, 0.87);
   }
-  
+
   .store-type__text {
     font-size: 1.5rem;
     line-height: 2.4rem;
@@ -257,10 +265,13 @@
   } */
 
   .store-detail__title {
-    font-size: 24px;
-    line-height: 2.4rem;
     padding-top: 55px;
     padding-bottom: 55px;
+  }
+
+  .store-detail__title .store-detail__title-text {
+    font-size: 24px;
+    line-height: 2.4rem;
   }
 
   /* .store-detail__text-title {
