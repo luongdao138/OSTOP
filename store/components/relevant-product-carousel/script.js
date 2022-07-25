@@ -300,7 +300,7 @@ window.addEventListener('DOMContentLoaded', function(){
   }
 
   // show arrow button in the carousel
-  function showButton(prevButton, nextButton, currentPage, maxPage) {
+  function showButton(prevButton, nextButton, currentPage, maxPage, WholeItemsSP = 0) {
     if (currentPage == 1) {
       prevButton.classList.remove('show');
       if(maxPage != 1) {
@@ -310,7 +310,7 @@ window.addEventListener('DOMContentLoaded', function(){
       nextButton.classList.remove('show');
       prevButton.classList.add('show');
     } else {
-      if(currentPage > maxPage) {
+      if(currentPage + WholeItemsSP > maxPage) {
         nextButton.classList.remove('show');
         prevButton.classList.add('show');
       } else {
@@ -353,15 +353,17 @@ window.addEventListener('DOMContentLoaded', function(){
     let svgPathPrev = 'M16.259,17.258a.712.712,0,0,1,0,1.028.761.761,0,0,1-1.057,0L8.8,12.064a.712.712,0,0,1,0-1.028l6.5-6.323a.762.762,0,0,1,1.057,0,.712.712,0,0,1,0,1.028L10.386,11.55l5.876,5.708Z';
     let svgPathNext = 'M8.9,17.258a.712.712,0,0,0,0,1.028.761.761,0,0,0,1.057,0l6.4-6.222a.712.712,0,0,0,0-1.028l-6.5-6.323a.762.762,0,0,0-1.057,0,.712.712,0,0,0,0,1.028l5.975,5.809L8.9,17.258Z';
 
+    let WholeItems = Math.floor((windowWidth - relevantCardMarginLeft) / relevantItemWidth);
+
     createCarouselButton(relevantCardWrap, arrowPrevButton, svgPathPrev);
     createCarouselButton(relevantCardWrap, arrowNextButton, svgPathNext);
 
-    let arrowButtons = document.querySelectorAll('.card-item-wrap .arrow-button');
-    let relevantItemHeight = relevantItem.offsetHeight;
+    // let arrowButtons = document.querySelectorAll('.card-item-wrap .arrow-button');
+    // let relevantItemHeight = relevantItem.offsetHeight;
 
-    for (button of arrowButtons) {
-      button.style.top = relevantItemHeight + 'px';
-    }
+    // for (button of arrowButtons) {
+    //   button.style.top = relevantItemHeight + 'px';
+    // }
 
     let nextButton = document.querySelector('.card-item-wrap .arrow-button--next');
     let prevButton = document.querySelector('.card-item-wrap .arrow-button--prev');
@@ -374,15 +376,23 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // when you click the next button
     nextButton.addEventListener('click', function(){
-      if ((currentPage + 1) !== relevantItemNum) {
+      // if ((currentPage + 1) !== relevantItemNum) {
+      //   position = relevantItemWidth * currentPage;
+      // }
+
+      if ((currentPage + WholeItems) < relevantItemNum) {
         position = relevantItemWidth * currentPage;
-      } else {
-        position = relevantItemWidth * (currentPage - 1) + relevantItemPaddingLeft + relevantCardMarginLeft * 2;
+      } 
+      else if((currentPage + WholeItems) == relevantItemNum) {
+        position = (relevantCardMarginLeft * 2 + relevantItemWidth * relevantItemNum + relevantItemPaddingLeft) - windowWidth;
+      }
+      else {
+        return;
       }
       relevantCard.style.transform = 'translateX(-' + position + 'px)';
       currentPage++;
 
-      showButton(prevButton, nextButton, currentPage, maxPage);
+      showButton(prevButton, nextButton, currentPage, maxPage, WholeItems);
     });
 
     // when you click the preview button
@@ -392,7 +402,7 @@ window.addEventListener('DOMContentLoaded', function(){
       relevantCard.style.transform = 'translateX(-' + position + 'px)';
       currentPage--;
 
-      showButton(prevButton, nextButton, currentPage, maxPage);
+      showButton(prevButton, nextButton, currentPage, maxPage, WholeItems);
     });
 
     // swipe
