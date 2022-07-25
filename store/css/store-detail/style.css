@@ -1,2 +1,12 @@
 @import url(/store/css/store-detail/store-content.css);
 @import url(/store/css/store-detail/store-information.css);
+
+.relevant-contents-wrapper {
+  padding-top: 4.2rem;
+}
+
+@media screen and (min-width: 520px) {
+  .relevant-contents-wrapper .section-heading-02 {
+    margin-bottom: 4.5rem;
+  }
+}

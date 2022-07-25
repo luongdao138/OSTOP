@@ -11,7 +11,9 @@
 }
 
 .store-detail__title {
-  padding: 39px 16px 0 16px;
+  /* padding: 39px 16px 0 16px; */
+  padding-top: 39px;
+  padding-bottom: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -41,7 +43,8 @@
 
 /* content */
 .store-detail__content {
-  padding-top: 39px;
+  /* padding-top: 39px; */
+  padding-top: 0;
   padding-bottom: 32px;
   display: grid;
 }
@@ -238,6 +241,7 @@
     font-size: 24px;
     line-height: 2.4rem;
     padding-top: 55px;
+    padding-bottom: 54px;
   }
 
   /* .store-detail__text-title {
@@ -247,7 +251,8 @@
   .store-detail__content {
     padding: 0 128px;
     padding-bottom: 49px;
-    padding-top: 54px;
+    /* padding-top: 54px; */
+    padding-top: 0;
     column-gap: 64px;
     grid-template-rows: auto auto;
     row-gap: 40px;
@@ -263,6 +268,10 @@
     padding: 0;
     padding-inline: 0;
     grid-row: 2;
+  }
+
+  .no-noti .store-detail__content-desc {
+    grid-row: 1;
   }
 
   .online-store__notification-container {
