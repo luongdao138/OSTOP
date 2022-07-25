@@ -6,10 +6,6 @@
   color: rgba(0, 0, 0, 0.87);
 }
 
-.store-detail__wrapper .breadcrum__current {
-  color: rgba(0, 0, 0, 0.87);
-}
-
 .store-detail__title {
   /* padding: 39px 16px 0 16px; */
   padding-top: 39px;
@@ -199,6 +195,10 @@
 
 /* responsive */
 @media screen and (min-width: 640px) {
+  .store-detail__wrapper .breadcrum__current {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
   .store-type__text {
     font-size: 1.5rem;
     line-height: 2.4rem;
