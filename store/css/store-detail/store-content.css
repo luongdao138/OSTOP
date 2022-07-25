@@ -134,8 +134,9 @@
 }
 
 .store-type__icon {
-  max-width: 40px;
+  width: 40px;
   height: auto;
+  flex-shrink: 0;
 }
 .store-type__text {
   line-height: 2.2rem;
@@ -241,7 +242,7 @@
   .store-detail__content {
     padding: 0 128px;
     padding-bottom: 49px;
-    padding-top: 55px;
+    padding-top: 54px;
     column-gap: 64px;
     grid-template-rows: auto auto;
     row-gap: 40px;
