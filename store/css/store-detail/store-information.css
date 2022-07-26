@@ -41,10 +41,10 @@
 .information__link-wrapper {
      display: flex;
      justify-content: flex-end;
+     margin-top: 2.4rem;
 }
 
 .information__link {
-     margin-top: 2.2rem;
      color: #00754A;
      font-size: 1.3rem;
      line-height: 1.8rem;
@@ -110,8 +110,11 @@
          overflow: hidden;
      }
 
-     .information__link {
+     .information__link-wrapper {
          margin-top: 3.2rem;
+     }
+
+     .information__link {
          font-size: 1.4rem;
          line-height: 2.4rem;
      }
