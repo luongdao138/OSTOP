@@ -1,0 +1,84 @@
+/* Store network CSS */
+.store-network__btn {
+  font-size: 1.4rem;
+  padding: 4px 16px;
+}
+
+.store-network {
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+}
+
+.store-network__label {
+  font-size: 1.3rem;
+  line-height: 2.7rem;
+}
+
+.store-network__title {
+  margin-bottom: 3.2rem;
+}
+
+.store-network__mobile-wifi {
+  margin-bottom: 2.4rem;
+  justify-content: center;
+}
+
+.store-network__mobile-wifi img {
+  width: 11.1rem;
+  object-fit: cover;
+}
+
+.store-network-wrapper {
+  max-width: 98.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-network__left {
+  margin-right: 3.2rem;
+}
+
+.store-network__right img {
+  width: 154px;
+  object-fit: cover;
+}
+
+.pc-hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  .pc-hidden {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .store-network {
+    padding-top: 2.3rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .store-network__title {
+    margin-bottom: 2.4rem;
+  }
+
+  .store-network-wrapper {
+    max-width: 100%;
+  }
+
+  .store-network__left {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .store-netword__btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1.7rem;
+  }
+}

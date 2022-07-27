@@ -43,6 +43,10 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
       rel="stylesheet"
       href="/store-searching/components/close-btn/style.css"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="/store-searching/components/carousel/styles.css"
+    /> -->
     <title>
       <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
     </title>
@@ -56,6 +60,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
     <link rel="stylesheet" href="/store-searching/css/style.css" />
     <link rel="stylesheet" href="/store-searching/css/searching/styles.css" />
     <link rel="stylesheet" href="/store-searching/css/modal/style.css" />
+    <link rel="stylesheet" href="/store-searching/css/store-content/style.css" />
     <!-- +++++ /local css +++++ -->
 
     <!-- +++++ /local script +++++ -->
@@ -63,6 +68,10 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
     <script src="/common/js/jquery-1.12.3.min.js"></script>
     <script
       src="/store-searching/components/relevant-product-carousel/script.js"
+      defer
+    ></script>
+    <script
+      src="/store-searching/components/carousel/script.js"
       defer
     ></script>
 
@@ -222,123 +231,6 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                             </span>
                           </label>
                      </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
-                     <div class="modal__content__list__item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox01">
-                            <span class="flex checkbox__label">
-                              <span class="checkbox__label-icon">
-                                <svg viewBox="0 0 20 20">
-                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
-                                </svg>
-                              </span>
-                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
-                            </span>
-                          </label>
-                     </div>
 
                 </div>
 
@@ -422,7 +314,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
 
         <div class="store-seperate"></div>
 
-
+      <!-- New stores -->
       <div class="container new-stores">
           <h4 class="new-stores__label store-label">新店舗情報</h4>
           <ul class="new-stores__list">
@@ -445,6 +337,9 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
           </ul>
       </div>
       <div class="store-seperate"></div>
+      
+      
+      <!-- Store Information -->
       <div class=" container store-information">
         <div class="store-information__left">
             <h4 class="english store-information__label store-label">STORE INFOMATION</h4> 
@@ -602,6 +497,9 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
         </div>
       </div>
       <div class="store-seperate"></div>
+      
+      
+      <!-- Store network -->
       <div class="container store-network">
         <div class="store-network-wrapper">
             <div class="store-network__left">

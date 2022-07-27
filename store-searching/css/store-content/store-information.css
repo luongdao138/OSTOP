@@ -1,0 +1,151 @@
+/* Store information CSS */
+.store-information {
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.store-information__label {
+  font-size: 1.4rem;
+  line-height: 2.7rem;
+}
+
+.store-information__seperate {
+  width: 3.2rem;
+}
+
+.store-information__left,
+.store-information__right {
+  flex: 1;
+  max-width: calc(50% - 1.6rem);
+}
+
+.store-information__right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.store-information__carousel {
+  max-width: calc(3 * var(--carousel-item-width) + 2rem);
+  overflow: hidden;
+  padding: 0.2rem;
+}
+
+/* Carousel */
+.store-information-carousel {
+  display: flex;
+  position: relative;
+  transition: all 0.4s;
+  padding-left: var(--padding-inline-SP);
+  /* padding-bottom: 2px; */
+}
+
+@media (max-width: 640px) {
+  .store-information-carousel {
+    padding-bottom: 0;
+  }
+}
+
+.store-information-carousel > * {
+  margin-right: 8px;
+}
+
+.store-infomation__card {
+  width: var(--carousel-item-width);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+}
+
+.store-infomation__card__inner {
+  height: 263px;
+  display: block;
+}
+
+.store-infomation__card__inner__img {
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.store-infomation__card__inner__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-infomation__card__inner__info {
+  padding: 1.2rem 1rem 1.1rem 0.8rem;
+}
+
+.store-infomation__card__inner__desc {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  margin-bottom: 2.3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.store-infomation__card__inner__name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #00754a;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .store-information {
+    flex-direction: column;
+  }
+
+  .store-information__label {
+    margin-bottom: 2.4rem;
+  }
+
+  .store-information__seperate {
+    width: 100%;
+    height: 2.4rem;
+  }
+
+  .store-information__left,
+  .store-information__right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .store-information__carousel {
+    max-width: 100%;
+    padding: 0;
+    overflow: auto;
+  }
+
+  .store-information__right {
+    justify-content: flex-start;
+  }
+
+  .store-information__carousel {
+    overflow: visible;
+  }
+
+  .store-information-carousel > * {
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .store-information {
+    padding-top: 2.3rem;
+    padding-bottom: 3.2rem;
+  }
+}
