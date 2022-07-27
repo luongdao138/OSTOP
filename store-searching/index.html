@@ -41,7 +41,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
     />
     <link
       rel="stylesheet"
-      href="/store-searching/components/close-btn/styles.css"
+      href="/store-searching/components/close-btn/style.css"
     />
     <title>
       <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
@@ -55,7 +55,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
     <!-- <link rel="stylesheet" href="/top/css/top.css" /> -->
     <link rel="stylesheet" href="/store-searching/css/style.css" />
     <link rel="stylesheet" href="/store-searching/css/searching/styles.css" />
-    <link rel="stylesheet" href="/store-searching/css/searching/styles.css" />
+    <link rel="stylesheet" href="/store-searching/css/modal/style.css" />
     <!-- +++++ /local css +++++ -->
 
     <!-- +++++ /local script +++++ -->
@@ -68,7 +68,7 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
 
     <!-- +++++ local script +++++ -->
     <!-- ここにJavaScriptを記載してください -->
-    <script src="/store-searching/js/store-detail.js" defer></script>
+    <script src="/store-searching/js/script.js" defer></script>
   </head>
 
   <body>
@@ -79,6 +79,158 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
     </noscript>
     <!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
     <div class="mainContents notExNav">
+      <div class="modal__overlay"></div>
+      <div class="modal__wrapper">
+              <div class="modal__header">
+                 <button class="modal__close-btn">
+                     <img src="/store-searching/images/common/close-icon.png" alt="close-icon" />
+                 </button>
+              </div>
+              <div class="modal__content">
+                <div class="text-bold modal__content__title modal__container">
+                     <h3>店舗形態・サービス</h3>
+                </div>
+
+                <div class="modal__container modal__content__list">
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">Mobile Order & Pay</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">無線LANサービス</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">ドライブスルー</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">サービスエリア</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">新幹線駅構内</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">空港</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">Book & Cafe</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">スターバックス リザーブ®販売店舗</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">アルコール販売店舗</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
+                            </span>
+                          </label>
+                     </div>
+
+                </div>
+
+                <div class="modal__content__btn-container">
+                    <button class="button modal__content__btn">決定する</button>
+                </div>
+              </div>
+         </div>
+      </div>
       <div class="store-searching__wrapper">
         <div class="breadcrum-wrap">
           <ul class="breadcrum container">
@@ -107,13 +259,13 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                           </svg>
                         </span>
                       </button>
-
+  
                       <input
                         type="text"
                         class="searching-box__input"
                         placeholder="キーワードを入力してください"
                       />
-
+  
                       <button class="searching-box__button__close-icon">
                         <svg viewBox="0 0 13.999 14">
                           <path
@@ -124,32 +276,297 @@ $pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
                       </button>
                     </div>
                   </div>
-                  <button class="searching-box__btn">サービス絞り込み</button>
+                  <button class="searching-box__btn">
+                    サービス絞り込み
+                  </button>
                 </div>
-                <!-- select box -->
-                <div class="searching__selectboxs">
-                  <div class="searching__selectbox selectbox-wrap">
-                    <svg>
-                      <path d="M12.954,16.668a.888.888,0,0,1-.637-.271L6.264,10.178a.944.944,0,0,1,0-1.307.885.885,0,0,1,1.275,0l5.414,5.562,5.511-5.663a.881.881,0,0,1,1.272,0,.943.943,0,0,1,0,1.309L13.589,16.4a.89.89,0,0,1-.637.271" transform="translate(-6.001 -8.499)" />
-                    </svg>
-                    <select name="selectbox" id="selectbox" class="selectbox">
-                      <option selected disabled>都道府県</option>
-                      <option value="1">東京都</option>
-                    </select>
+                <div class="store-search__list-tag">
+                  <ul class="list-tag__inner">
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text search-tag__text--Sodo">Mobile Order & Pay</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text">無線LANサービス</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text">ドライブスルー</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text">サービスエリア</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text">新幹線駅構内</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text">空港</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text search-tag__text--Sodo">Book & Cafe</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text"
+                          >スターバックス リザーブ®販売店舗</span
+                        >
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text">アルコール販売店舗</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="list-tag__search-tag">
+                        <span class="search-tag__text search-tag__text--Sodo">STARBUCKS Tea & Café</span>
+                        <button class="search-tag__delete-button"></button>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="store-search__search-result">
+                  <div class="line-gray line-gray--fullwidth--sp-only"></div>
+                  <div class="search-result__total-store">0件</div>
+                  <div class="line-gray line-gray--fullwidth--sp-only"></div>
+                  <div class="search-result__list-store">
+                    条件に該当する店舗はございません。
+                    <br>
+                    条件を変更して再度検索を行ってください。
                   </div>
+                  <div class="line-gray line-gray--fullwidth--sp-only"></div>
                 </div>
-                <!-- select box -->
               </div>
-              <div class="searching__inner__col searching__map">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=co-well+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                ></iframe>
-              </div>
+              <div class="searching__inner__col searching__map">map</div>
             </div>
           </div>
         </div>
+
+        <div class="store-seperate"></div>
+
+
+      <div class="container new-stores">
+          <h4 class="new-stores__label store-label">新店舗情報</h4>
+          <ul class="new-stores__list">
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">イオンモール都城駅前店</p>
+             </li>
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">田園調布 東急スクエアガーデンサイト店</p>
+             </li>
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">羽田空港第1ターミナル THE HANEDA HOUSE5階店</p>
+             </li>
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">イオンモール都城駅前店</p>
+             </li>
+          </ul>
+      </div>
+      <div class="store-seperate"></div>
+      <div class=" container store-information">
+        <div class="store-information__left">
+            <h4 class="english store-information__label store-label">STORE INFOMATION</h4> 
+            <h3 class="store-information__title store-title">
+                スターバックスには様々な店舗があり、<br/>
+                コーヒーを楽しむための<br/>
+                セミナーやイベントを開催しています。
+            </h3>
+        </div>
+        <div class="store-information__seperate"></div>
+        <div class="store-information__right">
+            <div class="store-information__carousel">
+                <ul class="carousel store-information-carousel">
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                          <img src="/store-searching/images/information/information-1.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                            いつものお店とすこし違うスターバックス体験。
+                          </p>
+                          <p class="store-infomation__card__inner__name ">
+                         リージョナル ランド<br/>
+マーク ストア
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                   
+                  
+                  </ul>
+              
+            </div>
+        </div>
+      </div>
+      <div class="store-seperate"></div>
+      <div class="container store-network">
+        <div class="store-network-wrapper">
+            <div class="store-network__left">
+                <h4 class="english store-network__label store-label">公衆無線LANサービス</h4> 
+
+                <div class="pc-hidden store-network__mobile-wifi">
+                  <img src="/store-searching/images/store-network/free-wifi.jpg" alt="">
+                </div>
+
+                <h3 class="store-network__title store-title">
+                  スターバックス コーヒー店舗にて<br/>
+                  公衆無線LANサービスをご利用いただけます。
+                </h3>
+                <div class="store-netword__btn-wrapper">
+                  <button class="button button--secondary-small store-network__btn text-medium">Wi-Fi対応店舗一覧へ</button>
+                </div>
+            </div>
+            <div class="store-network__right mobile-hidden">
+                <img src="/store-searching/images/store-network/free-wifi.jpg" alt="">
+            </div>
+        </div>
+      </div>
 
         <!-- information -->
         <div class="section-wrap relevant-contents relevant-contents-wrapper">

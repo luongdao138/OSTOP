@@ -5,6 +5,8 @@ html {
     --max-width-PC: 1184px;
     --max-width-SP: 343px;   
     --padding-inline: 16px;  
+
+    --carousel-item-width: 152px;
 }
 
 
