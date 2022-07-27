@@ -1,0 +1,97 @@
+/* ------------------------
+tag carousel / search tag
+--------------------------- */
+.store-search__list-tag {
+  position: relative;
+  margin-top: 15px;
+}
+/* .store-search__list-tag::before,
+.store-search__list-tag::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+.store-search__list-tag::before {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.9) 80%);
+  left: 0;
+}
+.store-search__list-tag::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.9) 80%);
+  right: 0;
+} */
+.list-tag__inner {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  overflow-x: scroll;
+  flex-wrap: wrap;
+  scrollbar-width: none;
+  padding-left: 0px;
+}
+.list-tag__inner::-webkit-scrollbar {
+  display: none;
+}
+.list-tag__inner > * {
+  flex-shrink: 0;
+}
+
+.search-tag__text--Sodo {
+  font-family: 'Sodo Sans';
+  font-size: 1.4rem;
+}
+.list-tag__search-tag {
+  line-height: 1.9rem;
+  font-size: 1.3rem;  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 32px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 1);
+  background: #FFFFFF;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  padding: 0 13px 0 13px;
+}
+.search-tag__text {
+  display: inline-block;
+}
+.search-tag__delete-button {
+  display: inline-block;
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease
+}
+.search-tag__delete-button::before,
+.search-tag__delete-button::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.87);
+  top: 50%;
+  left: 50%;
+}
+/* .search-tag__delete-button::before {
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+.search-tag__delete-button::after {
+  transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+} */
+
+@media screen and (min-width: 768px) {
+  .search-tag__delete-button:hover {
+    background: rgba(0, 117, 74, 0.08);
+  }
+}
+
+/* -------------------------------------------- */

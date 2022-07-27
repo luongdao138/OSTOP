@@ -1,0 +1,603 @@
+<!-- <?php
+include_once($_SERVER['DOCUMENT_ROOT']."/config.inc.php");
+require_once('cs/top/getData.php');
+session_start();
+
+if($_SESSION['member-quit-flg'])
+{
+    unset($_SESSION['member-quit-flg']);
+    header('Location: /mystarbucks/member-quit/complete/');
+    exit;
+}
+
+// キャッシュが存在する場合は表示する
+$pageCacheKey = md5(serialize(array(
+    'file' => __FILE__,
+    'params' => $_GET,
+    'device' => getDevice(),
+    'is_webview' => is_webview(),
+)));
+
+/*
+if (viewCache($pageCacheKey))
+{
+    return true;
+}
+*/
+
+$previewDate = '';
+if ($_GET['preview_date'] && strtotime($_GET['preview_date']))
+{
+    $previewDate = $_GET['preview_date'];
+}
+
+// 以下キャッシュが存在しない場合の処理
+$newss = getTopNews($previewDate);
+$wbs = getTopWb($previewDate);
+$recs = getTopRec($previewDate);
+$kv = getTopKv($previewDate);
+
+// stories
+$stories = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/top/json/stories.json'), true);
+
+// ページプロパティ設定
+$pageProperties['title'] = "Starbucks Coffee Japan";
+$pageProperties['description'] = "スターバックス コーヒー ジャパンの公式ホームページ。新商品・メニュー情報、店舗検索、イベント情報、求人情報、エスプレッソドリンク用語の解説、コーヒー豆の解説、IR情報、CSR情報など。";
+$pageProperties['keyword'] = "スターバックス, コーヒー, ジャパン, starbucks, coffee, japan, スタバ, 店, 店舗, 豆, カフェ, caf&eacute;";
+$pageProperties['ogImage'] = "https:"._AWS_DOMAIN_CF_."/images/og/logo.png";
+// サニタイズ
+$pageURL = str_replace(['\'', '"', '<', '>'],
+                       ['%27','%22','%3C', '%3E'],
+                       $pageURL);
+
+// 出力バッファで変数に格納
+ob_start();
+?>
+<?php echo '<?php include_once($_SERVER[\'DOCUMENT_ROOT\']."/config.inc.php"); ?>' ?>
+<?php echo '<?php include_once("cs/top/getData.php"); ?>' ?> -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Noto Sans JP Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reset and Common CSS -->
+    <link rel="stylesheet" href="/store/css/reset.css" />
+    <link rel="stylesheet" href="/store/css/common.css" />
+    <link rel="stylesheet" href="/store/css/components.css" />
+
+    <!-- component CSS -->
+    <link
+      rel="stylesheet"
+      href="/store/components/brief-info-carousel/styles.css"
+    />
+    <link rel="stylesheet" href="/store/components/breadcrum/breadcrum.css" />
+    <link
+      rel="stylesheet"
+      href="/store/components/notification/notification.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/store/components/relevant-product-carousel/styles.css"
+    />
+    <title>
+      <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
+    </title>
+    <!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
+    <?php include(INCLUDE_DIR."/css2022.html"); ?>
+    <?php include(INCLUDE_DIR."/js.html"); ?> -->
+
+    <!-- +++++ local css +++++ -->
+    <!-- ここにCSSを記載してください -->
+    <!-- <link rel="stylesheet" href="/top/css/top.css" /> -->
+    <link rel="stylesheet" href="/store/css/style.css" />
+    <link rel="stylesheet" href="/store/css/store-detail/style.css" />
+    <!-- +++++ /local css +++++ -->
+
+    <!-- +++++ /local script +++++ -->
+    <!-- Common script -->
+    <script src="/common/js/jquery-1.12.3.min.js"></script>
+    <script
+      src="/store/components/relevant-product-carousel/script.js"
+      defer
+    ></script>
+
+    <!-- +++++ local script +++++ -->
+    <!-- ここにJavaScriptを記載してください -->
+    <script src="/store/js/store-detail.js" defer></script>
+  </head>
+
+  <body>
+    <noscript>
+      <p class="noscript">
+        当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。
+      </p>
+    </noscript>
+    <!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
+    <div class="mainContents notExNav">
+      <div class="store-detail__wrapper">
+        <div class="breadcrum-wrap">
+          <ul class="breadcrum container">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">店舗検索</a></li>
+            <li><a href="#">広島県</a></li>
+            <li><span class="breadcrum__current">厳島表参道店</span></li>
+          </ul>
+        </div>
+        <div class="store-detail__title container">
+          <!-- 目黒店
+          <a class="reseave-logo" href="">
+            <img
+              style="vertical-align: baseline;"
+              src="/store/images/reseave-logo.png"
+              alt="スターバックス リザーブ&reg; ロースタリー"
+            />
+          </a> -->
+          <div class="store-detail__title-text">厳島表参道店</div>
+        </div>
+        <div class="store-detail__content">
+          <div class="online-store__notification-container container">
+            <div class="online-store__notification">
+              <h3 class="notification__title">臨時営業時間のお知らせ</h3>
+              <div class="notification__detail">
+                <p>2022年7月14日</p>
+                <p>営業時間：09:00～17:00</p>
+              </div>
+            </div>
+          </div>
+          <div class="store-detail__content-iframe">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=co-well+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.maps.ie/distance-area-calculator.html"
+                >store address</a
+              ></iframe
+            >
+          </div>
+          <div class="store-detail__content-desc">
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-detail line-height-22">
+                  739-0588　 広島県 廿日市市 宮島町459-2
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-title">電話番号</div>
+                <div class="store-detail__text-detail Sodo-text number-text">
+                  0829-40-2205
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text custom-break-line">
+                <div class="store-detail__text-title">営業時間</div>
+                <div class="store-detail__text-detail Sodo-text number-text">
+                  09:00～20:00
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-title">定休日</div>
+                <div class="store-detail__text-detail number-text">不定休</div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__text-title">アクセス</div>
+                <div class="store-detail__text-detail">
+                  廿日市インターチェンジより　約7.6km
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__text-title">無線LAN</div>
+                <div class="store-detail__text-detail Sodo-text">
+                  STARBUCKS　docomo　FLET’S (西)　au　Wi2 300
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex">
+                <div class="store-detail__text-title">モバイル決済</div>
+                <div class="store-detail__text-detail">
+                  <div class="store-detail__payment-method">
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method1.jpg"
+                        alt="IC"
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method2.jpg"
+                        alt="pay-pay"
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method3.jpg"
+                        alt="line-pay"
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method4.jpg"
+                        alt="d私い"
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method5.jpg"
+                        alt="R-pay"
+                      />
+                    </div>
+                    <div class="payment-method__item">
+                      <img
+                        src="/store/images/payment-icon/method6.jpg"
+                        alt="au-pay"
+                      />
+                    </div>
+                  </div>
+                  <div class="store-detail__text-notice">
+                    <div class="notice-icon">※</div>
+                    <div class="notice-text">
+                      一部店舗で表記と異なる場合がございます。詳しくは店頭でご確認ください。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text">
+                <div class="store-detail__text-title">サービス</div>
+                <div class="store-detail__text-detail flex">
+                  <img
+                    src="/store/images/mobile-order.svg"
+                    alt="mobile-order"
+                  />
+                  <div class="mobile-order__text Sodo-text">
+                    Mobile Order & Pay
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row">
+              <div class="store-detail__content-text no-flex custom-break-line">
+                <div class="store-detail__text-title">備考</div>
+                <div class="store-detail__text-detail">
+                  ゴミは、当店又は島内のゴミ箱に必ず捨てて頂き、厳島の美化に何卒ご協力をお願いいたします。<br />
+                  台風などの悪天候でフェリー運休の際は、臨時休業をする場合がございます。
+                  フェリー運行状況をご確認ください。
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__content--row flex-row">
+              <div class="store-detail__text-title"></div>
+              <div class="store-detail__content-text no-flex flex-column">
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img
+                      src="/store/images/store-type-icon/gas-station.jpg"
+                      alt="go-by-car"
+                    />
+                  </div>
+                  <div class="store-type__text">
+                    お車でも便利なドライブスルー店舗です。
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img src="/store/images/store-type-icon/car.jpg" alt="use-during-drive" />
+                  </div>
+                  <div class="store-type__text">
+                    ドライブの途中にご利用いただけるサービスエリアにある店舗です。
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img src="/store/images/store-type-icon/plane.jpg" alt="shinkansen-store" />
+                  </div>
+                  <div class="store-type__text">
+                    旅のお供に。新幹線停車駅の駅ビルの店舗です。
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img
+                      src="/store/images/store-type-icon/simple-plane.jpg"
+                      alt="airport-store"
+                    />
+                  </div>
+                  <div class="store-type__text">
+                    搭乗前の待ち時間に。空港にある店舗です。
+                  </div>
+                </div>
+                <div class="store-detail__store-type flex">
+                  <div class="store-type__icon">
+                    <img src="/store/images/store-type-icon/book.jpg" alt="" />
+                  </div>
+                  <div class="store-type__text">
+                    書店が併設され、本を読みながらコーヒーが楽しめる店舗です。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="store-detail__text-notice">
+              <div class="notice-icon">※</div>
+              <div class="notice-text">
+                台風、その他災害等により、予告なく臨時休業や営業時間を変更をさせて頂くことがありますが、あらかじめご了承下さい。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- information -->
+        <div class="information-wrapper">
+          <div class="information container">
+            <h2 class="english text-bold information__title">
+              MORE INFORMATION
+            </h2>
+            <div class="information__list">
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/information/information-1.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <h3 class="information__list__item__title text-bold">
+                    <a href="#"
+                      >地元の老舗家具メーカーと開発したチェアから瀬戸内海が一望でき、嚴島神社の大鳥居を望むロケーション</a
+                    >
+                  </h3>
+                  <p class="information__list__item__desc">
+                    株式会社
+                    宮島ビールが運営する自家醸造施設を備えたレストラン「宮島ブルワリー」と併設しています。デザインコンセプトは「Passion
+                    Brewery」。創業の地である宮島への熱い思いを醸造に込める宮島ビールと、コーヒーへの情熱と地域との繋がりと大切にするスターバックスの共通の想いから生まれたコンセプトです。
+                  </p>
+                </div>
+              </article>
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/information/information-2.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <p class="information__list__item__desc">
+                    世界文化遺産の嚴島神社に通じる表参道商店街に位置し、ガラス張りの店内からは瀬戸内海が目の前に広がります。
+                  </p>
+                </div>
+              </article>
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/information/information-3.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <p class="information__list__item__desc">
+                    2階の客席の壁には、宮島の伝統工芸品である木製しゃもじを使ったオリジナルのアートを飾りました。しゃもじの形をスターバックスのロゴであるサイレンの鱗に見立てています。
+                  </p>
+                </div>
+              </article>
+              <article class="information__list__item">
+                <a href="#" class="information__list__item__thumbnail"
+                  ><img
+                    src="/store/images/information/information-4.jpg"
+                    alt="store-thumbnail"
+                /></a>
+                <div class="information__list__item__seperate"></div>
+                <div class="information__list__item__info">
+                  <p class="information__list__item__desc">
+                    海側に設置されたバルコニーからは、時間帯によって表情の異なる瀬戸内海とともに、幻想的な空気に包まれる嚴島神社の大鳥居をご覧いただけます。
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="information__link-wrapper">
+              <a href="#" class="information__link">
+                他のリージョナル ランドマーク ストアを見る</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="section-wrap relevant-contents relevant-contents-wrapper">
+          <h2 class="section-heading-02 content-width--sp content-width--pc">
+            関連コンテンツ
+          </h2>
+          <div class="card-item-wrap">
+            <ul class="card-item">
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >Early Summer with Coffee 。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >季節のコーヒー</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒーと一緒に楽しむオーディオコンテンツ。様々なストーリーに耳を傾けてみませんか。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >コーヒーのおと</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >バリスタが楽しんでいる、試したくなるプライベートコーヒーライフを動画でご紹介。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >MEET YOUR COFFEE</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒー豆をお好みの引き具合で。お好きな場所にスターバックスの味わいをお届けします。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >STARBUCKS® DELIVERS</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >Early Summer with Coffee
+                      。少し早い夏の訪れ感じるコーヒータイム。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >季節のコーヒー</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒーと一緒に楽しむオーディオコンテンツ。様々なストーリーに耳を傾けてみませんか。コーヒーと一緒に楽しむオーディオコンテンツ。様々なストーリーに耳を傾けてみませんか。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >コーヒーのおと</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >バリスタが楽しんでいる、試したくなるプライベートコーヒーライフを動画でご紹介。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >MEET YOUR COFFEE</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒー豆をお好みの引き具合で。お好きな場所にスターバックスの味わいをお届けします。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >STARBUCKS® DELIVERS</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒー豆をお好みの引き具合で。お好きな場所にスターバックスの味わいをお届けします。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >STARBUCKS® DELIVERS</span
+                    >
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ここからコンテンツを作成してください -->
+      <!-- ここまでコンテンツを作成してください -->
+    </div>
+    <!-- /.mainContents -->
+    <!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
+  </body>
+</html>

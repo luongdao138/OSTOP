@@ -1,0 +1,95 @@
+<!-- <?php
+include_once($_SERVER['DOCUMENT_ROOT']."/config.inc.php");
+
+$is_brs = strpos($_SERVER['HTTP_HOST'], "starbucks.co.jp") !== false;
+$include_dir = $is_brs ? _SB_DIR_INCLUDE_."/common" : $_SERVER['DOCUMENT_ROOT'].'/local_include';
+define('INCLUDE_DIR', $include_dir);
+
+// ページプロパティ設定
+$pageProperties['title'] = "Connect Happy holidays for you";
+$pageProperties['description'] = "スターバックスからあなたへのプレゼント。１日１回届くGreen Gift BoxとeGiftを贈って届くGold Gift Box、２つの特別なギフトを用意しました。離れた友人や家族とも楽しい時間をシェアできるギフトや、スターバックスのドリンクやフードを楽しめるギフトをお届けします。";
+$pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
+?> -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Noto Sans JP Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reset and Common CSS -->
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./common.css" />
+
+    <title>
+      <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
+    </title>
+    <!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
+    <?php include(INCLUDE_DIR."/css2022.html"); ?>
+    <?php include(INCLUDE_DIR."/js.html"); ?> -->
+
+    <!-- +++++ local css +++++ -->
+    <!-- ここにCSSを記載してください -->
+    <!-- <link rel="stylesheet" href="/top/css/top.css" /> -->
+    <link rel="stylesheet" href="./store-description.css" />
+  </head>
+
+  <body>
+    <noscript>
+      <p class="noscript">
+        当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。
+      </p>
+    </noscript>
+    <!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
+    <div class="mainContents notExNav">
+      <!-- Content here -->
+      <div class="short-description-store">
+        <div class="short-description-store__body">
+          <img
+            class="short-description-store__image"
+            src="./store-image-1.jpg"
+            alt="store logo"
+          />
+          <div class="short-description-store__info">
+            <p class="short-description-store__info__title">
+              色鮮やかで香り豊かなティービバレッジに特化したスターバックス。
+            </p>
+            <p class="short-description-store__info__desc">
+              「彩りあふれる、心あたたまるティーのひとときを」をコンセプトに、上質な茶葉とボタニカルな素材を選び抜いたティーブランドTEAVANA™
+              (ティバーナ)の多彩なティービバレッジをご用意しています。ティーの彩りを感じていただける洗練された空間の中で、楽しく、香り豊かなスターバックスのティー体験をお届けします。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="separate"></div>
+      <div class="short-description-footer">
+        <p class="short-description-footer__name">1件</p>
+      </div>
+      <div class="separate"></div>
+      <div class="search-detail">
+        <div class="search-detail__info">
+          <p class="search-detail__info__title">
+            六本木ヒルズ メトロハット／ハリウッドプラザ店
+          </p>
+          <p class="search-detail__info__desc">
+            東京都 港区 六本木6-4-1 メトロハット/ハリウッドプラザ
+          </p>
+        </div>
+        <div class="search-detail__btn">
+          <button class="search-detail__btn-name">詳細</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- /.mainContents -->
+    <!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
+  </body>
+</html>

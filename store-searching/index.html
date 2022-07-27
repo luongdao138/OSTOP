@@ -1,0 +1,691 @@
+<!-- <?php
+include_once($_SERVER['DOCUMENT_ROOT']."/config.inc.php");
+
+$is_brs = strpos($_SERVER['HTTP_HOST'], "starbucks.co.jp") !== false;
+$include_dir = $is_brs ? _SB_DIR_INCLUDE_."/common" : $_SERVER['DOCUMENT_ROOT'].'/local_include';
+define('INCLUDE_DIR', $include_dir);
+
+// ページプロパティ設定
+$pageProperties['title'] = "Connect Happy holidays for you";
+$pageProperties['description'] = "スターバックスからあなたへのプレゼント。１日１回届くGreen Gift BoxとeGiftを贈って届くGold Gift Box、２つの特別なギフトを用意しました。離れた友人や家族とも楽しい時間をシェアできるギフトや、スターバックスのドリンクやフードを楽しめるギフトをお届けします。";
+$pageProperties['ogImage'] = "https://"._SB_DOMAIN_WWW_."/images/og/logo.png";
+?> -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Noto Sans JP Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reset and Common CSS -->
+    <link rel="stylesheet" href="/store-searching/css/reset.css" />
+    <link rel="stylesheet" href="/store-searching/css/common.css" />
+    <link rel="stylesheet" href="/store-searching/css/components.css" />
+
+    <!-- component CSS -->
+    <link
+      rel="stylesheet"
+      href="/store-searching/components/breadcrum/breadcrum.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/store-searching/components/relevant-product-carousel/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/store-searching/components/close-btn/style.css"
+    />
+    <title>
+      <?php echo $pageProperties['title']; ?>｜スターバックス コーヒー ジャパン
+    </title>
+    <!-- <?php include(INCLUDE_DIR."/meta.html"); ?>
+    <?php include(INCLUDE_DIR."/css2022.html"); ?>
+    <?php include(INCLUDE_DIR."/js.html"); ?> -->
+
+    <!-- +++++ local css +++++ -->
+    <!-- ここにCSSを記載してください -->
+    <!-- <link rel="stylesheet" href="/top/css/top.css" /> -->
+    <link rel="stylesheet" href="/store-searching/css/style.css" />
+    <link rel="stylesheet" href="/store-searching/css/searching/styles.css" />
+    <link rel="stylesheet" href="/store-searching/css/modal/style.css" />
+    <!-- +++++ /local css +++++ -->
+
+    <!-- +++++ /local script +++++ -->
+    <!-- Common script -->
+    <script src="/common/js/jquery-1.12.3.min.js"></script>
+    <script
+      src="/store-searching/components/relevant-product-carousel/script.js"
+      defer
+    ></script>
+
+    <!-- +++++ local script +++++ -->
+    <!-- ここにJavaScriptを記載してください -->
+    <script src="/store-searching/js/script.js" defer></script>
+  </head>
+
+  <body>
+    <noscript>
+      <p class="noscript">
+        当サイトをご覧いただくにはブラウザの設定で<strong>JavaScriptを有効に設定</strong>する必要がございます。
+      </p>
+    </noscript>
+    <!-- <?php include(INCLUDE_DIR."/header.html"); ?> -->
+    <div class="mainContents notExNav">
+      <div class="modal__overlay"></div>
+      <div class="modal__wrapper">
+              <div class="modal__header">
+                 <button class="modal__close-btn">
+                     <img src="/store-searching/images/common/close-icon.png" alt="close-icon" />
+                 </button>
+              </div>
+              <div class="modal__content">
+                <div class="text-bold modal__content__title modal__container">
+                     <h3>店舗形態・サービス</h3>
+                </div>
+
+                <div class="modal__container modal__content__list">
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">Mobile Order & Pay</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">無線LANサービス</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">ドライブスルー</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">サービスエリア</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">新幹線駅構内</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">空港</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">Book & Cafe</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">スターバックス リザーブ®販売店舗</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">アルコール販売店舗</span>
+                            </span>
+                          </label>
+                     </div>
+                     <div class="modal__content__list__item">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox01">
+                            <span class="flex checkbox__label">
+                              <span class="checkbox__label-icon">
+                                <svg viewBox="0 0 20 20">
+                                  <path d="M3.872,9.747a.51.51,0,1,0-.757.684l3.051,3.376a.51.51,0,0,0,.746.012L14.841,5.6a.51.51,0,0,0-.735-.707L6.557,12.717,3.872,9.748Z"/>
+                                </svg>
+                              </span>
+                              <span class="checkbox__label-text">STARBUCKS Tea & Café</span>
+                            </span>
+                          </label>
+                     </div>
+
+                </div>
+
+                <div class="modal__content__btn-container">
+                    <button class="button modal__content__btn">決定する</button>
+                </div>
+              </div>
+         </div>
+      </div>
+      <div class="store-searching__wrapper">
+        <div class="breadcrum-wrap">
+          <ul class="breadcrum container">
+            <li><a href="#">Home</a></li>
+            <li><span class="breadcrum__current">店舗検索</span></li>
+          </ul>
+        </div>
+
+        <div class="searching__head">
+          <div class="container">
+            <div class="searching__heading">店舗検索</div>
+            <div class="searching__inner">
+              <div class="searching__inner__col">
+                <div class="searching-box__wrap">
+                  <div class="searching-box__text">
+                    <div class="searching-box__textinput">
+                      <button class="searching-box__button" type="">
+                        <span class="searching-box__button__search-icon">
+                          <svg viewBox="0 0 24 24">
+                            <g transform="translate(-1089 -144)">
+                              <path
+                                d="M17.286,16.829a8.105,8.105,0,1,1,2.22-5.56,8.1,8.1,0,0,1-.154,1.572.889.889,0,1,0,1.744.344A9.894,9.894,0,0,0,11.328,1.373a9.9,9.9,0,1,0,7.248,16.679.888.888,0,0,0-1.289-1.221Zm1.478,3.081,5.095,5.062a.888.888,0,1,0,1.253-1.26l-5.095-5.061a.889.889,0,0,0-1.253,1.262Z"
+                                transform="translate(1087.626 142.627)"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                      </button>
+  
+                      <input
+                        type="text"
+                        class="searching-box__input"
+                        placeholder="キーワードを入力してください"
+                      />
+  
+                      <button class="searching-box__button__close-icon">
+                        <svg viewBox="0 0 13.999 14">
+                          <path
+                            d="M13.06,12l5.72-5.72a.75.75,0,1,0-1.06-1.06L12,10.94,6.28,5.22A.75.75,0,0,0,5.22,6.28L10.94,12,5.22,17.72a.75.75,0,1,0,1.06,1.06L12,13.06l5.72,5.72a.745.745,0,0,0,.53.22.75.75,0,0,0,.53-1.28Z"
+                            transform="translate(-5 -5)"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="searching-box__btn">
+                    サービス絞り込み
+                  </button>
+                </div>
+                <div class="searching__selectboxs">
+                  <div class="searching__selectbox selectbox-wrap">
+                    <svg>
+                      <path d="M12.954,16.668a.888.888,0,0,1-.637-.271L6.264,10.178a.944.944,0,0,1,0-1.307.885.885,0,0,1,1.275,0l5.414,5.562,5.511-5.663a.881.881,0,0,1,1.272,0,.943.943,0,0,1,0,1.309L13.589,16.4a.89.89,0,0,1-.637.271" transform="translate(-6.001 -8.499)" />
+                    </svg>
+                    <select name="selectbox" id="selectbox" class="selectbox">
+                      <option selected disabled>都道府県</option>
+                      <option value="1">東京都</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="searching__inner__col searching__map">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=co-well+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-seperate"></div>
+
+
+      <div class="container new-stores">
+          <h4 class="new-stores__label store-label">新店舗情報</h4>
+          <ul class="new-stores__list">
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">イオンモール都城駅前店</p>
+             </li>
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">田園調布 東急スクエアガーデンサイト店</p>
+             </li>
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">羽田空港第1ターミナル THE HANEDA HOUSE5階店</p>
+             </li>
+             <li>
+                 <p class="english new-stores__time">2022.06.24.</p>
+                 <p class="new-stores__name">イオンモール都城駅前店</p>
+             </li>
+          </ul>
+      </div>
+      <div class="store-seperate"></div>
+      <div class=" container store-information">
+        <div class="store-information__left">
+            <h4 class="english store-information__label store-label">STORE INFOMATION</h4> 
+            <h3 class="store-information__title store-title">
+                スターバックスには様々な店舗があり、<br/>
+                コーヒーを楽しむための<br/>
+                セミナーやイベントを開催しています。
+            </h3>
+        </div>
+        <div class="store-information__seperate"></div>
+        <div class="store-information__right">
+            <div class="store-information__carousel">
+                <ul class="carousel store-information-carousel">
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                          <img src="/store-searching/images/information/information-1.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                            いつものお店とすこし違うスターバックス体験。
+                          </p>
+                          <p class="store-infomation__card__inner__name ">
+                         リージョナル ランド<br/>
+マーク ストア
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-2.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                       あなたのコーヒーライフをより豊かに。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                         コーヒーセミナー
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="store-infomation__card">
+                      <a href="" class="store-infomation__card__inner">
+                        <div class="store-infomation__card__inner__img">
+                         <img src="/store-searching/images/information/information-3.jpg" />
+                        </div>
+                        <div class="store-infomation__card__inner__info">
+                          <p class="store-infomation__card__inner__desc">
+                          お近くの店舗のイベントに参加しませんか。
+                          </p>
+                          <span class="store-infomation__card__inner__name ">
+                           イベント情報
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                   
+                  
+                  </ul>
+              
+            </div>
+        </div>
+      </div>
+      <div class="store-seperate"></div>
+      <div class="container store-network">
+        <div class="store-network-wrapper">
+            <div class="store-network__left">
+                <h4 class="english store-network__label store-label">公衆無線LANサービス</h4> 
+
+                <div class="pc-hidden store-network__mobile-wifi">
+                  <img src="/store-searching/images/store-network/free-wifi.jpg" alt="">
+                </div>
+
+                <h3 class="store-network__title store-title">
+                  スターバックス コーヒー店舗にて<br/>
+                  公衆無線LANサービスをご利用いただけます。
+                </h3>
+                <div class="store-netword__btn-wrapper">
+                  <button class="button button--secondary-small store-network__btn text-medium">Wi-Fi対応店舗一覧へ</button>
+                </div>
+            </div>
+            <div class="store-network__right mobile-hidden">
+                <img src="/store-searching/images/store-network/free-wifi.jpg" alt="">
+            </div>
+        </div>
+      </div>
+
+        <!-- information -->
+        <div class="section-wrap relevant-contents relevant-contents-wrapper">
+          <h2 class="section-heading-02 content-width--sp content-width--pc">
+            関連コンテンツ
+          </h2>
+          <div class="card-item-wrap">
+            <ul class="card-item">
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >Early Summer with Coffee 。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >季節のコーヒー</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒーと一緒に楽しむオーディオコンテンツ。様々なストーリーに耳を傾けてみませんか。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >コーヒーのおと</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >バリスタが楽しんでいる、試したくなるプライベートコーヒーライフを動画でご紹介。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >MEET YOUR COFFEE</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒー豆をお好みの引き具合で。お好きな場所にスターバックスの味わいをお届けします。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >STARBUCKS® DELIVERS</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >Early Summer with Coffee
+                      。少し早い夏の訪れ感じるコーヒータイム。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >季節のコーヒー</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒーと一緒に楽しむオーディオコンテンツ。様々なストーリーに耳を傾けてみませんか。コーヒーと一緒に楽しむオーディオコンテンツ。様々なストーリーに耳を傾けてみませんか。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >コーヒーのおと</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >バリスタが楽しんでいる、試したくなるプライベートコーヒーライフを動画でご紹介。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >MEET YOUR COFFEE</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒー豆をお好みの引き具合で。お好きな場所にスターバックスの味わいをお届けします。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >STARBUCKS® DELIVERS</span
+                    >
+                  </div>
+                </a>
+              </li>
+              <li class="relevant-content-wrap">
+                <a href="" class="relevant-content">
+                  <div class="relevant-content__img">
+                    <img
+                      src="/top/images/brew-products/img-bottom-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="relevant-content__text">
+                    <span class="relevant-content__text__description"
+                      >コーヒー豆をお好みの引き具合で。お好きな場所にスターバックスの味わいをお届けします。</span
+                    >
+                    <span class="relevant-content__text__category"
+                      >STARBUCKS® DELIVERS</span
+                    >
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- ここからコンテンツを作成してください -->
+      <!-- ここまでコンテンツを作成してください -->
+    </div>
+    <!-- /.mainContents -->
+    <!-- <?php include(INCLUDE_DIR."/footer.html"); ?> -->
+  </body>
+</html>
