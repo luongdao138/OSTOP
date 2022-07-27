@@ -1,44 +1,54 @@
 html {
-    --clr-gray: #EDEBE9;
-    --clr-bg: #fff;
-    --clr-text: rgba(0,0,0,0.87);
-    --max-width-PC: 1184px;
-    --max-width-SP: 343px;   
-    --padding-inline: 16px;  
+  --clr-gray: #edebe9;
+  --clr-bg: #fff;
+  --clr-text: rgba(0, 0, 0, 0.87);
+  --max-width-PC: 1184px;
+  --max-width-SP: 343px;
+  --padding-inline: 16px;
 
-    --carousel-item-width: 152px;
+  --carousel-item-width: 152px;
 }
-
 
 body {
-    background-color: var(--clr-bg);
+  background-color: var(--clr-bg);
 }
 
+html.is-locked,
+html.is-locked body {
+  /* want to fix the height to the window height */
+  height: calc(var(--window-inner-height) - 1px);
+
+  /* want to block all overflowing content */
+  overflow: hidden;
+
+  /* want to exclude padding from the height */
+  box-sizing: border-box;
+}
 
 /* Common */
 
 .container {
-    width: 100%;
-    max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--padding-inline);
-    padding-right: var(--padding-inline);
+  width: 100%;
+  max-width: calc(var(--max-width-PC) + 2 * var(--padding-inline));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--padding-inline);
+  padding-right: var(--padding-inline);
 }
 
 .line-gray {
-    height: 1px;
-    background-color: #EDEBE9;
+  height: 1px;
+  background-color: #edebe9;
 }
 
 .line-gray--fullwidth--sp-only {
-    position: absolute;
-    left: 0;
-    width: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-    .line-gray--fullwidth--sp-only {
-        display: none;   
-    }    
+  .line-gray--fullwidth--sp-only {
+    display: none;
+  }
 }
