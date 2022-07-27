@@ -23,3 +23,20 @@ body {
     padding-left: var(--padding-inline);
     padding-right: var(--padding-inline);
 }
+
+.line-gray {
+    height: 1px;
+    background-color: #EDEBE9;
+}
+
+.line-gray--fullwidth--sp-only {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .line-gray--fullwidth--sp-only {
+        display: none;   
+    }    
+}
