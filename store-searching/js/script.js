@@ -62,7 +62,7 @@ function closeModal() {
   document.documentElement.classList.remove('is-locked');
 }
 
-alert('Hello');
+// alert('Hello');
 const modalOverlay = document.querySelector('.modal__overlay');
 const modalContent = document.querySelector('.modal__content');
 const btnModal = document.querySelector('.searching-box__btn');

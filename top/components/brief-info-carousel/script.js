@@ -104,7 +104,7 @@ function animateCarousel() {
 
     maxPage = Math.ceil(carouselItemLength / activeCarouselItemNum);
 
-    if(maxPage != 1) nextButton.classList.add('show');
+    if(maxPage > 1) nextButton.classList.add('show');
   
     prevButton.classList.remove('show');
     carouselInner.style.transform = 'translateX(-' + position + 'px)';
@@ -183,7 +183,7 @@ function animateCarousel() {
 function showButton(prevButton, nextButton, currentPage, maxPage) {
   if (currentPage == 1) {
     prevButton.classList.remove('show');
-    if(maxPage != 1) {
+    if(maxPage > 1) {
       nextButton.classList.add('show');
     }
   } else if (currentPage == maxPage) {
